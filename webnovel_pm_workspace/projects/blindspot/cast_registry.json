@@ -7,28 +7,29 @@
       "first_appearance": "episode_001",
       "status": "active",
       "role": "protagonist",
-      "summary": "자신을 볼 가능성이 있는 시선을 감지하는 전직 보안 장비 기사",
+      "summary": "자신을 볼 가능성이 있는 시선을 감지하는 전직 보안 장비 기사. 2~4화에서 증거 회수, 조건부 거래, 첫 잠입을 직접 선택했다.",
       "do_not_break": [
         "수동적 해결 반복",
         "근거 없는 완벽한 능력 이해",
-        "대가 없는 만능화"
+        "대가 없는 만능화",
+        "가벼운 농담식 말투"
       ]
     },
     {
       "character_id": "char_ma_gyeongtae",
       "name": "마경태",
       "first_appearance": "episode_001",
-      "status": "active_ep001",
+      "status": "active",
       "role": "pursuer",
-      "summary": "망루 하청 추적조 행동대원. 1화에서 한서진을 물리적으로 압박한다."
+      "summary": "망루 하청 추적조 행동대원. 3~4화에서 재추적과 물리 압박을 이어간다."
     },
     {
       "character_id": "char_yoon_hara",
       "name": "윤하라",
-      "first_appearance": "planned_after_ep001",
-      "status": "planned",
+      "first_appearance": "episode_002_voice_episode_003_direct",
+      "status": "active",
       "role": "handler_or_mentor_candidate",
-      "summary": "한서진에게 정보와 임무를 줄 수 있지만 신뢰하기 어려운 인물"
+      "summary": "망루 정보를 가진 정보 브로커. 한서진에게 경고와 거래를 제안하지만 완전한 아군은 아니다."
     },
     {
       "character_id": "org_watchtower",
@@ -36,7 +37,7 @@
       "first_appearance": "episode_001_voice_or_monitor",
       "status": "active",
       "role": "antagonist_force",
-      "summary": "도시의 감시망을 장악한 조직적 적대 세력"
+      "summary": "도시의 감시망을 장악한 조직적 적대 세력. WATCHLIST로 한서진을 오래전부터 분류했다."
     }
   ]
 }

@@ -43,10 +43,60 @@
         "org_watchtower"
       ],
       "continuity_notes": "망루의 상세 정체는 미공개. 클리프행어로만 사용."
+    },
+    {
+      "episode_id": "episode_002",
+      "sequence": 1,
+      "time_marker": "Day 2 dawn",
+      "location_id": "loc_closed_security_office",
+      "summary": "한서진이 망한 보안업체 사무실에서 영도시장 CCTV 백업 접근을 시도하지만 삭제를 확인한다.",
+      "characters": [
+        "char_han_seojin"
+      ],
+      "continuity_notes": "기록은 감지되지 않는다는 능력 한계 확인."
+    },
+    {
+      "episode_id": "episode_002",
+      "sequence": 2,
+      "time_marker": "Day 2 morning",
+      "location_id": "loc_yeongdo_alley",
+      "summary": "한서진이 죽은 렌즈의 로컬 저장장치를 회수하고 윤하라의 경고 전화를 받는다.",
+      "characters": [
+        "char_han_seojin",
+        "char_yoon_hara"
+      ],
+      "continuity_notes": "윤하라는 음성으로만 접촉."
+    },
+    {
+      "episode_id": "episode_003",
+      "sequence": 1,
+      "time_marker": "Day 2 late morning",
+      "location_id": "loc_underground_arcade",
+      "summary": "윤하라가 한서진에게 직접 접촉하고 망루 정보를 거래하려 한다.",
+      "characters": [
+        "char_han_seojin",
+        "char_yoon_hara",
+        "char_ma_gyeongtae"
+      ],
+      "continuity_notes": "마경태 재추적. 한서진은 조건부 거래 선택."
+    },
+    {
+      "episode_id": "episode_004",
+      "sequence": 1,
+      "time_marker": "Day 2 afternoon",
+      "location_id": "loc_abandoned_security_room",
+      "summary": "한서진이 폐보안실에 잠입해 WATCHLIST 자료 일부와 오래된 자기 파일명을 확인한다.",
+      "characters": [
+        "char_han_seojin",
+        "char_yoon_hara",
+        "char_ma_gyeongtae"
+      ],
+      "continuity_notes": "F002 일부 회수. stage_01 범위 유지."
     }
   ],
   "open_time_questions": [
     "망루가 한서진을 언제부터 후보로 분류했는지 추후 확정 필요",
-    "윤하라의 첫 등장 시점 확정 필요"
+    "윤하라가 어떤 이유로 망루와 적대하는지 추후 확정 필요",
+    "WATCHLIST_HAN_SEOJIN_OLD 파일의 작성 시점과 작성자 확정 필요"
   ]
 }
