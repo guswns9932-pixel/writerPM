@@ -2,51 +2,74 @@
   "project_id": "blindspot",
   "characters": [
     {
-      "character_id": "char_protagonist",
-      "name": "미정",
+      "character_id": "char_han_seojin",
+      "name": "한서진",
       "role": "protagonist",
-      "status": "initial_placeholder",
-      "desire": "누군가의 감시와 평가에 끌려다니지 않고 자신의 생존과 선택권을 되찾고 싶다",
-      "lack_or_wound": "늘 타인의 시선을 의식하며 살아온 탓에 결정적 순간에 먼저 숨는 습관이 있다",
+      "status": "active",
+      "age": "29",
+      "occupation": "폐업한 보안 장비 설치업체의 전직 현장 기사",
+      "desire": "감시와 빚, 타인의 평가에서 벗어나 자기 생존과 선택권을 되찾고 싶다",
+      "lack_or_wound": "어릴 때부터 남의 시선을 과도하게 의식했고, 실패 후에는 먼저 숨는 습관이 굳어졌다",
       "choice_principle": "안전한 도피와 위험한 돌파 사이에서, 장기적으로 시야를 넓히는 선택을 한다",
-      "voice": "짧고 긴장감 있는 내면 독백. 대사는 필요한 만큼만 한다.",
+      "voice": "짧고 긴장감 있는 내면 독백. 대사는 필요한 만큼만, 결정 순간에는 단호하게.",
       "strengths": [
         "시선 변화에 대한 민감함",
-        "위험 회피 본능",
-        "상황 관찰력"
+        "현장 구조 파악",
+        "CCTV·배선·출입 동선에 대한 실무 지식",
+        "위험 회피 본능"
       ],
       "weaknesses": [
         "과잉 경계",
         "고립 성향",
-        "타인의 호의를 감시로 오해하는 경향"
+        "타인의 호의를 감시로 오해하는 경향",
+        "능력 과부하 시 판단 지연"
       ],
+      "episode_001_arc": "도망치기만 하던 사람이 처음으로 사각지대를 선택해 추적을 끊는다",
       "collapse_risks": [
         "근거 없는 영웅화",
         "능력을 곧바로 완벽히 이해함",
-        "선택 없이 사건에 휩쓸리기만 함"
+        "선택 없이 사건에 휩쓸리기만 함",
+        "대가 없는 만능 감지"
       ],
       "relationship_hooks": [
         {
-          "target": "char_handler_candidate",
+          "target": "char_yoon_hara",
           "dynamic": "감시자와 조력자 사이",
           "change_direction": "불신에서 조건부 협력으로"
+        },
+        {
+          "target": "org_watchtower",
+          "dynamic": "추적 대상과 포획 조직",
+          "change_direction": "일방적 추적에서 조직전으로"
         }
       ]
     },
     {
-      "character_id": "char_handler_candidate",
-      "name": "미정",
+      "character_id": "char_yoon_hara",
+      "name": "윤하라",
       "role": "handler_or_mentor_candidate",
       "status": "planned",
-      "desire": "주인공의 능력을 조직전의 변수로 활용하고 싶다",
+      "occupation": "민간 보안 컨설턴트로 위장한 정보 브로커",
+      "desire": "망루의 감시망을 무너뜨릴 변수를 확보하고 싶다",
+      "voice": "차분하고 계산적. 정보를 전부 말하지 않는다.",
       "function": "정보와 임무를 제공하지만 완전히 믿을 수 없는 인물"
     },
     {
-      "character_id": "char_antagonist_org",
-      "name": "미정 조직",
+      "character_id": "char_ma_gyeongtae",
+      "name": "마경태",
+      "role": "episode_001_pursuer",
+      "status": "active_ep001",
+      "occupation": "망루 하청 추적조 행동대원",
+      "desire": "대상을 생포해 보상과 승급을 얻고 싶다",
+      "voice": "거칠고 짧다",
+      "function": "1화의 직접적 물리 위협"
+    },
+    {
+      "character_id": "org_watchtower",
+      "name": "망루",
       "role": "antagonist_force",
-      "status": "planned",
-      "desire": "도시의 시야와 정보망을 독점한다",
+      "status": "active",
+      "desire": "도시의 시야와 정보망을 독점하고 특이 능력자를 자산화한다",
       "function": "감시, 추적, 잠입전의 장기 적대 세력"
     }
   ]

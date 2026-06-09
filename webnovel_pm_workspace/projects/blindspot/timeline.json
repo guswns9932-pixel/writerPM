@@ -4,9 +4,9 @@
     {
       "event_id": "pre_001",
       "order": 1,
-      "summary": "주인공은 오래전부터 이유 없는 시선 공포와 감시받는 감각을 경험했다.",
+      "summary": "한서진은 오래전부터 이유 없는 시선 공포와 감시받는 감각을 경험했다.",
       "characters": [
-        "char_protagonist"
+        "char_han_seojin"
       ],
       "canon_status": "initial"
     },
@@ -15,14 +15,38 @@
       "order": 2,
       "summary": "도시의 일부 조직은 감시망과 정보 브로커를 이용해 사람을 추적한다.",
       "characters": [
-        "char_antagonist_org"
+        "org_watchtower"
       ],
       "canon_status": "initial"
     }
   ],
-  "episode_events": [],
+  "episode_events": [
+    {
+      "episode_id": "episode_001",
+      "sequence": 1,
+      "time_marker": "Day 1 night, rain",
+      "location_id": "loc_yeongdo_alley",
+      "summary": "한서진이 영도시장 뒤 골목에서 시선 세 개를 감지하고 추적자 마경태를 따돌린다.",
+      "characters": [
+        "char_han_seojin",
+        "char_ma_gyeongtae"
+      ],
+      "continuity_notes": "stage_01 능력만 사용. 배수로와 비상계단 아래 사각지대 활용."
+    },
+    {
+      "episode_id": "episode_001",
+      "sequence": 2,
+      "time_marker": "same night, shortly after escape",
+      "location_id": "loc_watchtower_room",
+      "summary": "망루 관측자가 한서진의 시선 반응과 이름을 확인하고 등급을 올린다.",
+      "characters": [
+        "org_watchtower"
+      ],
+      "continuity_notes": "망루의 상세 정체는 미공개. 클리프행어로만 사용."
+    }
+  ],
   "open_time_questions": [
-    "주인공 능력 각성 시점을 1화 이전 징후로 둘지, 1화 사건 중 명확히 각성하게 할지 결정 필요",
-    "주요 조직의 감시망 범위와 활동 시간대 확정 필요"
+    "망루가 한서진을 언제부터 후보로 분류했는지 추후 확정 필요",
+    "윤하라의 첫 등장 시점 확정 필요"
   ]
 }

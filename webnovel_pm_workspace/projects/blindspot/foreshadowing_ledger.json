@@ -3,21 +3,30 @@
   "foreshadowing": [
     {
       "foreshadowing_id": "F001",
-      "setup_episode": "episode_001_planned",
+      "setup_episode": "episode_001",
       "setup_scene": "첫 시선 감지 장면",
-      "content": "주인공이 감지한 시선 중 하나는 현장에 없는 감시 매체를 통한 것이다",
-      "payoff_plan": "초반부에서 감시망의 실체 공개",
-      "status": "planned",
+      "content": "현장에 없는 감시 매체의 시선이 직접 시선과 다른 차가운 압력으로 느껴진다",
+      "payoff_plan": "초반부에서 망루의 도시 감시망 공개",
+      "status": "active",
       "visibility": "reader_noticeable_but_not_explained"
     },
     {
       "foreshadowing_id": "F002",
-      "setup_episode": "episode_001_planned",
-      "setup_scene": "사각지대 진입 직전",
-      "content": "감지되지 않는 공간이 반드시 안전한 것은 아니라는 암시",
+      "setup_episode": "episode_001",
+      "setup_scene": "비상계단 아래 사각지대",
+      "content": "감지되지 않는 공간도 소리와 흔적 때문에 완전한 안전지대가 아니라는 암시",
       "payoff_plan": "잠입 에피소드에서 함정으로 회수",
-      "status": "planned",
+      "status": "active",
       "visibility": "subtle"
+    },
+    {
+      "foreshadowing_id": "F003",
+      "setup_episode": "episode_001",
+      "setup_scene": "망루 관측자의 마지막 대사",
+      "content": "망루가 한서진의 이름을 이미 알고 있다",
+      "payoff_plan": "망루가 과거부터 특이 감각자를 분류했다는 사실 공개",
+      "status": "active",
+      "visibility": "clear"
     }
   ],
   "rules": [

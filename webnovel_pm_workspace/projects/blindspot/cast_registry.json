@@ -2,12 +2,12 @@
   "project_id": "blindspot",
   "cast": [
     {
-      "character_id": "char_protagonist",
-      "name": "미정",
-      "first_appearance": "episode_001_planned",
+      "character_id": "char_han_seojin",
+      "name": "한서진",
+      "first_appearance": "episode_001",
       "status": "active",
       "role": "protagonist",
-      "summary": "자신을 볼 가능성이 있는 시선을 감지하는 남자",
+      "summary": "자신을 볼 가능성이 있는 시선을 감지하는 전직 보안 장비 기사",
       "do_not_break": [
         "수동적 해결 반복",
         "근거 없는 완벽한 능력 이해",
@@ -15,18 +15,26 @@
       ]
     },
     {
-      "character_id": "char_handler_candidate",
-      "name": "미정",
-      "first_appearance": "undecided",
-      "status": "planned",
-      "role": "handler_or_mentor_candidate",
-      "summary": "주인공에게 임무와 정보를 줄 수 있지만 신뢰하기 어려운 인물"
+      "character_id": "char_ma_gyeongtae",
+      "name": "마경태",
+      "first_appearance": "episode_001",
+      "status": "active_ep001",
+      "role": "pursuer",
+      "summary": "망루 하청 추적조 행동대원. 1화에서 한서진을 물리적으로 압박한다."
     },
     {
-      "character_id": "char_antagonist_org",
-      "name": "미정 조직",
-      "first_appearance": "undecided",
+      "character_id": "char_yoon_hara",
+      "name": "윤하라",
+      "first_appearance": "planned_after_ep001",
       "status": "planned",
+      "role": "handler_or_mentor_candidate",
+      "summary": "한서진에게 정보와 임무를 줄 수 있지만 신뢰하기 어려운 인물"
+    },
+    {
+      "character_id": "org_watchtower",
+      "name": "망루",
+      "first_appearance": "episode_001_voice_or_monitor",
+      "status": "active",
       "role": "antagonist_force",
       "summary": "도시의 감시망을 장악한 조직적 적대 세력"
     }

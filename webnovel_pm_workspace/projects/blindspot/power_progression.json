@@ -1,6 +1,7 @@
 {
   "project_id": "blindspot",
   "current_stage": "stage_01_awareness",
+  "last_verified_episode": "episode_001",
   "stages": [
     {
       "stage_id": "stage_01_awareness",
@@ -8,14 +9,17 @@
       "allowed_capabilities": [
         "시선의 방향 감지",
         "강한 적의와 관찰 의도 구분",
-        "근거리 사각지대 직감"
+        "근거리 사각지대 직감",
+        "매개 시선과 직접 시선의 희미한 차이 감지"
       ],
       "locked_capabilities": [
         "카메라 네트워크 전체 추적",
         "개별 인물 식별",
-        "시선 역추적 정밀 좌표화"
+        "시선 역추적 정밀 좌표화",
+        "광역 감시망 지도화"
       ],
-      "required_growth_event": "첫 생존 위기에서 감지 한계와 대가를 체험"
+      "required_growth_event": "첫 생존 위기에서 감지 한계와 대가를 체험",
+      "episode_001_status": "한서진은 기본 감지와 사각지대 선택만 사용했다"
     },
     {
       "stage_id": "stage_02_filtering",
@@ -34,12 +38,20 @@
         "감시 루틴 예측"
       ],
       "unlock_condition": "조직전에서 감시 패턴을 학습한다"
+    },
+    {
+      "stage_id": "stage_04_blindspot_design",
+      "episode_range": "051-080",
+      "allowed_capabilities": [
+        "제한된 구역의 사각지대 설계",
+        "조직 감시망 교란"
+      ],
+      "unlock_condition": "망루의 핵심 감시 구조를 파악한 뒤 대가를 감수한다"
     }
   ],
   "anti_sudden_powerup_rules": [
     "위기 직전 무근거 각성 금지",
     "강화에는 사건, 훈련, 실패, 대가 중 하나 이상 필요",
     "능력 성장 후에도 대가와 오판 가능성 유지"
-  ],
-  "last_verified_episode": "episode_000"
+  ]
 }

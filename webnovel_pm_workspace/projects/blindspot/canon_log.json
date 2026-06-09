@@ -4,12 +4,12 @@
     {
       "canon_id": "CANON001",
       "category": "core_ability",
-      "summary": "주인공은 자신을 볼 가능성이 있는 모든 시선을 감지한다.",
-      "source_file": "brief.md",
+      "summary": "한서진은 자신을 볼 가능성이 있는 모든 시선을 방향, 거리감, 위험도로 감지한다.",
+      "source_file": "ability_rules.json",
       "source_episode": "episode_000",
       "status": "approved_initial_input",
       "approved_by": "user",
-      "last_updated": "2026-06-08"
+      "last_updated": "2026-06-09"
     },
     {
       "canon_id": "CANON002",
@@ -19,18 +19,49 @@
       "source_episode": "episode_000",
       "status": "approved_initial_input",
       "approved_by": "user",
-      "last_updated": "2026-06-08"
+      "last_updated": "2026-06-09"
     },
     {
       "canon_id": "CANON003",
       "category": "scope",
-      "summary": "아직 1화 원고는 작성하지 않고 초기 설정 파일만 작성한다.",
+      "summary": "이번 작업 범위는 컨셉부터 1화 final까지이며, 2화 이후 본문은 작성하지 않는다.",
       "source_file": "user_request",
       "source_episode": "episode_000",
       "status": "approved_initial_input",
       "approved_by": "user",
-      "last_updated": "2026-06-08"
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON004",
+      "category": "character",
+      "summary": "주인공 이름은 한서진이며 전직 보안 장비 현장 기사다.",
+      "source_file": "character_bible.json",
+      "source_episode": "episode_001",
+      "status": "active",
+      "approved_by": "codex_draft_pending_user_review",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON005",
+      "category": "antagonist_force",
+      "summary": "망루는 도시 감시망과 정보 브로커를 이용해 특이 능력자를 추적하는 비공식 조직이다.",
+      "source_file": "story_bible.json",
+      "source_episode": "episode_001",
+      "status": "active",
+      "approved_by": "codex_draft_pending_user_review",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON006",
+      "category": "episode_001_event",
+      "summary": "한서진은 영도시장 뒤 폐골목에서 마경태의 추적을 사각지대와 피 묻은 장갑 미끼로 따돌렸다.",
+      "source_file": "episode_001_final_v2.md",
+      "source_episode": "episode_001",
+      "status": "final_candidate_pending_user_review",
+      "approved_by": "pending_user_review",
+      "last_updated": "2026-06-09"
     }
   ],
-  "change_requests": []
+  "change_requests": [],
+  "current_stage": "awaiting_user_review"
 }
