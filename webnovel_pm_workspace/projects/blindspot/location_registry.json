@@ -1,0 +1,35 @@
+{
+  "project_id": "blindspot",
+  "locations": [
+    {
+      "location_id": "loc_city",
+      "name": "미정 도시",
+      "type": "modern_city",
+      "rules": [
+        "CCTV와 사설 감시망이 촘촘하다",
+        "사각지대는 드물지만 존재한다",
+        "밤에는 조직의 비공식 감시가 늘어난다"
+      ],
+      "spatial_notes": "상업지구, 낡은 골목, 지하 통로, 고층 감시 지점을 구분 예정",
+      "first_appearance": "episode_001_planned",
+      "canon_status": "initial"
+    },
+    {
+      "location_id": "loc_safe_blindspot",
+      "name": "첫 사각지대 후보",
+      "type": "urban_hideout",
+      "rules": [
+        "외부 시선이 제한된다",
+        "완전한 안전지대는 아니다"
+      ],
+      "spatial_notes": "1화 outline 단계에서 구체화",
+      "first_appearance": "episode_001_planned",
+      "canon_status": "planned"
+    }
+  ],
+  "space_conflict_checks": [
+    "동일 시간대 이동 가능한 거리인가?",
+    "감시망 밀도와 사각지대 존재가 모순되지 않는가?",
+    "폐쇄 구역 규칙을 무시하지 않았는가?"
+  ]
+}

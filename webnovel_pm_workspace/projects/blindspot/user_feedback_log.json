@@ -1,0 +1,9 @@
+{
+  "project_id": "blindspot",
+  "feedback": [],
+  "rules": {
+    "record_all_user_feedback": true,
+    "requires_feedback_application_plan_unless_user_says": "바로 반영",
+    "canon_change_requires_user_approval": true
+  }
+}

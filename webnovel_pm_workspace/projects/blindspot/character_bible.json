@@ -1,0 +1,53 @@
+{
+  "project_id": "blindspot",
+  "characters": [
+    {
+      "character_id": "char_protagonist",
+      "name": "미정",
+      "role": "protagonist",
+      "status": "initial_placeholder",
+      "desire": "누군가의 감시와 평가에 끌려다니지 않고 자신의 생존과 선택권을 되찾고 싶다",
+      "lack_or_wound": "늘 타인의 시선을 의식하며 살아온 탓에 결정적 순간에 먼저 숨는 습관이 있다",
+      "choice_principle": "안전한 도피와 위험한 돌파 사이에서, 장기적으로 시야를 넓히는 선택을 한다",
+      "voice": "짧고 긴장감 있는 내면 독백. 대사는 필요한 만큼만 한다.",
+      "strengths": [
+        "시선 변화에 대한 민감함",
+        "위험 회피 본능",
+        "상황 관찰력"
+      ],
+      "weaknesses": [
+        "과잉 경계",
+        "고립 성향",
+        "타인의 호의를 감시로 오해하는 경향"
+      ],
+      "collapse_risks": [
+        "근거 없는 영웅화",
+        "능력을 곧바로 완벽히 이해함",
+        "선택 없이 사건에 휩쓸리기만 함"
+      ],
+      "relationship_hooks": [
+        {
+          "target": "char_handler_candidate",
+          "dynamic": "감시자와 조력자 사이",
+          "change_direction": "불신에서 조건부 협력으로"
+        }
+      ]
+    },
+    {
+      "character_id": "char_handler_candidate",
+      "name": "미정",
+      "role": "handler_or_mentor_candidate",
+      "status": "planned",
+      "desire": "주인공의 능력을 조직전의 변수로 활용하고 싶다",
+      "function": "정보와 임무를 제공하지만 완전히 믿을 수 없는 인물"
+    },
+    {
+      "character_id": "char_antagonist_org",
+      "name": "미정 조직",
+      "role": "antagonist_force",
+      "status": "planned",
+      "desire": "도시의 시야와 정보망을 독점한다",
+      "function": "감시, 추적, 잠입전의 장기 적대 세력"
+    }
+  ]
+}

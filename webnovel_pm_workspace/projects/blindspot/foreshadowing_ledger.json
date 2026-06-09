@@ -1,0 +1,29 @@
+{
+  "project_id": "blindspot",
+  "foreshadowing": [
+    {
+      "foreshadowing_id": "F001",
+      "setup_episode": "episode_001_planned",
+      "setup_scene": "첫 시선 감지 장면",
+      "content": "주인공이 감지한 시선 중 하나는 현장에 없는 감시 매체를 통한 것이다",
+      "payoff_plan": "초반부에서 감시망의 실체 공개",
+      "status": "planned",
+      "visibility": "reader_noticeable_but_not_explained"
+    },
+    {
+      "foreshadowing_id": "F002",
+      "setup_episode": "episode_001_planned",
+      "setup_scene": "사각지대 진입 직전",
+      "content": "감지되지 않는 공간이 반드시 안전한 것은 아니라는 암시",
+      "payoff_plan": "잠입 에피소드에서 함정으로 회수",
+      "status": "planned",
+      "visibility": "subtle"
+    }
+  ],
+  "rules": [
+    "새 복선은 반드시 기록",
+    "회수 전까지 모순 금지",
+    "회수 시 독자 보상 명시",
+    "사용자 승인 없는 중대 canon 변경 금지"
+  ]
+}

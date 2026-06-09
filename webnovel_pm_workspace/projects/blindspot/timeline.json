@@ -1,0 +1,28 @@
+{
+  "project_id": "blindspot",
+  "pre_story_events": [
+    {
+      "event_id": "pre_001",
+      "order": 1,
+      "summary": "주인공은 오래전부터 이유 없는 시선 공포와 감시받는 감각을 경험했다.",
+      "characters": [
+        "char_protagonist"
+      ],
+      "canon_status": "initial"
+    },
+    {
+      "event_id": "pre_002",
+      "order": 2,
+      "summary": "도시의 일부 조직은 감시망과 정보 브로커를 이용해 사람을 추적한다.",
+      "characters": [
+        "char_antagonist_org"
+      ],
+      "canon_status": "initial"
+    }
+  ],
+  "episode_events": [],
+  "open_time_questions": [
+    "주인공 능력 각성 시점을 1화 이전 징후로 둘지, 1화 사건 중 명확히 각성하게 할지 결정 필요",
+    "주요 조직의 감시망 범위와 활동 시간대 확정 필요"
+  ]
+}

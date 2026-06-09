@@ -1,0 +1,34 @@
+{
+  "project_id": "blindspot",
+  "cast": [
+    {
+      "character_id": "char_protagonist",
+      "name": "미정",
+      "first_appearance": "episode_001_planned",
+      "status": "active",
+      "role": "protagonist",
+      "summary": "자신을 볼 가능성이 있는 시선을 감지하는 남자",
+      "do_not_break": [
+        "수동적 해결 반복",
+        "근거 없는 완벽한 능력 이해",
+        "대가 없는 만능화"
+      ]
+    },
+    {
+      "character_id": "char_handler_candidate",
+      "name": "미정",
+      "first_appearance": "undecided",
+      "status": "planned",
+      "role": "handler_or_mentor_candidate",
+      "summary": "주인공에게 임무와 정보를 줄 수 있지만 신뢰하기 어려운 인물"
+    },
+    {
+      "character_id": "char_antagonist_org",
+      "name": "미정 조직",
+      "first_appearance": "undecided",
+      "status": "planned",
+      "role": "antagonist_force",
+      "summary": "도시의 감시망을 장악한 조직적 적대 세력"
+    }
+  ]
+}

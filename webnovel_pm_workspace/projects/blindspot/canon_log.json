@@ -1,0 +1,36 @@
+{
+  "project_id": "blindspot",
+  "canon_entries": [
+    {
+      "canon_id": "CANON001",
+      "category": "core_ability",
+      "summary": "주인공은 자신을 볼 가능성이 있는 모든 시선을 감지한다.",
+      "source_file": "brief.md",
+      "source_episode": "episode_000",
+      "status": "approved_initial_input",
+      "approved_by": "user",
+      "last_updated": "2026-06-08"
+    },
+    {
+      "canon_id": "CANON002",
+      "category": "genre_tone",
+      "summary": "작품은 현대 판타지이며 긴장감, 생존, 성장, 잠입, 조직전을 핵심 톤으로 한다.",
+      "source_file": "brief.md",
+      "source_episode": "episode_000",
+      "status": "approved_initial_input",
+      "approved_by": "user",
+      "last_updated": "2026-06-08"
+    },
+    {
+      "canon_id": "CANON003",
+      "category": "scope",
+      "summary": "아직 1화 원고는 작성하지 않고 초기 설정 파일만 작성한다.",
+      "source_file": "user_request",
+      "source_episode": "episode_000",
+      "status": "approved_initial_input",
+      "approved_by": "user",
+      "last_updated": "2026-06-08"
+    }
+  ],
+  "change_requests": []
+}
