@@ -1,0 +1,47 @@
+{
+  "template_name": "quality_review_template",
+  "project_id": "example_project",
+  "review_id": "quality_review_YYYYMMDD_001",
+  "target_file": "episode_001_draft_v1.md",
+  "scores": {
+    "first_500_chars_hook": {
+      "score": 0,
+      "evidence": "예시 근거",
+      "fix": "예시 개선안"
+    },
+    "scene_conflict": {
+      "score": 0,
+      "evidence": "",
+      "fix": ""
+    },
+    "protagonist_choice": {
+      "score": 0,
+      "evidence": "",
+      "fix": ""
+    },
+    "reader_reward": {
+      "score": 0,
+      "evidence": "",
+      "fix": ""
+    },
+    "cliffhanger": {
+      "score": 0,
+      "evidence": "",
+      "fix": ""
+    },
+    "commerciality": {
+      "score": 0,
+      "evidence": "",
+      "fix": ""
+    },
+    "mobile_readability": {
+      "score": 0,
+      "evidence": "",
+      "fix": ""
+    }
+  },
+  "final_save_allowed": false,
+  "blocking_issues": [
+    "예시: 주인공 선택이 약하면 final 저장 금지"
+  ]
+}
