@@ -1,6 +1,20 @@
 {
   "project_id": "blindspot",
-  "feedback": [],
+  "feedback": [
+    {
+      "feedback_id": "feedback_20260609_001",
+      "date": "2026-06-09",
+      "target_file": "webnovel_pm_workspace/projects/blindspot/episodes/episode_001_final_v2.md",
+      "target_episode": "episode_001",
+      "user_original": "1화는 좋은데 주인공 말투가 조금 가볍다. 더 건조하고 짧은 말투로 바꾸고 싶다. 바로 수정하지 말고 먼저 feedback_application_plan을 작성해줘.",
+      "interpretation": "1화 구조와 사건은 유지하되 한서진의 대사와 내면 독백을 더 건조하고 짧게 조정하려는 피드백으로 해석한다.",
+      "apply_immediately": false,
+      "requires_feedback_application_plan": true,
+      "feedback_application_plan": "webnovel_pm_workspace/projects/blindspot/feedback_application_plans/feedback_application_plan_20260609_001.md",
+      "canon_change_possible": false,
+      "status": "plan_created_pending_user_approval"
+    }
+  ],
   "rules": {
     "record_all_user_feedback": true,
     "requires_feedback_application_plan_unless_user_says": "바로 반영",
