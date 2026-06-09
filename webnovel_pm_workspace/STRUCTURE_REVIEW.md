@@ -6,7 +6,7 @@
 
 1. 운영 전제: API 사용 없음, `OPENAI_API_KEY` 없음, 외부 자동화 앱 없음, Codex 안 자연어 지시
 2. 통제 문서: `AGENTS.md`, `CODEX_WORKFLOW.md`, `PROJECT_POLICY.md`, `REPORT_FORMAT.md`
-3. Harness 문서: workflow, memory, continuity, quality, originality, feedback, recovery, versioning
+3. Harness 문서: workflow, memory, continuity, quality, originality, feedback, recovery, versioning, cast, longform
 4. 작품 기억: `projects/{project_id}/` 아래 Bible, 규칙, 시간선, 로그, context, 취향, format policy
 5. 회차 산출물: `projects/{project_id}/episodes/` 아래 outline, v1 draft, review, revision note, v2 final, status
 6. 안전장치: `canon_change_requests/`, `feedback_application_plans/`, `recovery_plans/`, halt reason code, final versioning, 3화 단위 제한, 사용자 승인 gate
@@ -36,7 +36,7 @@ webnovel_pm_workspace/
 
 - `templates/`: 작품별 기본 JSON/Markdown 템플릿 보관에 필요하다.
 - `prompts/`: Codex 자연어 작업 지시 패턴을 문서화하는 데 필요하다.
-- `harness/`: 품질, 연속성, memory, recovery, versioning 등 검수 기준이므로 필요하다.
+- `harness/`: 품질, 연속성, memory, recovery, versioning, cast, longform 등 검수 기준이므로 필요하다.
 - `projects/`: 실제 작품별 기억 파일, 회차 산출물, run report, 안전장치를 보관하는 핵심 위치다.
 - `examples/`: 실제 active 프로젝트가 아닌 예시 구조를 보존하는 위치다.
 

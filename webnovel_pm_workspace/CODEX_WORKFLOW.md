@@ -8,7 +8,7 @@
 - Codex는 사용자 승인 없이 다음 회차, 다음 배치, 추가 수정, 설정 변경을 진행하지 않습니다.
 - 모든 결과물은 파일로 저장합니다.
 - 작업 후에는 반드시 수행 내용, 변경 파일, 검수 결과, 사용자 확인 필요 사항, 다음 가능한 작업을 보고합니다.
-- 원고 작성 전에는 `story_bible`, `character_bible`, `ability_rules`, `canon_log`, `timeline`, `foreshadowing_ledger`, `style_guide`, `rolling_context` 역할의 문서를 확인합니다.
+- 원고 작성 전에는 `story_bible`, `character_bible`, `ability_rules`, `canon_log`, `timeline`, `foreshadowing_ledger`, `style_guide`, `rolling_context` 역할의 문서를 확인합니다. 장기 연재 또는 새 인물 추가가 포함되면 `CAST_HARNESS`와 `LONGFORM_HARNESS`도 확인합니다.
 
 ## 1. 새 작품 시작 절차
 
@@ -127,6 +127,22 @@
 6. 각 회차마다 outline, draft, review, revision_note, run_report, episode_XXX_status.md를 작성합니다.
 7. 배치 완료 후 다음 배치로 넘어가지 않습니다.
 8. 반드시 사용자 검토 대기 상태로 정리합니다.
+
+## 7-1. 등장인물 추가 절차
+
+1. 새 named character가 필요한지 확인합니다.
+2. 기존 인물, 조직명, 직책, 이름 없는 단역으로 대체 가능한지 먼저 검토합니다.
+3. 3화 배치당 신규 named character는 기본 0~2명으로 제한합니다.
+4. 새 인물이 필요하면 `cast_registry.json`에 첫 등장, 역할, 상태, 재등장 목적을 기록합니다.
+5. 역할 중복 또는 active cast 과다가 있으면 final 저장 전 review 또는 recovery_plan에 기록합니다.
+
+## 7-2. 장기 연재 audit 절차
+
+1. 20화 이상 목표 작품은 10화 단위 또는 arc 종료 시 장기 audit을 작성합니다.
+2. audit 대상은 continuity, cast, foreshadowing, quality trend입니다.
+3. 열린 복선, active cast, 주인공 목표, 독자 보상이 누적 drift를 일으키는지 확인합니다.
+4. critical issue가 있으면 다음 배치 작성 전에 recovery_plan 또는 canon_change_request를 작성합니다.
+5. audit 후에도 사용자 승인 없이 다음 배치로 넘어가지 않습니다.
 
 ## 8. 설정 충돌 발생 시 중단 절차
 

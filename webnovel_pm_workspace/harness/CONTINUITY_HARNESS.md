@@ -11,7 +11,11 @@
 - `ability_rules.json`
 - `power_progression.json`
 - `timeline.json`
+- `arc_state.json`
+- `cast_registry.json`
+- `location_registry.json`
 - `canon_log.json`
+- `foreshadowing_ledger.json`
 
 ## 검수 항목
 
@@ -46,6 +50,19 @@
 - [ ] 성격 변화에는 사건 또는 감정적 근거가 있다.
 - [ ] 단기 편의를 위해 인물이 기존 가치관과 모순되게 행동하지 않는다.
 
+### 등장인물 과다 및 역할 중복
+
+- [ ] 새 named character가 기존 인물로 대체 가능한 역할이 아니다.
+- [ ] active cast가 arc 상한을 과도하게 넘지 않는다.
+- [ ] 조연/빌런의 목적이 편의상 바뀌지 않았다.
+- [ ] 새 인물은 `cast_registry.json`에 기록된다.
+
+### 복선 누락 또는 모순
+
+- [ ] 활성 복선이 `foreshadowing_ledger.json`과 맞다.
+- [ ] 회수된 복선은 상태를 갱신할 계획이 있다.
+- [ ] 새 복선은 회수 예정 또는 기능이 있다.
+
 ### 공간 설정 충돌
 
 - [ ] 장소 구조와 거리감이 기존 설정과 맞다.
@@ -62,6 +79,8 @@
 - 시간선 오류
 - 인물 성격 붕괴
 - 공간 설정 충돌
+- 등장인물 과다 또는 역할 중복으로 회차 초점 붕괴
+- 복선 누락 또는 모순
 - 사용자 승인 없는 canon 변경 필요
 
 ## 문제 발생 시 처리

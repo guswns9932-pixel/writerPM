@@ -15,10 +15,16 @@
 - [ ] `ability_rules.json`
 - [ ] `power_progression.json`
 - [ ] `timeline.json`
+- [ ] `arc_state.json`
+- [ ] `cast_registry.json`
+- [ ] `location_registry.json`
 - [ ] `canon_log.json`
 - [ ] `foreshadowing_ledger.json`
 - [ ] `style_guide.json`
 - [ ] `rolling_context.md`
+- [ ] `user_feedback_log.json`
+- [ ] `user_taste_profile.json`
+- [ ] `episode_format_policy.json`
 
 ## 확인 기준
 
@@ -58,6 +64,27 @@
 - 회복 시간
 - 정보 전달 시점
 
+### `arc_state.json`
+
+- 현재 arc
+- arc 목표
+- 주인공 상태 변화
+- 열린 갈등
+
+### `cast_registry.json`
+
+- active cast
+- 신규 named character
+- 역할 중복
+- dormant/merged/removed 상태
+
+### `location_registry.json`
+
+- 장소 구조
+- 이동 가능성
+- 공간 제약
+- 장소별 canon 상태
+
 ### `canon_log.json`
 
 - 확정 canon
@@ -93,3 +120,7 @@
 3. `halt_reason_code: MEMORY_FILE_MISSING`을 기록한다.
 4. 누락 파일 생성 또는 보강을 위한 `recovery_plan`을 작성한다.
 5. 사용자 승인 또는 지시 전에는 원고 작성을 진행하지 않는다.
+
+## 장기 연재 추가 확인
+
+20화 이상 장기 연재 프로젝트는 원고 작성 전 `CAST_HARNESS`와 `LONGFORM_HARNESS`도 함께 확인합니다. 특히 새 인물 추가, 10화 단위 audit, arc gate, 복선 회수 계획은 별도 점검 대상입니다.

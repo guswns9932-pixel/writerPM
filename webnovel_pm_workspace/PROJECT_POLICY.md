@@ -67,3 +67,18 @@
 - 사용자 승인 없는 범위 초과
 
 문제가 발견되면 review, revision_note, run_report에 기록하고 필요한 경우 recovery plan을 작성합니다.
+
+## 10. 등장인물 과다 방지
+
+- 한 arc의 active 핵심 인물은 주인공 포함 5~7명을 기본 상한으로 둡니다.
+- 3화 배치당 신규 named character는 기본 0~2명으로 제한합니다.
+- 새 인물을 만들기 전 기존 인물, 조직명, 직책, 단역으로 대체 가능한지 확인합니다.
+- 새 named character가 등장하면 `cast_registry.json`에 첫 등장, 역할, 상태, 재등장 목적을 기록합니다.
+- 역할 중복, 목적 흔들림, active cast 과다로 회차 초점이 흐려지면 final 저장 전 review 또는 recovery_plan을 작성합니다.
+
+## 11. 장기 연재 audit 규칙
+
+- 20화 이상 장기 연재 프로젝트는 `arc_state.json`, `foreshadowing_ledger.json`, `canon_log.json`, `rolling_context.md`를 기준으로 장기 진행 상태를 관리합니다.
+- 매 10화 완료 또는 arc 종료 시 `continuity_audit`, `cast_audit`, `foreshadowing_audit`, `quality_trend_audit` 중 필요한 audit을 작성합니다.
+- 마지막 20~25% 구간에서는 신규 핵심 인물, 신규 핵심 능력, 신규 장기 복선을 추가하지 않고 기존 복선 회수와 결말 정리를 우선합니다.
+- 장기 구조 변경이나 핵심 설정 변경이 필요하면 `canon_change_request`를 작성하고 사용자 승인 전에는 반영하지 않습니다.

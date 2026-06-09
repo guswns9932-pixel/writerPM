@@ -8,13 +8,13 @@
 - Codex는 사용자 승인 없이 다음 회차, 다음 배치, 추가 수정, 설정 변경을 진행하지 않습니다.
 - 모든 결과물은 파일로 저장합니다.
 - 작업 후에는 반드시 수행 내용, 변경 파일, 검수 결과, 사용자 확인 필요 사항, 다음 가능한 작업을 보고합니다.
-- 원고 작성 전에는 `story_bible`, `character_bible`, `ability_rules`, `canon_log`, `timeline`, `foreshadowing_ledger`, `style_guide`, `rolling_context` 역할의 문서를 확인합니다.
+- 원고 작성 전에는 `story_bible`, `character_bible`, `ability_rules`, `canon_log`, `timeline`, `foreshadowing_ledger`, `style_guide`, `rolling_context` 역할의 문서를 확인합니다. 장기 연재 또는 새 인물 추가가 포함되면 `CAST_HARNESS`와 `LONGFORM_HARNESS`도 확인합니다.
 
 ## 1. 새 작품 시작 절차
 
 1. 사용자 요청 범위를 확인합니다.
-2. `webnovel_pm_workspace/00_control/PROJECT_BRIEF.md`에 작품 목표, 장르, 타깃 독자, 금지 요소를 정리합니다.
-3. 필요한 경우 `webnovel_pm_workspace/00_control/STATUS.md`에 현재 단계와 사용자 승인 필요 여부를 기록합니다.
+2. `webnovel_pm_workspace/projects/{project_id}/brief.md`에 작품 목표, 장르, 타깃 독자, 금지 요소를 정리합니다.
+3. 필요한 경우 `webnovel_pm_workspace/projects/{project_id}/story_bible.json`의 `current_stage`와 회차별 `episode_XXX_status.md`에 사용자 승인 필요 여부를 기록합니다.
 4. 아직 원고를 작성하지 않습니다.
 5. 다음 가능한 작업을 보고합니다.
 
@@ -30,7 +30,7 @@
    - 1화 후킹 방향
    - 장기 연재 가능성
    - 모방 위험 점검
-3. 후보는 `webnovel_pm_workspace/01_concept/` 아래에 저장합니다.
+3. 후보는 `webnovel_pm_workspace/projects/{project_id}/episodes/concept_candidates.md` 또는 프로젝트별 concept 파일에 저장합니다.
 4. Codex는 사용자가 선택하거나 추가 지시하기 전까지 특정 후보로 작품 Bible을 확정하지 않습니다.
 
 ## 3. 작품 Bible 생성 절차
@@ -80,7 +80,7 @@
 1. 사용자 요청이 1화 작성 범위를 포함하는지 확인합니다.
 2. 원고 작성 전 필수 확인 문서를 검토합니다.
 3. 누락된 필수 문서가 있으면 원고를 final로 저장하지 않고 누락 사항을 보고합니다.
-4. `webnovel_pm_workspace/06_episode_001/EP001_OUTLINE.md`에 1화 개요를 정리합니다.
+4. `webnovel_pm_workspace/projects/{project_id}/episodes/episode_001_outline.md`에 1화 개요를 정리합니다.
 5. 1화 초안을 작성합니다.
 6. 각 장면에 다음 요소가 있는지 확인합니다.
    - 초반 후킹
@@ -127,6 +127,22 @@
 6. 각 회차마다 outline, draft, review, revision_note, run_report, episode_XXX_status.md를 작성합니다.
 7. 배치 완료 후 다음 배치로 넘어가지 않습니다.
 8. 반드시 사용자 검토 대기 상태로 정리합니다.
+
+## 7-1. 등장인물 추가 절차
+
+1. 새 named character가 필요한지 확인합니다.
+2. 기존 인물, 조직명, 직책, 이름 없는 단역으로 대체 가능한지 먼저 검토합니다.
+3. 3화 배치당 신규 named character는 기본 0~2명으로 제한합니다.
+4. 새 인물이 필요하면 `cast_registry.json`에 첫 등장, 역할, 상태, 재등장 목적을 기록합니다.
+5. 역할 중복 또는 active cast 과다가 있으면 final 저장 전 review 또는 recovery_plan에 기록합니다.
+
+## 7-2. 장기 연재 audit 절차
+
+1. 20화 이상 목표 작품은 10화 단위 또는 arc 종료 시 장기 audit을 작성합니다.
+2. audit 대상은 continuity, cast, foreshadowing, quality trend입니다.
+3. 열린 복선, active cast, 주인공 목표, 독자 보상이 누적 drift를 일으키는지 확인합니다.
+4. critical issue가 있으면 다음 배치 작성 전에 recovery_plan 또는 canon_change_request를 작성합니다.
+5. audit 후에도 사용자 승인 없이 다음 배치로 넘어가지 않습니다.
 
 ## 8. 설정 충돌 발생 시 중단 절차
 

@@ -84,7 +84,7 @@ Codex에게 자연어로 반복 지시할 웹소설 제작용 프롬프트 템�
 
 ### `webnovel_pm_workspace/harness/`
 
-작업 전후 검수 기준을 담은 문서형 harness를 보관합니다. workflow, memory, continuity, quality, originality, feedback, recovery, versioning 기준과 보조 체크리스트가 여기에 속합니다.
+작업 전후 검수 기준을 담은 문서형 harness를 보관합니다. workflow, memory, continuity, quality, originality, feedback, recovery, versioning, cast, longform 기준과 보조 체크리스트가 여기에 속합니다.
 
 ### `webnovel_pm_workspace/projects/`
 
