@@ -13,8 +13,8 @@
 ## 1. 새 작품 시작 절차
 
 1. 사용자 요청 범위를 확인합니다.
-2. `webnovel_pm_workspace/00_control/PROJECT_BRIEF.md`에 작품 목표, 장르, 타깃 독자, 금지 요소를 정리합니다.
-3. 필요한 경우 `webnovel_pm_workspace/00_control/STATUS.md`에 현재 단계와 사용자 승인 필요 여부를 기록합니다.
+2. `webnovel_pm_workspace/projects/{project_id}/brief.md`에 작품 목표, 장르, 타깃 독자, 금지 요소를 정리합니다.
+3. 필요한 경우 `webnovel_pm_workspace/projects/{project_id}/story_bible.json`의 `current_stage`와 회차별 `episode_XXX_status.md`에 사용자 승인 필요 여부를 기록합니다.
 4. 아직 원고를 작성하지 않습니다.
 5. 다음 가능한 작업을 보고합니다.
 
@@ -30,7 +30,7 @@
    - 1화 후킹 방향
    - 장기 연재 가능성
    - 모방 위험 점검
-3. 후보는 `webnovel_pm_workspace/01_concept/` 아래에 저장합니다.
+3. 후보는 `webnovel_pm_workspace/projects/{project_id}/episodes/concept_candidates.md` 또는 프로젝트별 concept 파일에 저장합니다.
 4. Codex는 사용자가 선택하거나 추가 지시하기 전까지 특정 후보로 작품 Bible을 확정하지 않습니다.
 
 ## 3. 작품 Bible 생성 절차
@@ -80,7 +80,7 @@
 1. 사용자 요청이 1화 작성 범위를 포함하는지 확인합니다.
 2. 원고 작성 전 필수 확인 문서를 검토합니다.
 3. 누락된 필수 문서가 있으면 원고를 final로 저장하지 않고 누락 사항을 보고합니다.
-4. `webnovel_pm_workspace/06_episode_001/EP001_OUTLINE.md`에 1화 개요를 정리합니다.
+4. `webnovel_pm_workspace/projects/{project_id}/episodes/episode_001_outline.md`에 1화 개요를 정리합니다.
 5. 1화 초안을 작성합니다.
 6. 각 장면에 다음 요소가 있는지 확인합니다.
    - 초반 후킹

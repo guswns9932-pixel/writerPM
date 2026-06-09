@@ -6,13 +6,13 @@
 
 ## 입력 파일
 
-- `webnovel_pm_workspace/00_control/PROJECT_BRIEF.md`
+- `webnovel_pm_workspace/projects/{project_id}/brief.md`
 - `webnovel_pm_workspace/PROJECT_POLICY.md`
 - 사용자가 제공한 장르, 소재, 금지 요소
 
 ## 출력 파일
 
-- `webnovel_pm_workspace/projects/{project_id}/concept/concept_candidates.md 또는 webnovel_pm_workspace/01_concept/CONCEPT.md`
+- `webnovel_pm_workspace/projects/{project_id}/episodes/concept_candidates.md`
 
 ## 반드시 지켜야 할 규칙
 

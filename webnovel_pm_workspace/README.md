@@ -56,74 +56,40 @@ Codex가 repository 안의 문서를 직접 생성, 수정, 검수하는 방식�
 
 ## 주요 폴더 설명
 
-### `webnovel_pm_workspace/00_control/`
+현재 active workspace 구조는 `webnovel_pm_workspace/` 아래의 통제 문서와 5개 핵심 폴더를 기준으로 합니다. 자세한 구조 검토 결과는 `webnovel_pm_workspace/STRUCTURE_REVIEW.md`를 참고합니다.
 
-작업 범위, 승인 기록, 진행 상태, workflow를 관리합니다.
+### `webnovel_pm_workspace/AGENTS.md`
 
-### `webnovel_pm_workspace/01_concept/`
+Codex가 이 workspace에서 반드시 따라야 하는 절대 규칙입니다. 외부 API, API key, 서버, 웹 UI, 외부 자동화 앱을 만들지 않는다는 원칙과 작업 범위 통제 규칙을 포함합니다.
 
-장르, 로그라인, 핵심 재미, 후킹 요소, 컨셉 후보를 관리합니다.
+### `webnovel_pm_workspace/CODEX_WORKFLOW.md`
 
-### `webnovel_pm_workspace/02_worldbuilding/`
+새 작품 시작, 컨셉 후보, Bible 생성, 1화 작성/검수, 피드백 반영, 3화 단위 추가 작성, 중단/복구 절차를 정의합니다.
 
-세계관 규칙, 능력 규칙, 시간선, 설정 충돌 방지 메모를 관리합니다.
+### `webnovel_pm_workspace/PROJECT_POLICY.md`
 
-### `webnovel_pm_workspace/03_plot/`
+작업 범위 제한, 기본 컨셉 후보 수, 최초 1화 final 제한, 추가 작성 3화 단위, 자동 수정 제한, 사용자 승인 gate를 정의합니다.
 
-시놉시스, 회차 계획, 복선 장부를 관리합니다.
+### `webnovel_pm_workspace/REPORT_FORMAT.md`
 
-### `webnovel_pm_workspace/04_characters/`
-
-인물 Bible, 인물 프로필, 관계, 욕망, 결핍, 말투를 관리합니다.
-
-### `webnovel_pm_workspace/05_style/`
-
-문체 가이드, 대사 톤, 금지 표현, 장면 전환 규칙, 회차 엔딩 규칙을 관리합니다.
-
-### `webnovel_pm_workspace/06_episode_001/`
-
-1화 개요, 초안, 검수, 수정본, final, 상태 파일을 관리합니다.
-
-### `webnovel_pm_workspace/07_episode_batches/`
-
-1화 final 승인 후 3화 단위 추가 작성 배치를 관리합니다.
-
-### `webnovel_pm_workspace/08_review/`
-
-회차별 검수 결과와 품질 점검 기록을 관리합니다.
-
-### `webnovel_pm_workspace/09_revision/`
-
-사용자 피드백, 수정 계획, 수정 기록, revision note를 관리합니다.
-
-### `webnovel_pm_workspace/10_exports/`
-
-사용자에게 전달할 final 원고와 정리본을 관리합니다.
+Codex가 작업 완료 후 보고해야 하는 형식입니다. 수행한 작업, 생성/수정 파일, 검수 결과, 충돌 여부, 품질 이슈, 다음 가능한 작업을 정리합니다.
 
 ### `webnovel_pm_workspace/templates/`
 
-회차, 검수, 수정 기록 등 반복 사용 템플릿을 보관합니다.
+작품별 기본 기억 파일과 회차/status/report/safety 문서 템플릿을 보관합니다. 실제 작품을 만들 때 `projects/{project_id}/` 아래로 복사해 사용합니다.
 
 ### `webnovel_pm_workspace/prompts/`
 
-Codex에게 반복 지시할 프롬프트 초안, 작업 요청 패턴, 검수 요청 문구를 보관합니다.
+Codex에게 자연어로 반복 지시할 웹소설 제작용 프롬프트 템플릿을 보관합니다. 컨셉 후보, Bible, 캐릭터, 월드빌딩, 회차 개요, 원고, 검수, 수정, 독창성 점검 등을 포함합니다.
 
 ### `webnovel_pm_workspace/harness/`
 
-자동 실행 프로그램이 아니라, Codex 작업 절차를 점검하기 위한 문서형 검수 harness와 운영 메모를 보관합니다.
+작업 전후 검수 기준을 담은 문서형 harness를 보관합니다. workflow, memory, continuity, quality, originality, feedback, recovery, versioning 기준과 보조 체크리스트가 여기에 속합니다.
 
 ### `webnovel_pm_workspace/projects/`
 
-개별 웹소설 프로젝트별 Bible, 원고, 검수 기록, 승인 기록을 분리해 보관합니다.
+실제 작품별 작업 공간입니다. 각 작품 폴더는 story bible, character bible, ability rules, timeline, canon log, rolling context, episode outputs, run reports, canon change requests, feedback plans, recovery plans를 보관합니다.
 
 ### `webnovel_pm_workspace/examples/`
 
-작품 원고가 아닌 예시 템플릿, 사용 예시, 보고 형식 샘플을 보관합니다.
-
-### `webnovel_pm_workspace/checklists/`
-
-작업 범위 통제와 회차 품질 검수 체크리스트를 보관합니다.
-
-### `webnovel_pm_workspace/archive/`
-
-폐기되었거나 보류된 아이디어, 이전 버전 메모를 보관합니다.
+active 작품이 아닌 예시와 legacy scaffold를 보관합니다. 기존 numbered scaffold(`00_control`~`10_exports`)는 active root 구조와 중복되므로 `examples/legacy_single_project_scaffold/`로 이동해 참조용으로만 남겼습니다.
