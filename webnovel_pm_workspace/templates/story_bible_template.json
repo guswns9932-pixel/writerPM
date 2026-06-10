@@ -1,0 +1,34 @@
+{
+  "template_name": "story_bible_template",
+  "project_id": "example_project",
+  "title": "예시 작품명",
+  "genre": "현대판타지",
+  "logline": "예시: 실패한 주인공이 단 하나의 규칙을 깨닫고 자신의 선택으로 판을 뒤집는다.",
+  "core_premise": "작품의 핵심 전제를 장면으로 확장할 수 있게 적는다.",
+  "reader_promise": [
+    "빠른 후킹",
+    "성장 보상",
+    "선택의 대가",
+    "회차 말미 궁금증"
+  ],
+  "main_conflict": {
+    "external": "예시 외부 갈등",
+    "internal": "예시 내적 결핍",
+    "series_engine": "매 회차 선택과 보상이 이어지는 구조"
+  },
+  "first_episode_requirements": {
+    "first_500_chars_hook": "위험, 욕망, 비밀, 이상 징후 중 하나로 시작",
+    "protagonist_choice": "주인공이 회피가 아니라 선택을 한다",
+    "reader_reward": "정보, 감정, 반전, 작은 승리 중 하나",
+    "cliffhanger": "다음 화 클릭 이유"
+  },
+  "canon_boundaries": [
+    "특정 기존 작품 고유 설정 모방 금지",
+    "사용자 승인 없는 canon 변경 금지"
+  ],
+  "forbidden_elements": [
+    "설정 설명으로 시작",
+    "수동적인 주인공",
+    "기존 final 덮어쓰기"
+  ]
+}

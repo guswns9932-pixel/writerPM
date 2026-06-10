@@ -1,0 +1,46 @@
+# Episode Status Template
+
+## 회차 정보
+
+- episode_id: episode_001
+- episode_number: 1
+- title: 예시 회차 제목
+- status: outline / draft / review / revision / final_candidate / approved / halted
+- current_final: 승인 대기 또는 `episode_001_final_v1.md`
+- user_approval: pending / approved / rejected
+
+## 현재 파일
+
+- latest_outline: `episode_001_outline.md`
+- latest_draft: `episode_001_draft_v1.md`
+- latest_review: `episode_001_review_v1.md`
+- latest_revision_note: `episode_001_revision_note_v1.md`
+- latest_run_report: `run_report_YYYYMMDD_001.md`
+
+## 품질 체크
+
+- 첫 500자 후킹: pending / pass / fail
+- 주인공 욕망과 선택: pending / pass / fail
+- 독자 보상: pending / pass / fail
+- 클리프행어: pending / pass / fail
+- 모바일 가독성: pending / pass / fail
+- 독창성: pending / pass / fail
+
+## 연속성 체크
+
+- story_bible: pending / pass / fail
+- character_bible: pending / pass / fail
+- ability_rules: pending / pass / fail
+- power_progression: pending / pass / fail
+- timeline: pending / pass / fail
+- canon_log: pending / pass / fail
+
+## 이전 버전 보존 목록
+
+| version | file | status | note |
+|---|---|---|---|
+| v1 | episode_001_final_v1.md | candidate | 사용자 승인 대기 |
+
+## 다음 가능한 작업
+
+-
