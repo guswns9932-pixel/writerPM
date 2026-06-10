@@ -3,10 +3,10 @@
   "characters": [
     {
       "character_id": "char_protagonist",
-      "name": "[주인공 이름 미정]",
+      "name": "문예린",
       "role": "protagonist",
       "age": "28세",
-      "gender": "남성",
+      "gender": "여성",
       "appearance": "무감각한 눈빛. 조용한 목소리. 몸에는 사냥의 흔적들(상흔, 멍)이 남겨져 있음.",
       "desire": "가장 강한 사냥꾼이 되기. (표면) / 자신이 정말 무엇인지 알기. (근본)",
       "lack_or_wound": "번아웃. 10년 사냥을 해오며 자신이 인간인지 괴물인지 잊음. 감정의 적응.",
@@ -51,7 +51,7 @@
     },
     {
       "character_id": "char_child",
-      "name": "[아이 이름 미정]",
+      "name": "박서윤",
       "role": "co_protagonist / catalyst",
       "age": "9세",
       "gender": "여성",
