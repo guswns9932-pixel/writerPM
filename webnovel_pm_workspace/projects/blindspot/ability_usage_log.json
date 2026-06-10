@@ -20,7 +20,26 @@
           "note": "마음 읽기, 완전 예지, 광역 탐지는 없음"
         }
       ],
-      "episode_verdict": "pass"
+      "episode_verdict": "pass",
+      "phase_records": {
+        "outline_planned_usage": [
+          {
+            "source_outline": "episodes/episode_001_outline.md",
+            "planned_ability_summary": "시선 방향과 위험도 감지, 근거리 사각지대 선택",
+            "planned_stage": "stage_01_awareness"
+          }
+        ],
+        "draft_actual_usage": [
+          {
+            "source_draft": "episodes/episode_001_draft_v1.md",
+            "actual_ability_summary": "시선 방향과 위험도 감지, 근거리 사각지대 선택",
+            "cost_or_limit_shown": "통증, 구토감, 정보 과부하"
+          }
+        ],
+        "review_verdict": "pass",
+        "final_save_allowed": true,
+        "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md"
+      }
     },
     {
       "episode": 2,
@@ -37,7 +56,26 @@
           "note": "저장 영상 감지로 확장하지 않음"
         }
       ],
-      "episode_verdict": "pass"
+      "episode_verdict": "pass",
+      "phase_records": {
+        "outline_planned_usage": [
+          {
+            "source_outline": "episodes/episode_002_outline.md",
+            "planned_ability_summary": "매개 시선과 직접 시선의 차이 감지",
+            "planned_stage": "stage_01_awareness"
+          }
+        ],
+        "draft_actual_usage": [
+          {
+            "source_draft": "episodes/episode_002_draft_v1.md",
+            "actual_ability_summary": "매개 시선과 직접 시선의 차이 감지",
+            "cost_or_limit_shown": "저장 영상 자체를 감지하지 않고 현재 관측 압력만 구분"
+          }
+        ],
+        "review_verdict": "pass",
+        "final_save_allowed": true,
+        "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md"
+      }
     },
     {
       "episode": 3,
@@ -54,7 +92,26 @@
           "note": "stage_02 필터링 확정 전 단계"
         }
       ],
-      "episode_verdict": "pass"
+      "episode_verdict": "pass",
+      "phase_records": {
+        "outline_planned_usage": [
+          {
+            "source_outline": "episodes/episode_003_outline.md",
+            "planned_ability_summary": "다수 시선 중 직접 위협의 방향 감지",
+            "planned_stage": "stage_01_awareness"
+          }
+        ],
+        "draft_actual_usage": [
+          {
+            "source_draft": "episodes/episode_003_draft_v1.md",
+            "actual_ability_summary": "다수 시선 중 직접 위협의 방향 감지",
+            "cost_or_limit_shown": "정밀 좌표화나 개별 인물 식별은 하지 않음"
+          }
+        ],
+        "review_verdict": "pass",
+        "final_save_allowed": true,
+        "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md"
+      }
     },
     {
       "episode": 4,
@@ -71,7 +128,26 @@
           "note": "능력 만능화 방지 장면"
         }
       ],
-      "episode_verdict": "pass"
+      "episode_verdict": "pass",
+      "phase_records": {
+        "outline_planned_usage": [
+          {
+            "source_outline": "episodes/episode_004_outline.md",
+            "planned_ability_summary": "근거리 사각지대 직감과 감시 압력 회피",
+            "planned_stage": "stage_01_awareness"
+          }
+        ],
+        "draft_actual_usage": [
+          {
+            "source_draft": "episodes/episode_004_draft_v1.md",
+            "actual_ability_summary": "근거리 사각지대 직감과 감시 압력 회피",
+            "cost_or_limit_shown": "압력판 함정처럼 시선이 아닌 위험은 감지하지 못함"
+          }
+        ],
+        "review_verdict": "pass",
+        "final_save_allowed": true,
+        "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md"
+      }
     }
   ],
   "blocked_usages": [
@@ -80,5 +156,11 @@
     "저장 영상 자체 감지",
     "감시망 전체 광역 지도화",
     "canon_change_request 없는 성장 단계 상승"
-  ]
+  ],
+  "phase_requirements": {
+    "outline": "record planned ability use before drafting",
+    "draft": "record actual ability use and shown cost/limit",
+    "review": "compare actual use against ability_rules and power_progression",
+    "final": "final save blocked if usage is unrecorded or violates rules"
+  }
 }

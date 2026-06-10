@@ -6,7 +6,7 @@
 - episode_number: 1
 - title: 보는 자들
 - status: final_candidate
-- current_final: `episode_001_final_v2.md`
+- current_final: `episodes/episode_001_final_v2.md`
 - user_approval: pending
 - current_stage: awaiting_user_review
 
@@ -16,7 +16,7 @@
 - roadmap_20: `roadmap_20.md`
 - latest_outline: `episode_001_outline.md`
 - latest_draft: `episode_001_draft_v1.md`
-- latest_final_candidate: `episode_001_final_v2.md`
+- latest_final_candidate: `episodes/episode_001_final_v2.md`
 - latest_continuity_review: `episode_001_continuity_check.md`
 - latest_originality_review: `episode_001_originality_check.md`
 - latest_style_review: `episode_001_style_check.md`
@@ -56,8 +56,22 @@
 | v1 | episode_001_draft_v1.md | preserved_draft | 초안 보존 |
 | v2 | episode_001_final_v2.md | current_final_candidate | 사용자 승인 대기 |
 
+
+## Registry / Approval Sync
+
+- approval_state_current_stage: awaiting_user_review
+- approval_state_allowed_scope: episodes_002_004_generated_pending_user_review; episode_005_and_later blocked
+- continuation_approval: approved_for_episodes_002_004_generation
+- formal_final_approval: pending
+- final_registry_current_final_candidate: `episodes/episode_001_final_v2.md`
+- final_registry_approved_final: null
+- status_registry_match: pass
+- mismatch_halt_reason_code: none
+- existing_final_read_only_confirmed: pass
+- last_sync_run_report: `../run_reports/run_report_20260610_metadata_sync.md`
+
 ## 다음 가능한 작업
 
 - 사용자 검토 및 승인
 - 승인 전 1화 추가 수정 요청
-- 승인 후 2~4화 3화 단위 배치 작업
+- 1화 continuation approval은 이미 2~4화 생성에 사용됨; 다음 배치는 사용자 명시 승인/지시 전 진행 금지

@@ -7,14 +7,28 @@
     "first_work_limit": "concept_to_episode_001_final_only",
     "post_episode_001_batch_size": 3,
     "next_batch_requires_explicit_user_instruction": true,
-    "do_not_write_unapproved_episodes": true
+    "do_not_write_unapproved_episodes": true,
+    "max_episodes_per_generation_request": 3,
+    "excess_episode_requests_must_be_reported_only": true
   },
   "episode_approval": {
     "approved_through_episode": 1,
     "episode_001_approved_for_continuation": true,
-    "current_review_range": [2, 3, 4],
+    "current_review_range": [
+      2,
+      3,
+      4
+    ],
     "next_allowed_batch": null,
-    "blocked_episodes": [5, 6, 7]
+    "blocked_episodes": [
+      5,
+      6,
+      7
+    ],
+    "episode_001_continuation_approval": true,
+    "episode_001_formal_final_approval": false,
+    "approved_for_generation_through_episode": 4,
+    "formal_final_approved_through_episode": 0
   },
   "approval_records": [
     {
@@ -35,5 +49,17 @@
     "5화 이후 본문, outline, draft, final은 사용자 지시 전 작성하지 않는다.",
     "2~4화 배치는 awaiting_user_review 상태이며 다음 배치로 자동 진행하지 않는다.",
     "승인 상태가 불명확하면 원고를 작성하지 않고 보고한다."
-  ]
+  ],
+  "request_gate": {
+    "must_classify_request_type_before_work": true,
+    "audit_or_plan_only_blocks_file_changes_unless_explicitly_requested": true,
+    "source_of_truth": "approval_state.json overrides conversational assumptions",
+    "next_batch_requires_new_user_instruction": true
+  },
+  "staleness_check": {
+    "last_validated_by_run_report": "run_reports/run_report_20260610_metadata_sync.md",
+    "stale_if_current_stage_conflicts_with_latest_user_request": true,
+    "stale_state_requires_user_confirmation": true,
+    "latest_sync_scope": "approval/final/ability/payoff/report metadata sync only"
+  }
 }

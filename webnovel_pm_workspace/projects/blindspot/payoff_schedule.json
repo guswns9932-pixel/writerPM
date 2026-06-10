@@ -12,7 +12,12 @@
       "payoff_type": "information",
       "status": "partially_paid",
       "risk_if_delayed": "감시 매체 규칙이 불명확해져 능력 만능화로 오해될 수 있음",
-      "next_required_action": "canon_change_request 승인 여부에 따라 시선 감지 판정 기준 정리"
+      "next_required_action": "canon_change_request 승인 여부에 따라 시선 감지 판정 기준 정리",
+      "ledger_status": "partially_paid",
+      "ledger_sync_status": "synced",
+      "overdue_status": "not_due",
+      "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md",
+      "status_vocabulary_note": "status normalized against foreshadowing_ledger for metadata sync; no manuscript/canon content changed"
     },
     {
       "thread_id": "thread_F002",
@@ -23,7 +28,12 @@
       "payoff_type": "limitation",
       "status": "partially_paid",
       "risk_if_delayed": "사각지대가 무적 공간처럼 보일 위험",
-      "next_required_action": "5화 이후 작성 전 시선 아닌 위험은 감지하지 못한다는 한계 유지"
+      "next_required_action": "5화 이후 작성 전 시선 아닌 위험은 감지하지 못한다는 한계 유지",
+      "ledger_status": "partially_paid",
+      "ledger_sync_status": "synced",
+      "overdue_status": "not_due",
+      "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md",
+      "status_vocabulary_note": "status normalized against foreshadowing_ledger for metadata sync; no manuscript/canon content changed"
     },
     {
       "thread_id": "thread_F003",
@@ -34,7 +44,12 @@
       "payoff_type": "reversal",
       "status": "expanded",
       "risk_if_delayed": "WATCHLIST_HAN_SEOJIN_OLD의 장기 보상 지연",
-      "next_required_action": "과거 아크 전까지 원인 단서를 단계적으로 배치"
+      "next_required_action": "과거 아크 전까지 원인 단서를 단계적으로 배치",
+      "ledger_status": "expanded",
+      "ledger_sync_status": "synced",
+      "overdue_status": "not_due",
+      "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md",
+      "status_vocabulary_note": "status normalized against foreshadowing_ledger for metadata sync; no manuscript/canon content changed"
     },
     {
       "thread_id": "thread_F004",
@@ -43,9 +58,14 @@
       "description": "윤하라가 한서진의 동선을 먼저 알고 있었다.",
       "planned_payoff_episode_or_arc": "arc_01 midpoint",
       "payoff_type": "information",
-      "status": "open",
+      "status": "active",
       "risk_if_delayed": "윤하라가 편의적 조력자로 보일 위험",
-      "next_required_action": "정보 출처와 망루 내부 연결 단서를 5~10화 구간에서 관리"
+      "next_required_action": "정보 출처와 망루 내부 연결 단서를 5~10화 구간에서 관리",
+      "ledger_status": "active",
+      "ledger_sync_status": "synced_equivalent_status",
+      "overdue_status": "not_due",
+      "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md",
+      "status_vocabulary_note": "status normalized against foreshadowing_ledger for metadata sync; no manuscript/canon content changed"
     },
     {
       "thread_id": "thread_F005",
@@ -54,15 +74,23 @@
       "description": "한서진은 어젯밤 발견된 것이 아니라 오래전부터 목록에 있었다.",
       "planned_payoff_episode_or_arc": "middle past arc",
       "payoff_type": "major_reversal",
-      "status": "open",
+      "status": "active",
       "risk_if_delayed": "핵심 미스터리 보상 지연으로 독자 피로 발생",
-      "next_required_action": "10화 단위 audit에서 회수 일정 재검토"
+      "next_required_action": "10화 단위 audit에서 회수 일정 재검토",
+      "ledger_status": "active",
+      "ledger_sync_status": "synced_equivalent_status",
+      "overdue_status": "not_due",
+      "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md",
+      "status_vocabulary_note": "status normalized against foreshadowing_ledger for metadata sync; no manuscript/canon content changed"
     }
   ],
   "payoff_rules": {
     "audit_every_10_episodes": true,
     "must_report_overdue_threads": true,
     "no_new_major_threads_in_final_arc_without_approval": true,
-    "delayed_thread_requires_reason": true
+    "delayed_thread_requires_reason": true,
+    "must_sync_with_foreshadowing_ledger": true,
+    "critical_overdue_blocks_new_major_threads": true,
+    "batch_report_must_list_open_paid_delayed_threads": true
   }
 }
