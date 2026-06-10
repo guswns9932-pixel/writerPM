@@ -71,8 +71,17 @@
 
 ---
 
+## 선택 결과
+
+✅ **후보 C — 《냄새로 본다》 선택됨**
+
+- 2026-06-10 사용자 선택
+- Story Bible, Character Bible, Ability Rules 작성 완료
+- 1화 outline 작성 대기 중
+
 ## 다음 가능한 작업
 
-- 사용자가 1개 후보 선택 → Story Bible, Character Bible, Ability Rules 초안 생성
-- 후보 조합 또는 수정 요청 가능
-- 추가 컨셉 후보 요청 가능
+- 기존 파일(story_bible, character_bible, ability_rules)에 대한 피드백 및 수정
+- 1화 outline 작성 지시 (사용자 명시 필요)
+- 아이와 상급자의 이름 정하기
+- 아이를 어떤 배경을 가진 인물로 만들 것인지에 대한 추가 설정
