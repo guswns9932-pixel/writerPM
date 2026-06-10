@@ -122,3 +122,29 @@
 66. 사용자 피드백은 `feedback_application_plan`의 영향도 매트릭스로 분류한다. 말투/문체 피드백은 기본적으로 `TEXT_ONLY`, `STYLE_ADJUSTMENT`, `CHARACTER_VOICE` 범위를 넘지 않는다.
 67. 새 복선, 열린 질문, 회수 지연, 회수 완료는 `foreshadowing_ledger.json`과 `payoff_schedule.json` 양쪽에 동기화한다. critical overdue thread가 있으면 새 장기 복선을 추가하지 않는다.
 68. 모든 prompt 실행 전 `HARNESS_ROUTER.md`와 `REQUIRED_OUTPUTS_MATRIX.md` 또는 해당 역할 문서를 확인해 입력 파일, 출력 파일, 업데이트 파일, 금지 행동을 확정한다.
+
+## 계층적 메모리 및 컨텍스트 압축
+
+69. 세션 시작 시 `CONTEXT_COMPRESSION_HARNESS.md`의 Cold Start 프로토콜 필독 순서를 따른다.
+70. arc 종료 시 반드시 `arc_XXX_summary.md`와 `arc_canon_snapshot.json`을 작성하고 rolling_context.md를 압축한다.
+71. rolling_context.md가 15,000자를 초과하거나 2개 arc 이상 압축되지 않은 경우 원고 작성 전 압축을 먼저 실행한다.
+
+## 주제 나침반
+
+72. 원고 작성 전 `thematic_compass.json`을 확인해 이번 회차가 core_theme 또는 anti_theme 경계를 위반하지 않는지 점검한다.
+73. `emotional_promise_ledger.json`의 high-investment 약속이 10화 이상 진전 없이 방치되면 final 저장 전 진전 계획 또는 payoff 계획을 작성한다.
+
+## 페이싱 관리
+
+74. arc 종료 시 `PACING_HARNESS.md`를 실행해 tension curve와 relief episode 비율을 점검한다.
+75. 연속 3화 이상 tension level 8 이상이면 다음 회차 outline 전 relief episode 계획을 작성한다.
+
+## 캐릭터 말투 진화 및 Drift 방지
+
+76. 10화마다 주요 인물의 말투를 `VOICE_DRIFT_HARNESS.md` 기준으로 점검하고 `voice_evolution_log.md`에 checkpoint를 기록한다.
+77. 사건 없이 인물 말투가 이전 checkpoint와 크게 달라졌다면 revision_note 없이 final로 저장하지 않는다.
+
+## 세계관 팽창 통제
+
+78. 새 세력, 권력 조직, 능력 체계 추가 전 `world_expansion_policy.json`의 complexity_budget을 확인한다.
+79. 예산 초과 시 canon_change_request를 작성하고 사용자 승인 전에는 추가하지 않는다.

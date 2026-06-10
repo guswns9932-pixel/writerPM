@@ -134,3 +134,20 @@
 - 회수를 지연하면 지연 이유, 다음 점검 회차, 독자 보상 보완책을 기록한다.
 - critical overdue thread가 있으면 새 장기 복선 추가보다 회수 또는 정리를 우선한다.
 - 3화 배치 run_report에는 열린 복선, 회수된 복선, 지연된 복선, 다음 회수 후보를 보고한다.
+
+## 계층적 메모리 압축 (Context Compression)
+
+20화 이상 장기 연재에서는 rolling_context.md를 무한히 늘리는 대신 계층적으로 관리합니다.
+
+- arc 종료 시 반드시 `CONTEXT_COMPRESSION_HARNESS.md`의 압축 프로토콜을 실행합니다.
+- `arc_XXX_summary.md`를 작성하고 rolling_context.md를 최신 arc 상세 + 이전 arc 1줄 요약 구조로 갱신합니다.
+- `arc_canon_snapshot.json`을 작성해 arc 종료 시점의 clean state를 보존합니다.
+
+## 주제/감정/페이싱 감사
+
+10화 단위 audit 시 다음 세 가지를 추가합니다.
+- `THEMATIC_HARNESS.md`: 주제 나침반 점검 (core theme drift, emotional promise 점검)
+- `PACING_HARNESS.md`: 거시적 페이싱 점검 (tension curve, relief episode 비율)
+- `VOICE_DRIFT_HARNESS.md`: 주요 인물 말투 drift 점검
+
+위 세 harness 점검 없이 10화 audit을 완료한 것으로 보고하지 않습니다.

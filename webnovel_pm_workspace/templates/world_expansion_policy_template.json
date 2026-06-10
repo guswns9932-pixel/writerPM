@@ -1,0 +1,161 @@
+{
+  "template_name": "world_expansion_policy_template",
+  "project_id": "example_project",
+  "last_updated": "YYYY-MM-DD",
+  "version": "1.0",
+  "_description": "세계관 팽창을 통제하는 정책 파일. 새 세력/능력 체계/주요 장소 추가 전 반드시 이 파일의 complexity_budget을 확인한다.",
+
+  "current_complexity": {
+    "last_audited_episode": 0,
+    "named_factions": {
+      "count": 0,
+      "active_count": 0,
+      "list": []
+    },
+    "named_organizations": {
+      "count": 0,
+      "active_count": 0,
+      "list": []
+    },
+    "power_systems": {
+      "count": 0,
+      "list": []
+    },
+    "distinct_named_locations": {
+      "count": 0,
+      "list": []
+    },
+    "named_characters_total": 0,
+    "named_characters_active": 0,
+    "complexity_notes": ""
+  },
+
+  "complexity_budget_per_arc": {
+    "max_new_factions": 1,
+    "max_new_organizations": 2,
+    "max_new_power_systems": 1,
+    "max_new_major_locations": 3,
+    "max_new_named_characters_per_10_episodes": 3,
+    "exceptions": "최종 arc(전체의 85% 이후)에서는 신규 핵심 요소 추가 금지. 예외는 canon_change_request와 사용자 승인 필요.",
+    "budget_notes": "복잡도 예산은 이야기 단계(arc_tier)에 따라 조정 가능. 중반 이후 새 능력 체계 추가는 원칙적으로 금지."
+  },
+
+  "expansion_rules": [
+    {
+      "rule_id": "ER001",
+      "element": "새 주요 세력(faction)",
+      "condition": "canon_change_request 작성 + 사용자 승인 필수",
+      "checklist": [
+        "이 세력이 기존 세계관 질서를 어떻게 변화시키는가?",
+        "이 세력과 주인공의 관계가 명확한가?",
+        "이 세력이 제거될 arc 또는 역할 종료 계획이 있는가?",
+        "complexity_budget 내에 있는가?"
+      ]
+    },
+    {
+      "rule_id": "ER002",
+      "element": "새 능력 체계(power system)",
+      "condition": "ability_rules.json 업데이트 + 사용자 승인 필수",
+      "checklist": [
+        "기존 능력 체계와 충돌하지 않는가?",
+        "이 체계만의 규칙, 한계, 비용이 명확히 정의되었는가?",
+        "중반 이후(50% 이상 진행 시) 추가는 특별 사유 없으면 금지",
+        "story_bible의 세계관 전제와 일치하는가?"
+      ]
+    },
+    {
+      "rule_id": "ER003",
+      "element": "새 주요 장소(major location)",
+      "condition": "location_registry.json 업데이트 필수",
+      "checklist": [
+        "기존 지리/세계관 구조와 연결되는가?",
+        "이 장소가 서사에 기여하는 역할이 명확한가?",
+        "arc 종료 후 이 장소의 역할이 자연스럽게 종결되는가?"
+      ]
+    },
+    {
+      "rule_id": "ER004",
+      "element": "새 named character",
+      "condition": "cast_registry.json 업데이트 + CAST_HARNESS 확인",
+      "checklist": [
+        "기존 active cast 상한을 초과하지 않는가?",
+        "이 인물이 기존 인물의 역할과 중복되지 않는가?",
+        "이 인물의 퇴장 또는 역할 종료 계획이 있는가?"
+      ]
+    }
+  ],
+
+  "bloat_warnings": [
+    {
+      "warning_id": "BW001",
+      "signal": "active faction 수가 3개를 초과하면서 어느 것도 해소 계획이 없다",
+      "severity": "high",
+      "action": "canon_change_request 작성. 세력 통합, 소멸, 비활성화 계획 수립 후 신규 세력 추가 금지."
+    },
+    {
+      "warning_id": "BW002",
+      "signal": "power system 수가 4개를 초과한다",
+      "severity": "critical",
+      "action": "신규 능력 체계 추가 즉시 중단. 기존 체계 통합 또는 폐기 계획 필수. 사용자 승인 전 진행 금지."
+    },
+    {
+      "warning_id": "BW003",
+      "signal": "10화 내 named character가 5명 이상 신규 추가된다",
+      "severity": "high",
+      "action": "CAST_HARNESS 실행. 인물 추가 속도 제한. 기존 dormant 인물 활용 우선."
+    },
+    {
+      "warning_id": "BW004",
+      "signal": "arc당 주요 장소 4개 이상 신규 등장",
+      "severity": "medium",
+      "action": "기존 장소 재활용 우선. 신규 장소는 이미 설정된 세계관 지리와의 연결 필수."
+    },
+    {
+      "warning_id": "BW005",
+      "signal": "조직 이름이 10개를 초과하면서 독자가 구별하기 어려운 상태",
+      "severity": "medium",
+      "action": "조직 정리 계획 수립. 비중 없는 조직은 통합하거나 이름 제거."
+    }
+  ],
+
+  "simplification_triggers": [
+    {
+      "trigger_id": "ST001",
+      "condition": "active faction 수 4개 이상 + 해소 계획 없음",
+      "required_action": "신규 세력 추가 전 최소 1개 세력 해소 또는 통합 계획 확정",
+      "blocks": ["new_faction_addition"]
+    },
+    {
+      "trigger_id": "ST002",
+      "condition": "power system 수 4개 초과",
+      "required_action": "능력 체계 감사 및 통합 계획 사용자 승인 전 신규 추가 금지",
+      "blocks": ["new_power_system_addition"]
+    },
+    {
+      "trigger_id": "ST003",
+      "condition": "active named character 수가 arc 상한 2회 연속 초과",
+      "required_action": "CAST_HARNESS 강제 실행. cast 정리 계획 확정 전 신규 인물 추가 금지",
+      "blocks": ["new_character_addition"]
+    },
+    {
+      "trigger_id": "ST004",
+      "condition": "final arc 진입 (전체 85% 이후)",
+      "required_action": "모든 신규 핵심 요소 추가 금지. 기존 요소 해소 및 수렴 집중",
+      "blocks": ["new_faction_addition", "new_power_system_addition", "new_major_location_addition", "new_long_term_foreshadowing"]
+    }
+  ],
+
+  "expansion_history": [
+    {
+      "episode": 0,
+      "element_type": "initial",
+      "element_name": "초기 설정",
+      "added_by": "AI",
+      "user_approved": true,
+      "canon_change_request_id": null,
+      "notes": "프로젝트 초기 세계관 설정"
+    }
+  ],
+
+  "notes": "이 파일은 arc 경계마다 current_complexity를 갱신하고 HARNESS_ROUTER에서 episode_outline, episode_draft 작업 전 확인 대상이다."
+}

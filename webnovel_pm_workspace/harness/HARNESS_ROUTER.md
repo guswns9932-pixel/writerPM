@@ -37,8 +37,8 @@
 | `audit_only` | “검토해줘”, “문제만 찾아줘” | CONTINUITY, QUALITY, ORIGINALITY, CONTENT_RISK | 관련 원고, 기억 파일, final_registry | 파일 수정, 원고 재작성, 설정 반영 |
 | `plan_only` | “계획만 작성해줘”, “바로 수정하지 마” | WORKFLOW, FEEDBACK, RECOVERY, VERSIONING | approval_state, final_registry, user_feedback_log | 원고/설정 직접 수정 |
 | `concept_generation` | “컨셉 후보 생성” | WORKFLOW, ORIGINALITY, HUMAN_CONTRIBUTION | brief, user_taste_profile | 선택 전 Bible 확정 |
-| `bible_generation` | “Bible 생성/보강” | MEMORY, CONTINUITY, ORIGINALITY | approval_state, canon_log, approved canon 역할 문서 | 승인 없는 핵심 canon 확정 |
-| `episode_outline` | “N화 outline 작성” | WORKFLOW, MEMORY, CONTINUITY, QUALITY, CAST, PATTERN_REPETITION, LONGFORM | approval_state, arc_state, payoff_schedule, episode_pattern_log, opposition_ladder, voice_samples | 승인되지 않은 회차 outline 작성 |
+| `bible_generation` | “Bible 생성/보강” | MEMORY, CONTINUITY, ORIGINALITY, THEMATIC, CONTEXT_COMPRESSION | approval_state, canon_log, approved canon 역할 문서, thematic_compass, arc_canon_snapshot | 승인 없는 핵심 canon 확정 |
+| `episode_outline` | “N화 outline 작성” | WORKFLOW, MEMORY, CONTINUITY, QUALITY, CAST, PATTERN_REPETITION, LONGFORM, THEMATIC, PACING, VOICE_DRIFT, CONTEXT_COMPRESSION | approval_state, arc_state, payoff_schedule, episode_pattern_log, opposition_ladder, voice_samples, thematic_compass, pacing_curve, emotional_promise_ledger, world_expansion_policy | 승인되지 않은 회차 outline 작성 |
 | `episode_draft` | “N화 draft 작성” | WORKFLOW, MEMORY, CONTINUITY, QUALITY, CAST, PATTERN_REPETITION, CONTENT_RISK | approval_state, ability_usage_log, payoff_schedule, voice_samples, final_registry | 승인되지 않은 회차 본문 작성 |
 | `revision` | “수정해줘” | FEEDBACK, VERSIONING, CONTINUITY, QUALITY, CHARACTER/VOICE 역할 문서 | feedback_application_plan, final_registry, voice_samples, approval_state | 기존 final 직접 편집 |
 | `canon_change_request` | “설정 변경 요청서 작성” | CONTINUITY, RECOVERY, ORIGINALITY | canon_log, story_bible, ability_rules, approval_state | 사용자 승인 전 Bible 직접 수정 |
@@ -57,6 +57,12 @@
 - `quality_trend_log.json`: 재미 하락 추세 감지
 - `reader_reward_ledger.json`: 독자 보상 반복/누락 감지
 - `run_report_index.json`: 보고 누락과 최신 작업 범위 혼선 방지
+- `thematic_compass.json`: 주제 drift 방지
+- `pacing_curve.json`: 거시적 페이싱 붕괴 방지
+- `emotional_promise_ledger.json`: 독자 감정 계약 이행 추적
+- `arc_canon_snapshot` (latest): arc 경계 이후 일관성 기준점
+- `world_expansion_policy.json`: 세계관 비대화 방지
+- `context_compression_log.md`: 메모리 압축 상태 확인
 
 ## 중단 조건
 
@@ -97,3 +103,5 @@
 - 사용자 승인 필요 여부
 
 matrix와 사용자 요청이 충돌하면 사용자 요청 범위를 우선하되, 안전 규칙 위반이 있으면 작업을 중단하고 보고합니다.
+
+> **장기 연재(20화+) 주의사항**: episode_outline 및 episode_draft 작업 전 `CONTEXT_COMPRESSION_HARNESS.md`의 Cold Start 프로토콜 확인 필수. rolling_context.md가 압축되지 않은 상태에서 작업하면 설정 drift 위험이 높다.

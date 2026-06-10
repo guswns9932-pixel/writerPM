@@ -148,6 +148,13 @@ High 심각도/High 발생 가능성 위험을 줄이기 위해 원고 작성, �
 - [ ] `reader_reward_ledger.json`
 - [ ] `voice_samples.md`
 - [ ] `run_reports/run_report_index.json`
+- [ ] `thematic_compass.json`
+- [ ] `pacing_curve.json`
+- [ ] `emotional_promise_ledger.json`
+- [ ] `arc_canon_snapshot` (most recent)
+- [ ] `world_expansion_policy.json`
+- [ ] `context_compression_log.md`
+- [ ] `voice_evolution_log.md`
 
 누락 시 final 저장 전 누락 사실을 보고하고, 해당 파일 생성 또는 보강을 사용자 확인 필요 사항으로 정리합니다.
 
@@ -163,3 +170,7 @@ High 심각도/High 발생 가능성 위험을 줄이기 위해 원고 작성, �
 - `run_reports/run_report_index.json`: 최신 작업 보고 색인
 
 위 파일이 없거나 서로 충돌하면 final 저장, 다음 배치, canon 변경을 중단합니다.
+
+## 컨텍스트 압축 및 Cold Start
+
+세션 시작 시 이전 회차 원고 전체를 읽을 수 없으므로, CONTEXT_COMPRESSION_HARNESS의 Cold Start 프로토콜과 계층적 메모리 구조(Tier 1~4)를 반드시 따른다. rolling_context.md가 arc 단위로 압축되지 않은 상태에서 원고를 작성하면 설정 drift 위험이 크다.
