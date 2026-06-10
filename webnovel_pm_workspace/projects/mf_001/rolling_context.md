@@ -2,13 +2,19 @@
 
 - **project_id**: mf_001
 - **project_title**: 냄새로 본다
-- **current_episode**: 0 (Pre-Episode)
-- **current_phase**: story_bible_completed → ready_for_episode_001_outline
+- **current_episode**: 001
+- **current_phase**: episode_001_outline_completed → awaiting_draft_approval
 - **last_updated**: 2026-06-10
 
-## 현재까지의 줄거리 요약
+## 현재까지의 줄거리 요약 (Outline 기준)
 
-아직 1화 작성 전. Story Bible, Character Bible, Ability Rules가 완성됨. 프로젝트는 1화 outline 작성 준비 단계.
+**1화 "냄새로 본다"**
+
+출근 시간 버스 안. 주인공은 32명의 승객 중 11명이 괴물임을 냄새로 감지한다. 무시하려 하지만, 옆에 앉은 어린 아이가 주인공의 본명을 부르며 속삭인다: "나는 네가 뭔지 알아."
+
+주인공이 처음으로 두려움을 느끼는 순간, 괴물들이 정체를 드러내고 공격한다. 주인공은 아이를 보호하기 위해 약한 채로 싸운다 (새 능력을 흡수하지 않음). 전투가 끝났을 때 아이는 사라져 있고, 깨끗한 흔적만 남는다.
+
+주인공의 혼잣말: "이게... 진짜 괴물이었나?"
 
 ## 주인공 현재 상태
 
