@@ -1,0 +1,173 @@
+{
+  "template_name": "pacing_curve_template",
+  "project_id": "example_project",
+  "last_updated": "YYYY-MM-DD",
+  "version": "1.0",
+
+  "total_target_episodes": 1000,
+
+  "tension_level_scale": {
+    "description": "1~10 척도. 독자가 느끼는 긴장·위험감·불확실성의 강도.",
+    "levels": {
+      "1": "일상 / 이완 / 캐릭터 호흡 장면. 갈등이 없거나 배경 설명 위주.",
+      "2": "잔잔한 복선 심기. 독자가 이상함을 느끼지만 긴장 없음.",
+      "3": "사소한 갈등 또는 정보 노출. 약한 긴장감.",
+      "4": "목표와 장애물이 명확해짐. 초반 긴장 형성.",
+      "5": "중간 강도 갈등. 결과가 불확실한 대결 또는 선택.",
+      "6": "위기감 형성. 실패 가능성 체감.",
+      "7": "강한 위기. 주인공이 진짜 위험에 처함.",
+      "8": "고강도 대결 또는 충격적 반전. 독자 심리 충격.",
+      "9": "클라이맥스 직전. 모든 것이 위태로운 상태.",
+      "10": "arc 또는 작품 클라이맥스. 최대 긴장. 지속 불가."
+    }
+  },
+
+  "arc_pacing_map": [
+    {
+      "arc_id": "ARC001",
+      "arc_name": "도입 arc (예시)",
+      "episode_range": {"start": 1, "end": 20},
+      "arc_tier": "early",
+      "average_tension_target": 4,
+      "peak_tension_allowed": 7,
+      "required_relief_episodes": 4,
+      "escalation_events": [
+        {"episode": 10, "description": "첫 번째 위기 정점", "tension_level": 7},
+        {"episode": 20, "description": "arc 클라이맥스", "tension_level": 7}
+      ],
+      "relief_episode_positions": ["EP003", "EP008", "EP015", "EP019"],
+      "notes": "도입 arc는 독자와 주인공 유대 형성이 우선. 극단적 긴장보다 흥미와 공감이 핵심."
+    },
+    {
+      "arc_id": "ARC002",
+      "arc_name": "발전 arc (예시)",
+      "episode_range": {"start": 21, "end": 60},
+      "arc_tier": "mid_early",
+      "average_tension_target": 5,
+      "peak_tension_allowed": 8,
+      "required_relief_episodes": 7,
+      "escalation_events": [],
+      "relief_episode_positions": [],
+      "notes": "예시: 다음 arc 계획 시 채워 넣을 것."
+    }
+  ],
+
+  "escalation_rules": {
+    "by_arc_tier": {
+      "early": {
+        "description": "1~30% 구간. 도입부.",
+        "max_average_tension": 5,
+        "max_peak_tension": 7,
+        "min_relief_ratio": 0.25
+      },
+      "mid": {
+        "description": "31~60% 구간. 전개부.",
+        "max_average_tension": 6,
+        "max_peak_tension": 8,
+        "min_relief_ratio": 0.20
+      },
+      "late": {
+        "description": "61~85% 구간. 위기 심화부.",
+        "max_average_tension": 7,
+        "max_peak_tension": 9,
+        "min_relief_ratio": 0.15
+      },
+      "final": {
+        "description": "86~100% 구간. 클라이맥스~결말.",
+        "max_average_tension": 8,
+        "max_peak_tension": 10,
+        "min_relief_ratio": 0.10,
+        "notes": "final arc에서도 resolution 및 emotional landing 구간은 tension 3~4 수준 필수."
+      }
+    },
+    "global_rules": [
+      "tension 8 이상 회차가 3화 연속 초과 금지.",
+      "arc 평균 tension이 이전 arc보다 2 이상 급상승 금지 (점진 상승 필수).",
+      "1000화 기준 tension 10은 1~2회만 허용 (작품 클라이맥스).",
+      "arc 종료 후 다음 arc 첫 화는 반드시 tension을 이전 peak보다 2 이상 낮춰 시작.",
+      "tension 1~3 구간 회차(이완 구간)는 전체의 최소 15% 이상 유지."
+    ]
+  },
+
+  "relief_episode_rules": {
+    "definition": "relief episode(이완 회차)란 주요 갈등을 일시적으로 내려놓고 독자와 인물이 숨쉬는 회차. tension_level 1~3.",
+    "what_counts_as_relief": [
+      "인물 간 일상 또는 관계 심화 장면 중심 회차",
+      "세계관 탐색 또는 배경 깊이 부여 회차",
+      "주인공의 내면 성찰 또는 감정 회복 회차",
+      "복선 심기 위주 조용한 전개 회차",
+      "유머 또는 캐릭터 매력 발산 위주 회차"
+    ],
+    "what_does_not_count": [
+      "새로운 위기가 등장하는 회차 (tension 4 이상)",
+      "정보 폭탄 공개 회차",
+      "전투 또는 생존 위기가 포함된 회차"
+    ],
+    "minimum_frequency": "10화당 최소 2화 이상 relief episode 포함.",
+    "mandatory_after_high_tension": "tension 8 이상 회차 이후 3화 이내에 반드시 relief episode 1회 이상 배치."
+  },
+
+  "pacing_warnings": [
+    {
+      "warning_id": "PW001",
+      "signal": "tension level 8 이상 회차가 3화 이상 연속",
+      "severity": "critical",
+      "action": "PACING_HARNESS 즉시 실행. relief episode 계획 없이 다음 outline 금지."
+    },
+    {
+      "warning_id": "PW002",
+      "signal": "10화 내 relief episode가 1화 이하",
+      "severity": "high",
+      "action": "다음 배치 계획 시 relief episode 최소 2화 선배치."
+    },
+    {
+      "warning_id": "PW003",
+      "signal": "arc 평균 tension이 max_average_tension 초과",
+      "severity": "high",
+      "action": "arc 재검토. tension 조정 없이 다음 arc 진입 금지."
+    },
+    {
+      "warning_id": "PW004",
+      "signal": "독자 보상 유형이 3화 이상 동일 유형 반복",
+      "severity": "medium",
+      "action": "PATTERN_REPETITION_HARNESS 연계 확인."
+    },
+    {
+      "warning_id": "PW005",
+      "signal": "전체 회차의 15% 미만이 tension 1~3 구간",
+      "severity": "medium",
+      "action": "장기 pacing fatigue 위험. 이완 회차 비율 보정 계획 수립."
+    }
+  ],
+
+  "pacing_fatigue_triggers": [
+    "arc 2개 이상 연속으로 escalation_rules.global_rules 위반",
+    "독자 보상 review에서 '독자가 무감각해졌다' 또는 '패턴이 느껴진다' 피드백 수신",
+    "relief episode 비율이 목표 대비 50% 이하로 떨어진 상태가 20화 이상 지속",
+    "tension 7 이상 회차 비율이 전체의 40% 초과"
+  ],
+
+  "long_form_tension_curve": {
+    "description": "1000화 기준 3막 구조 긴장 곡선 가이드라인",
+    "act1": {
+      "range": "1~300화",
+      "shape": "완만한 상승. 도입→갈등 심화. 독자 유대 우선.",
+      "average_tension": "3~5",
+      "key_beats": ["EP001: 훅", "EP020 전후: 첫 arc 클라이맥스", "EP100 전후: 세계관 전환점"]
+    },
+    "act2": {
+      "range": "301~750화",
+      "shape": "파동형 상승. 상승-하강 반복하며 전체 수준은 높아짐. 독자 피로 방지가 핵심.",
+      "average_tension": "5~7",
+      "key_beats": ["EP300 전후: 1막 → 2막 전환. 큰 선택", "EP500 전후: 작품 중간 위기", "EP700 전후: 클라이맥스 준비 시작"]
+    },
+    "act3": {
+      "range": "751~1000화",
+      "shape": "지속 상승 후 단일 클라이맥스 → 급격한 하강 (resolution).",
+      "average_tension": "7~9",
+      "key_beats": ["EP850~900: 클라이맥스 준비 완료", "EP950 전후: 최종 대결", "EP980~1000: 결말 및 emotional landing (tension 2~3)"]
+    }
+  },
+
+  "review_trigger": "10화 단위 audit 시 또는 arc 종료 시 PACING_HARNESS 실행"
+}

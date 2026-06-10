@@ -1,0 +1,120 @@
+{
+  "template_name": "thematic_compass_template",
+  "project_id": "example_project",
+  "last_updated": "YYYY-MM-DD",
+  "version": "1.0",
+
+  "core_theme": "예시: 힘을 얻는다고 해서 존엄을 되찾을 수 없다 — 진정한 회복은 선택의 대가를 감당하는 데서 온다",
+
+  "emotional_center": "예시: 독자가 주인공의 투쟁에서 '고통 속에도 포기하지 않는 인간'의 아름다움을 느끼도록 한다. 희망과 슬픔이 공존하는 감각.",
+
+  "symbolic_motifs": [
+    {
+      "motif_id": "M001",
+      "symbol": "예시: 부러진 칼",
+      "meaning": "패배의 흔적이자 다시 싸울 이유. 완전하지 않아도 여전히 무기가 될 수 있음을 상징.",
+      "first_appearance_episode": "EP001",
+      "recurring_contexts": ["위기 직전", "각성 장면", "동료와의 재회"]
+    },
+    {
+      "motif_id": "M002",
+      "symbol": "예시: 이름 없는 무덤",
+      "meaning": "기억되지 못한 자들의 존재. 주인공이 지키려는 것의 본질.",
+      "first_appearance_episode": "EP003",
+      "recurring_contexts": ["희생 장면", "도덕적 선택 직전"]
+    }
+  ],
+
+  "thematic_questions": [
+    {
+      "question_id": "Q001",
+      "question": "예시: 힘 없이 선택할 수 있는가, 아니면 힘이 있어야만 진짜 선택인가?",
+      "arc_relevance": "전체 arc에 걸쳐 반복적으로 등장"
+    },
+    {
+      "question_id": "Q002",
+      "question": "예시: 대가 없는 성장이 가능한가? 그 성장은 진짜인가?",
+      "arc_relevance": "능력 성장 arc 핵심 질문"
+    },
+    {
+      "question_id": "Q003",
+      "question": "예시: 타인의 기억이 되는 것이 불멸보다 나은 삶인가?",
+      "arc_relevance": "후반부 주제 질문"
+    }
+  ],
+
+  "anti_themes": [
+    {
+      "anti_theme_id": "AT001",
+      "label": "대가 없는 파워 판타지",
+      "description": "주인공이 노력이나 상실 없이 강해지고 모든 문제가 힘으로 해결되는 전개. 이 작품이 되어서는 안 되는 방향.",
+      "warning_signs": [
+        "주인공이 3연속으로 아무 대가 없이 승리한다",
+        "능력 성장이 사건이 아닌 시간 경과만으로 이루어진다",
+        "패배가 단 한 번도 진짜 결과로 이어지지 않는다"
+      ]
+    },
+    {
+      "anti_theme_id": "AT002",
+      "label": "허무주의적 결말 지향",
+      "description": "투쟁이 의미 없다는 결론으로 수렴하거나 희망을 일관되게 처벌하는 방향.",
+      "warning_signs": [
+        "긍정적 감정선이 arc 2개 이상 연속으로 부재",
+        "독자 보상이 회수되지 않고 반전만 반복된다",
+        "주인공의 성장이 오히려 공허함 증가로 귀결된다"
+      ]
+    },
+    {
+      "anti_theme_id": "AT003",
+      "label": "도덕적 단순화",
+      "description": "선과 악이 명확히 구분되어 갈등이 흑백 논리로 해소되는 전개.",
+      "warning_signs": [
+        "적대자에게 이해 가능한 동기가 없다",
+        "주인공이 도덕적 딜레마 없이 행동한다",
+        "복잡한 상황이 힘으로 정당화된다"
+      ]
+    }
+  ],
+
+  "theme_drift_warnings": [
+    {
+      "warning_id": "TDW001",
+      "signal": "주인공이 대가 없이 3화 이상 연속으로 성장하거나 승리한다",
+      "drift_direction": "AT001 방향 drift",
+      "corrective_action": "다음 회차 전 THEMATIC_HARNESS 실행 및 thematic_correction_note 작성"
+    },
+    {
+      "warning_id": "TDW002",
+      "signal": "희망적 해소 없이 고통과 실패만 5화 이상 이어진다",
+      "drift_direction": "AT002 방향 drift",
+      "corrective_action": "독자 보상과 희망 요소를 포함한 회차 계획 필수"
+    },
+    {
+      "warning_id": "TDW003",
+      "signal": "symbolic_motifs가 3개 arc 이상 등장하지 않는다",
+      "drift_direction": "주제 단절 위험",
+      "corrective_action": "arc 시작 전 thematic_compass 재확인 및 motif 재도입 계획 수립"
+    },
+    {
+      "warning_id": "TDW004",
+      "signal": "thematic_questions 중 어느 것도 arc 에서 직접적으로 탐색되지 않는다",
+      "drift_direction": "주제 희석",
+      "corrective_action": "arc 계획에 주제 질문과 연결된 장면 또는 선택 최소 1개 확보"
+    }
+  ],
+
+  "per_arc_theme_check": {
+    "enabled": true,
+    "check_points": ["arc 시작 전", "arc 종료 후"],
+    "checklist": [
+      "이번 arc에서 core_theme이 탐색되는 장면 또는 선택이 최소 1개 있는가?",
+      "이번 arc가 anti_themes 중 하나로 수렴하는 위험이 없는가?",
+      "symbolic_motifs 중 최소 1개가 arc에 자연스럽게 등장하는가?",
+      "thematic_questions 중 최소 1개가 arc 전개와 연결되는가?",
+      "arc 종료 후 emotional_center의 감각이 유지되는가?"
+    ],
+    "failure_action": "THEMATIC_HARNESS 실행 후 thematic_correction_note 작성. 사용자 확인 전 다음 arc 진행 보류."
+  },
+
+  "notes": "이 파일은 story_bible 수준의 절대 기준점입니다. core_theme 또는 anti_themes 정의를 변경하려면 canon_change_request를 작성하고 사용자 승인을 받아야 합니다."
+}
