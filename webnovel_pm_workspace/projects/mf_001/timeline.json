@@ -1,0 +1,84 @@
+{
+  "project_id": "mf_001",
+  "series_timeline": {
+    "pre_series": {
+      "before_10_years_ago": "주인공의 태생. 왜 냄새를 감지할 수 있는지는 미정(arc 3에서 밝혀질 예정).",
+      "10_years_ago": "주인공이 괴물 사냥을 시작함.",
+      "10_years_ago_to_1_episode_ago": "주인공의 번아웃 상태. 감정 마비. 냄새 감지 능력을 일상처럼 사용.",
+      "unknown_time": "아이가 어떻게 태어나고 자랐는지는 미정(arc 2에서 밝혀질 예정). 적어도 옆집에 살기 시작한 지는 얼마 되지 않은 것으로 추정."
+    },
+    "episode_timeline": [
+      {
+        "episode": 1,
+        "date": "2026년 6월 어느 월요일 아침 9시경",
+        "location": "한국 서울 (배경 도시 미정, draft 작성 시 결정)",
+        "events": [
+          "주인공이 버스에 탐",
+          "아이가 주인공을 처음 만남",
+          "신전투 발발",
+          "아이가 사라짐"
+        ],
+        "duration": "약 30분 (버스 탑승부터 정류장까지)"
+      },
+      {
+        "episode_range": "2-10",
+        "date": "EP1 이후 같은 주, 같은 월 (week 1-2)",
+        "estimated_events": "주인공이 아이를 찾으려 함. 옆집 아파트 정찰 시작. arc 1 축 설정."
+      },
+      {
+        "episode_range": "11-50",
+        "date": "EP1 이후 1개월 ~ 3개월",
+        "estimated_events": "아이와의 재만남. 주인공의 번아웃에 대한 질문 시작. 조직으로부터의 첫 간섭."
+      },
+      {
+        "episode_range": "51-100",
+        "date": "EP1 이후 3개월 ~ 6개월",
+        "estimated_events": "arc 1 종료. 주인공이 아이를 보호하기로 결정. 감정의 재각성 완성."
+      },
+      {
+        "episode_range": "101-200",
+        "date": "EP1 이후 6개월 ~ 1년",
+        "estimated_events": "arc 2 시작. 괴물 세계의 규칙 발견. 상급자와의 갈등 고조. 능력 흡수 시작."
+      },
+      {
+        "episode_range": "201-300",
+        "date": "EP1 이후 1년 ~ 1년 6개월",
+        "estimated_events": "arc 2 종료. 상위 포식자 첫 등장. 아이의 배경 부분 공개. 주인공의 괴물화 자각."
+      },
+      {
+        "episode_range": "301-450",
+        "date": "EP1 이후 1년 6개월 ~ 2년 6개월",
+        "estimated_events": "arc 3 초중반. 경계 붕괴. 아이의 정체 완전 공개. 상위 포식자와의 본격 대면."
+      },
+      {
+        "episode_range": "451-600",
+        "date": "EP1 이후 2년 6개월 ~ 3년 6개월",
+        "estimated_events": "arc 3 후반. 새로운 냄새(제3의 존재) 발견. arc 3 종료."
+      },
+      {
+        "episode_range": "601-1000",
+        "date": "EP1 이후 3년 6개월 ~ 5년",
+        "estimated_events": "arc 4. 최종 선택. 새로운 질서 모색. 완결."
+      }
+    ]
+  },
+  "daily_timeline_for_episode_1": {
+    "time_precision": "hour_level",
+    "9_00_am": "주인공이 지하철역에서 버스 승차. 32명 중 11명의 괴물 냄새 감지.",
+    "9_15_am": "버스 이동 중. 아이가 주인공 옆에 앉음. '나는 네가 뭔지 알아' 속삭임.",
+    "9_20_am": "신전투 시작. 버스 정류장 근처에서 전투.",
+    "9_30_am": "전투 종료. 아이 사라짐. 주인공이 정류장 바닥에 무릎을 꿇음."
+  },
+  "season_and_weather": {
+    "episode_1_weather": "맑은 날씨. 아침 햇빛. 일상과 정상성의 대비를 통해 비정상의 긴장감 강조.",
+    "seasonal_arc_progression": "arc 1 (봄~여름), arc 2 (여름~가을), arc 3 (가을~겨울), arc 4 (겨울~봄) 예상. 하지만 draft 작성 시 미정."
+  },
+  "location_timeline": {
+    "episode_1_locations": [
+      "지하철역 (off-screen)",
+      "버스 내부 (주요 장면)",
+      "버스 정류장 (클리프행어)"
+    ],
+    "episode_2_onwards_estimated_location": "옆집 아파트 (주인공이 아이를 찾으러 가게 될 것)"
+  }
+}
