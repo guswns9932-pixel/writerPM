@@ -1,0 +1,35 @@
+{
+  "template_name": "character_bible_template",
+  "project_id": "example_project",
+  "characters": [
+    {
+      "character_id": "char_protagonist",
+      "name": "예시 주인공",
+      "role": "protagonist",
+      "desire": "스스로 선택권을 되찾고 싶다",
+      "lack_or_wound": "실패 경험 때문에 중요한 순간에 망설인다",
+      "choice_principle": "두려워도 손해를 감수하고 원하는 방향을 선택한다",
+      "voice": "짧고 건조하지만 결정적 순간에는 직설적",
+      "strengths": [
+        "관찰력",
+        "집요함"
+      ],
+      "weaknesses": [
+        "불신",
+        "조급함"
+      ],
+      "collapse_risks": [
+        "이유 없는 무기력",
+        "근거 없는 천재화",
+        "기존 가치관과 모순된 선택"
+      ],
+      "relationship_hooks": [
+        {
+          "target": "char_rival",
+          "dynamic": "경쟁과 협력 사이",
+          "change_direction": "불신에서 조건부 신뢰로"
+        }
+      ]
+    }
+  ]
+}

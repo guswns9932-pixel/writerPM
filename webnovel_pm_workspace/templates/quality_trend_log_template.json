@@ -1,0 +1,24 @@
+{
+  "project_id": "example_project",
+  "purpose": "회차별 재미, 후킹, 독자 보상, 클리프행어 추세를 누적해 장기 품질 하락을 방지한다",
+  "episodes": [
+    {
+      "episode": 1,
+      "source_review": "episodes/episode_001_quality_review.md",
+      "hook_score": 0,
+      "conflict_score": 0,
+      "protagonist_choice_score": 0,
+      "reader_reward_score": 0,
+      "cliffhanger_score": 0,
+      "commerciality_score": 0,
+      "overall_score": 0,
+      "trend_note": "직전 회차 대비 강점/약점",
+      "revision_required": false
+    }
+  ],
+  "warning_rules": {
+    "overall_below_75_requires_revision_note": true,
+    "three_episode_decline_requires_quality_audit": true,
+    "repeated_reward_type_requires_variation_plan": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "project_id": "blindspot",
+  "purpose": "적대 세력의 단계적 확장을 관리한다.",
+  "current_opposition_level": "level_01_field_pursuit_and_local_surveillance",
+  "rules": [
+    "적대 세력은 회차 편의를 위해 갑자기 전능해지지 않는다.",
+    "상위 적대자는 하위 압박의 결과와 단서를 통해 단계적으로 등장한다.",
+    "주인공의 성장보다 적대 압박이 항상 한 단계 넓거나 깊어야 한다.",
+    "새 적대 세력 추가 전 기존 망루 구조로 대체 가능한지 확인한다."
+  ],
+  "ladder": [
+    {
+      "level_id": "level_01_field_pursuit_and_local_surveillance",
+      "episode_range": "001-010",
+      "opposition_form": "현장 추적자, 폐쇄회로, 죽은 렌즈, 지역 감시망",
+      "representatives": ["마경태", "망루 현장 추적조"],
+      "allowed_pressure": ["물리 추적", "지역 CCTV", "거짓 사각지대", "기초 포획 명령"],
+      "locked_pressure": ["도시 전체 실시간 봉쇄", "정밀 심리 조작", "최종 간부 직접 개입"]
+    },
+    {
+      "level_id": "level_02_networked_watch",
+      "episode_range": "011-030",
+      "opposition_form": "권역별 감시망과 정보 브로커 압박",
+      "representatives": ["망루 지역 관리자", "계약 정보원"],
+      "allowed_pressure": ["감시망 루틴", "미끼 정보", "협력자 의심"],
+      "unlock_condition": "한서진이 단순 도주를 넘어 조건부 침투자가 된다"
+    },
+    {
+      "level_id": "level_03_organization_war",
+      "episode_range": "031-060",
+      "opposition_form": "망루 내부 파벌과 조직전",
+      "representatives": ["상급 관측자", "작전 설계자"],
+      "allowed_pressure": ["팀 단위 추적", "감시망 역이용", "동료 분열"],
+      "unlock_condition": "한서진이 망루의 구조 일부를 역추적한다"
+    },
+    {
+      "level_id": "level_04_core_watchtower",
+      "episode_range": "061-080",
+      "opposition_form": "망루 핵심 감시 구조와 최종 관측자",
+      "representatives": ["최종 관측자"],
+      "allowed_pressure": ["사각지대 설계전", "최종 감시망 교란", "주인공의 선택권 시험"],
+      "unlock_condition": "기존 복선과 WATCHLIST의 진실이 충분히 회수된다"
+    }
+  ]
+}

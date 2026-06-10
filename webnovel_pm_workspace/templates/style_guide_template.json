@@ -1,0 +1,20 @@
+{
+  "template_name": "style_guide_template",
+  "project_id": "example_project",
+  "narrative_style": "한국 웹소설 모바일 연재체, 빠른 장면 전환, 선명한 감정선",
+  "sentence_policy": {
+    "default": "짧고 명확한 문장 중심",
+    "avoid": "과도하게 긴 설명문",
+    "mobile_readability": "문단을 짧게 유지"
+  },
+  "dialogue_policy": {
+    "protagonist": "짧고 단단한 말투",
+    "rival": "도발적이지만 정보가 담긴 말투"
+  },
+  "opening_policy": "설정 설명이 아니라 사건, 위험, 욕망, 비밀로 시작",
+  "ending_policy": "회차마다 다음 화를 누를 이유가 있는 클리프행어",
+  "banned_style_requests": [
+    "특정 작가 문체 모방",
+    "기존 작품 대표 문장 리듬 모방"
+  ]
+}
