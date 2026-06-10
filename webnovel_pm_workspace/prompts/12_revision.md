@@ -77,10 +77,42 @@
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
 
-## High-risk 보완 규칙
 
 - 기존 final 파일은 읽기 전용으로만 사용하고 직접 수정하지 않는다.
 - final 후보 수정은 반드시 새 `episode_XXX_final_vN.md` 또는 사용자 요청 범위에 맞는 새 버전 파일로 저장한다.
 - 수정 전 `approval_state.json`, `final_registry.json`, `episode_XXX_status.md`, `feedback_application_plan`을 확인한다.
 - 말투 수정은 `voice_samples.md` 기준으로 제한하고, 성격/canon 변경으로 확대하지 않는다.
 - 수정 후 `final_registry.json`, `episode_XXX_status.md`, `run_report_index.json` 갱신 여부를 보고한다.
+
+## High-risk 공통 게이트
+
+### 추가 입력 파일
+
+- `webnovel_pm_workspace/AGENTS.md`
+- `webnovel_pm_workspace/harness/HARNESS_ROUTER.md`
+- `webnovel_pm_workspace/harness/REQUEST_TYPE_CLASSIFIER.md`
+- `webnovel_pm_workspace/harness/REQUIRED_OUTPUTS_MATRIX.md`
+- `webnovel_pm_workspace/projects/{project_id}/approval_state.json`
+- `webnovel_pm_workspace/projects/{project_id}/final_registry.json`
+- `webnovel_pm_workspace/projects/{project_id}/ability_usage_log.json` (능력 사용 또는 검수 관련 작업인 경우)
+- `webnovel_pm_workspace/projects/{project_id}/payoff_schedule.json` (복선, 장기 보상, 회차 작업인 경우)
+- `webnovel_pm_workspace/projects/{project_id}/voice_samples.md` (대사, 내면 독백, 말투 수정이 있는 경우)
+- `webnovel_pm_workspace/projects/{project_id}/run_reports/run_report_index.json` (작업 완료 보고가 필요한 경우)
+
+### 추가 금지사항
+
+- `audit_only`, `review_only`, `proposal_only`, `plan_only` 요청에서 사용자가 파일 생성을 명시하지 않았으면 파일을 만들거나 수정하지 않는다.
+- `approval_state.json`이 허용하지 않은 회차 outline, draft, final, batch를 작성하지 않는다.
+- 3화를 초과하는 생성 요청은 기본 3화까지만 수행하고 초과분의 장면, 대사, 설정 초안을 작성하지 않는다.
+- 기존 final 파일을 직접 편집하지 않는다.
+- `final_registry.json`과 `episode_XXX_status.md`가 충돌하면 final 저장을 중단한다.
+- `story_bible.json`, `character_bible.json`, `ability_rules.json`, `power_progression.json`의 핵심 변경은 승인된 `canon_change_request` 없이는 반영하지 않는다.
+
+### 추가 업데이트 파일
+
+- request_type 및 승인 상태가 관련되면 `approval_state.json` 확인 결과를 run_report에 기록한다.
+- final 후보 또는 수정본이 관련되면 `final_registry.json`과 `episode_XXX_status.md`를 함께 갱신한다.
+- 능력 사용이 관련되면 outline/draft/review 단계별로 `ability_usage_log.json`를 갱신한다.
+- 복선 추가, 회수, 지연이 관련되면 `foreshadowing_ledger.json`과 `payoff_schedule.json`을 함께 갱신한다.
+- 피드백이 관련되면 `feedback_application_plan`의 영향도 매트릭스를 작성하거나 확인한다.
+- 작업 완료 시 `run_report`와 필요 시 `run_report_index.json`를 갱신한다.

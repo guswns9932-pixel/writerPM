@@ -25,6 +25,14 @@
     "episode_status_must_match_registry": true,
     "approved_final_is_read_only": true,
     "new_revision_requires_new_version": true,
-    "mismatch_requires_recovery_plan": true
+    "mismatch_requires_recovery_plan": true,
+    "status_registry_sync_required_before_completion": true,
+    "new_version_requires_revision_note": true
+  },
+  "preflight_check": {
+    "must_compare_episode_status_before_final_work": true,
+    "must_list_existing_final_files_before_new_version": true,
+    "existing_final_files_are_read_only": true,
+    "mismatch_halt_reason_code": "FINAL_REGISTRY_STATUS_MISMATCH"
   }
 }

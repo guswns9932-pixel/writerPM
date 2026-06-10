@@ -75,3 +75,14 @@
 - `episode_XXX_status.md`의 `current_final`과 `final_registry.json`의 `current_final_candidate`가 다르면 final 저장을 중단합니다.
 - 승인된 final과 승인 대기 final 후보를 구분합니다.
 - registry/status 불일치가 있으면 `halt_reason_code: FINAL_REGISTRY_MISMATCH`를 기록하고 `recovery_plan`을 작성합니다.
+
+## Final preflight integrity check
+
+final 후보 또는 수정본을 만들기 전 다음을 확인합니다.
+
+1. `final_registry.json`에 해당 회차가 등록되어 있는가?
+2. `episode_XXX_status.md`의 `current_final`이 registry의 `current_final_candidate`와 일치하는가?
+3. 기존 final 파일을 직접 수정하지 않는가?
+4. 새 수정본 파일명이 다음 버전(`v3`, `v4` 등)인가?
+5. 승인본과 승인 대기 후보가 구분되어 있는가?
+6. 불일치가 있으면 `FINAL_REGISTRY_STATUS_MISMATCH`로 중단하고 `recovery_plan`을 작성했는가?

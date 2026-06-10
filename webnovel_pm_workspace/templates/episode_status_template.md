@@ -64,3 +64,13 @@
 - 독자 보상 ledger 갱신: pending / pass / fail
 - 품질 추세 갱신: pending / pass / fail
 - 주인공/주요 인물 말투 안정성: pending / pass / fail
+
+## Registry / Approval Sync
+
+- approval_state_current_stage:
+- approval_state_allowed_scope:
+- final_registry_current_final_candidate:
+- final_registry_approved_final:
+- status_registry_match: pending / pass / fail
+- mismatch_halt_reason_code: none / FINAL_REGISTRY_STATUS_MISMATCH
+- existing_final_read_only_confirmed: pending / pass / fail

@@ -199,3 +199,38 @@ critical issue가 approval, final registry, ability usage, payoff, voice, report
 - run_report_index 영향:
 - 필요한 state repair:
 ```
+
+## High/High 우선 보고 확장
+
+원고 생성, 회차 outline/draft/review/final, 수정, batch, canon 변경 요청, feedback 반영 계획, recovery, packaging 작업 후에는 기본 보고에 더해 아래 항목을 포함합니다.
+
+```md
+### 16. 수정한 파일별 변경 이유
+
+| 파일 | 변경 이유 | 연결된 High/High 항목 | 사용자 요청 범위 안 여부 |
+|---|---|---|---|
+
+### 17. High/High 안전 게이트 체크
+
+- request_type 선판정:
+- audit_only/plan_only 수정 금지 준수 여부:
+- approval_state 확인 여부:
+- 3화 초과 요청 제한 준수 여부:
+- final_registry 확인 여부:
+- episode_status/final_registry 일치 여부:
+- 기존 final 덮어쓰기 여부:
+- Bible 계열 직접 변경 여부:
+- canon_change_request 필요 여부:
+- ability_usage_log outline/draft/review 연결 여부:
+- feedback_application_plan 영향도 매트릭스 확인 여부:
+- foreshadowing_ledger/payoff_schedule 동기화 여부:
+- HARNESS_ROUTER/REQUIRED_OUTPUTS_MATRIX 확인 여부:
+
+### 18. 다음 프롬프트 추천
+
+- 추천 목적:
+- 사용자가 그대로 입력할 수 있는 프롬프트:
+- 이 프롬프트가 진행하지 않는 것:
+```
+
+`다음 프롬프트 추천`에는 실제 다음 회차의 장면, 대사, 사건 전개, 새 canon 초안을 넣지 않습니다. 작업 후보와 안전 조건만 제안합니다.

@@ -11,13 +11,19 @@
       "payoff_type": "information / emotional / victory / reversal / growth",
       "status": "open / partially_paid / paid / delayed / dropped_with_reason",
       "risk_if_delayed": "독자 보상 약화 또는 설정 혼선",
-      "next_required_action": "다음 점검 또는 회수 계획"
+      "next_required_action": "다음 점검 또는 회수 계획",
+      "ledger_sync_status": "pending / synced / mismatch",
+      "overdue_status": "not_due / warning / critical",
+      "last_checked_run_report": "run_report_YYYYMMDD_001.md"
     }
   ],
   "payoff_rules": {
     "audit_every_10_episodes": true,
     "must_report_overdue_threads": true,
     "no_new_major_threads_in_final_arc_without_approval": true,
-    "delayed_thread_requires_reason": true
+    "delayed_thread_requires_reason": true,
+    "must_sync_with_foreshadowing_ledger": true,
+    "critical_overdue_blocks_new_major_threads": true,
+    "batch_report_must_list_open_paid_delayed_threads": true
   }
 }

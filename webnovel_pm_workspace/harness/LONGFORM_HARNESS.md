@@ -126,3 +126,11 @@
 - `voice_samples.md`
 
 10화 단위 audit 시 위 파일을 확인하고, 복선 회수 지연/독자 보상 반복/능력 성장 drift/말투 drift가 있으면 다음 배치 작성 전 review 또는 recovery_plan을 작성합니다.
+
+## Payoff synchronization gate
+
+- 새 복선을 추가하면 `foreshadowing_ledger.json`과 `payoff_schedule.json`에 모두 기록한다.
+- 복선을 회수하면 두 파일의 상태를 모두 갱신한다.
+- 회수를 지연하면 지연 이유, 다음 점검 회차, 독자 보상 보완책을 기록한다.
+- critical overdue thread가 있으면 새 장기 복선 추가보다 회수 또는 정리를 우선한다.
+- 3화 배치 run_report에는 열린 복선, 회수된 복선, 지연된 복선, 다음 회수 후보를 보고한다.

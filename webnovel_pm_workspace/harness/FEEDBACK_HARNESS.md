@@ -99,3 +99,19 @@
 - 말투/문체 피드백은 기본적으로 대사와 문장 수정으로 제한하고, 인물 성격·욕망·결핍·canon 변경으로 확대하지 않습니다.
 - 말투 피드백은 `voice_samples.md` 또는 해당 역할 문서에 반영할지 먼저 판단합니다.
 - final 수정이 필요하면 기존 final을 직접 편집하지 않고 `final_registry.json` 기준 새 버전을 제안합니다.
+
+## Feedback Impact Matrix gate
+
+피드백 반영 전 다음 매트릭스를 작성하거나 확인합니다.
+
+| 영향 분류 | 기본 허용 범위 | 사용자 재승인 필요 조건 |
+|---|---|---|
+| `TEXT_ONLY` | 문장, 표현, 오탈자 | final 새 버전 필요 시 |
+| `STYLE_ADJUSTMENT` | 문체, 호흡, 문단 길이 | 회차 톤 전체 변경 시 |
+| `CHARACTER_VOICE` | 대사/내면 독백 말투 | 성격·욕망·결핍 변경으로 확대될 때 |
+| `SCENE_REWRITE` | 특정 장면 재작성 | 사건 결과가 바뀔 때 |
+| `CONTINUITY_REPAIR` | 설정 충돌 보정 | canon 변경이 필요할 때 |
+| `BIBLE_CHANGE_REQUIRED` | Bible 변경 요청 | 항상 canon_change_request 필요 |
+| `SCOPE_EXPANSION_RISK` | 다음 회차/배치로 확장 위험 | 항상 사용자 확인 필요 |
+
+말투/문체 피드백은 기본적으로 `TEXT_ONLY`, `STYLE_ADJUSTMENT`, `CHARACTER_VOICE`에 머물러야 하며, canon 변경으로 확대하지 않습니다.

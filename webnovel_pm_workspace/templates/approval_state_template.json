@@ -6,14 +6,20 @@
     "first_work_limit": "concept_to_episode_001_final_only",
     "post_episode_001_batch_size": 3,
     "next_batch_requires_explicit_user_instruction": true,
-    "do_not_write_unapproved_episodes": true
+    "do_not_write_unapproved_episodes": true,
+    "max_episodes_per_generation_request": 3,
+    "excess_episode_requests_must_be_reported_only": true
   },
   "episode_approval": {
     "approved_through_episode": 0,
     "episode_001_approved_for_continuation": false,
     "current_review_range": [],
     "next_allowed_batch": null,
-    "blocked_episodes": [2, 3, 4]
+    "blocked_episodes": [
+      2,
+      3,
+      4
+    ]
   },
   "approval_records": [
     {
@@ -30,5 +36,15 @@
     "approval_state가 불명확하면 다음 회차를 작성하지 않는다",
     "승인되지 않은 회차는 outline, draft, final 모두 작성하지 않는다",
     "배치 완료 후 current_stage를 awaiting_user_review로 둔다"
-  ]
+  ],
+  "request_gate": {
+    "must_classify_request_type_before_work": true,
+    "audit_or_plan_only_blocks_file_changes_unless_explicitly_requested": true,
+    "source_of_truth": "approval_state.json overrides conversational assumptions"
+  },
+  "staleness_check": {
+    "last_validated_by_run_report": "run_report_YYYYMMDD_001.md",
+    "stale_if_current_stage_conflicts_with_latest_user_request": true,
+    "stale_state_requires_user_confirmation": true
+  }
 }

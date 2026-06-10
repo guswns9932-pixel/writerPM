@@ -226,3 +226,39 @@ critical issue 예시는 다음과 같습니다.
 - 회차별 독자 보상과 품질 점수는 `reader_reward_ledger.json`과 `quality_trend_log.json`에 누적합니다.
 - 주요 인물의 대사나 내면 독백을 작성/수정할 때는 `voice_samples.md`를 확인합니다.
 - run report를 작성한 뒤 `run_report_index.json` 또는 해당 역할 문서가 있으면 색인을 갱신합니다.
+
+## High/High 우선 보완 절차
+
+이 절차는 승인 게이트, final 보호, canon 보호, ability/payoff/feedback 누락을 막기 위한 최우선 절차입니다.
+
+### 1. request_type 선판정
+
+1. 사용자 요청을 먼저 `audit_only`, `plan_only`, `proposal_only`, `concept_generation`, `bible_generation`, `episode_outline`, `episode_draft`, `revision`, `canon_change_request`, `recovery_plan`, `packaging` 중 하나 이상으로 분류한다.
+2. `검토만`, `리뷰만`, `제안만`, `아직 수정하지 말고`, `보고서만` 요청이면 파일 생성/수정 금지 상태로 처리한다.
+3. 분석만 요청에서 파일 변경이 필요해 보이면 변경하지 말고 “수정 제안”으로만 보고한다.
+
+### 2. approval_state 승인 게이트
+
+1. 회차 outline, draft, final, batch, final 수정, canon 변경 전 `projects/{project_id}/approval_state.json`을 확인한다.
+2. `current_stage`가 `awaiting_user_review`이면 다음 배치로 자동 진행하지 않는다.
+3. `next_allowed_batch`가 없거나 사용자 요청과 충돌하면 원고 작업을 중단한다.
+4. 3화를 초과하는 요청은 기본 3화까지만 수행하고 나머지는 다음 가능한 작업으로만 보고한다.
+
+### 3. final 보호 게이트
+
+1. final 관련 작업 전 `final_registry.json`과 `episode_XXX_status.md`의 current final 정보를 대조한다.
+2. 기존 final 파일은 직접 수정하지 않는다.
+3. registry/status 불일치, 승인본/후보 혼동, 기존 final 덮어쓰기 위험이 있으면 `halt_reason_code: FINAL_REGISTRY_STATUS_MISMATCH` 또는 `FINAL_OVERWRITE_RISK`로 중단한다.
+
+### 4. canon 및 능력 규칙 게이트
+
+1. `story_bible.json`, `character_bible.json`, `ability_rules.json`, `power_progression.json`의 핵심 규칙 변경은 canon 변경으로 간주한다.
+2. 승인 전에는 Bible 계열 파일을 직접 수정하지 않고 `canon_change_request`만 작성한다.
+3. 능력이 등장하는 outline/draft/review/final에서는 `ability_usage_log.json`에 예정 사용, 실제 사용, 검수 결과를 기록한다.
+
+### 5. feedback/payoff/report 완료 게이트
+
+1. 피드백 반영 전 `feedback_application_plan` 영향도 매트릭스를 작성하거나 확인한다.
+2. 복선 추가·회수·지연은 `foreshadowing_ledger.json`과 `payoff_schedule.json`을 함께 갱신한다.
+3. 작업 후 `run_report`와 필요 시 `run_report_index.json`를 갱신한다.
+4. 완료 보고에는 수정한 파일별 변경 이유와 다음 프롬프트 추천을 포함한다.

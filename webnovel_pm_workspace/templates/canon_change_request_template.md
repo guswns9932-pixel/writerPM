@@ -64,3 +64,20 @@
 - `canon_log.json`
 - 기존 final 파일
 - `final_registry.json`의 승인 상태
+
+## Canon Change Threshold
+
+| 변경 유형 | canon_change_request 필요 여부 | 승인 전 직접 수정 가능 여부 |
+|---|---|---|
+| 오탈자/표현 정리 | no | 가능하나 final 덮어쓰기 금지 |
+| 설명 보강, 모호성 해소 | maybe | 핵심 규칙 변화 없을 때만 |
+| 능력 조건/한계/대가 변경 | yes | no |
+| 주인공 욕망/결핍/선택 원칙 변경 | yes | no |
+| 조직 목적/세계 규칙 변경 | yes | no |
+| 기존 canon 폐기 또는 대체 | yes | no |
+
+## 승인 후 적용 범위
+
+- approved_patch_scope:
+- forbidden_changes_even_if_approved:
+- post_change_audit_required:

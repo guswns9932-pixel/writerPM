@@ -62,3 +62,30 @@
 - run_report_index 갱신 여부:
 - 기존 final 덮어쓰기 여부: 없음 / 있음
 - 다음 회차 또는 다음 배치 자동 진행 여부: 없음 / 있음
+
+## 수정한 파일별 변경 이유
+
+| 파일 | 변경 이유 | 연결된 사용자 요청 | 연결된 High/High 안전 항목 |
+|---|---|---|---|
+
+## High/High 안전 게이트 체크
+
+- request_type 선판정:
+- audit_only/plan_only 수정 금지 준수:
+- approval_state 확인:
+- 3화 초과 요청 제한 준수:
+- final_registry 확인:
+- episode_status/final_registry 일치:
+- 기존 final 덮어쓰기 여부:
+- Bible 계열 직접 변경 여부:
+- canon_change_request 필요 여부:
+- ability_usage_log 단계별 연결:
+- feedback 영향도 매트릭스 확인:
+- foreshadowing_ledger/payoff_schedule 동기화:
+- HARNESS_ROUTER/REQUIRED_OUTPUTS_MATRIX 확인:
+
+## 다음 프롬프트 추천
+
+- 추천 목적:
+- 프롬프트 초안:
+- 이 프롬프트가 진행하지 않는 것:

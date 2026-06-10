@@ -19,7 +19,13 @@
           "note": "검수 메모"
         }
       ],
-      "episode_verdict": "pass / fail / needs_review"
+      "episode_verdict": "pass / fail / needs_review",
+      "phase_records": {
+        "outline_planned_usage": [],
+        "draft_actual_usage": [],
+        "review_verdict": "pending / pass / fail",
+        "final_save_allowed": false
+      }
     }
   ],
   "blocked_usages": [
@@ -27,5 +33,11 @@
     "perfect_future_prediction_without_rule",
     "unearned_power_up",
     "rule_change_without_canon_change_request"
-  ]
+  ],
+  "phase_requirements": {
+    "outline": "record planned ability use before drafting",
+    "draft": "record actual ability use and shown cost/limit",
+    "review": "compare actual use against ability_rules and power_progression",
+    "final": "final save blocked if usage is unrecorded or violates rules"
+  }
 }

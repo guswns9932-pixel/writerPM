@@ -104,3 +104,15 @@ Bible 또는 canon 변경이 필요한 경우입니다.
 - `quality_trend_log.json` / `reader_reward_ledger.json` 누락으로 품질 추세 확인 불가
 - `voice_samples.md` 기준 말투 drift 발생
 - `run_report_index.json` 누락 또는 최신 run_report 불일치
+
+## High/High recovery triggers
+
+다음은 즉시 중단하고 recovery_plan을 작성해야 하는 High/High trigger입니다.
+
+- `approval_state`와 사용자 요청 범위가 충돌한다.
+- `final_registry`와 `episode_status`가 서로 다른 final을 가리킨다.
+- 기존 final 파일을 직접 편집했거나 편집하려 한다.
+- Bible 계열 핵심 설정 변경이 필요한데 canon_change_request가 없다.
+- ability_usage_log 없이 능력 사용 장면을 final로 저장하려 한다.
+- payoff_schedule상 critical overdue thread가 있는데 새 장기 복선을 추가하려 한다.
+- run_report 없이 완료 보고하려 한다.

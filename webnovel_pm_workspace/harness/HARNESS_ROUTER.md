@@ -69,3 +69,31 @@
 - payoff_schedule상 overdue thread가 critical인데 새 복선을 추가하려는 경우
 - voice_samples와 충돌하는 말투 drift가 발생했는데 revision_note 없이 final 저장하려는 경우
 - run_report 없이 작업을 완료하려는 경우
+
+## Request Type 선판정 규칙
+
+작업 전 사용자 요청을 먼저 분류합니다.
+
+| request_type | 판단 기준 | 파일 변경 가능 여부 | 필수 보고 |
+|---|---|---|---|
+| `audit_only` | 검토, 리뷰, 점검, 문제 찾기 | 원칙적으로 불가 | 발견 사항, 수정 제안, 수정 금지 준수 |
+| `plan_only` | 계획, recovery_plan, feedback_application_plan, canon_change_request | 요청한 계획 파일만 가능 | 원문/해석/승인 필요 여부 |
+| `proposal_only` | 제안, 추천, 분석 보고서 | 원칙적으로 불가 | 제안 목록, 우선순위 |
+| `episode_outline` | 회차 outline 작성 | 승인된 회차만 가능 | approval_state, ability_usage 계획 |
+| `episode_draft` | draft/final 작성 | 승인된 회차만 가능 | ability/payoff/reward/final 보호 |
+| `revision` | 수정 요청 | 기존 final 직접 수정 불가 | feedback plan, 새 버전 여부 |
+
+`audit_only`, `proposal_only` 요청에서 파일 변경이 필요해 보이면 변경하지 않고 “수정 제안”으로만 보고합니다.
+
+## Required Outputs Matrix 연결
+
+`REQUIRED_OUTPUTS_MATRIX.md`가 있으면 모든 prompt 실행 전 다음을 확정합니다.
+
+- 필수 입력 파일
+- 필수 출력 파일
+- 작업 후 업데이트 파일
+- 금지 파일 또는 읽기 전용 파일
+- run_report 필요 여부
+- 사용자 승인 필요 여부
+
+matrix와 사용자 요청이 충돌하면 사용자 요청 범위를 우선하되, 안전 규칙 위반이 있으면 작업을 중단하고 보고합니다.

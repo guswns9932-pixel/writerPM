@@ -109,3 +109,16 @@
 
 57. critical issue에는 독창성/표절성 유사성 위험, 권리/플랫폼 리스크, 승인 상태 불일치, final registry/status 불일치, 등장인물 과다, 복선 회수 불능, 반복 패턴으로 인한 독자 보상 약화, 작업 범위 밖 파일 수정도 포함한다.
 58. critical issue가 하나라도 있으면 final, packaging, export, 다음 배치 진행을 중단하고 `halt_reason_code`와 `recovery_plan`을 작성한다.
+
+## High/High 우선 안전 게이트
+
+59. 작업 시작 전 `request_type`을 먼저 분류한다. `audit_only`, `plan_only`, `review_only`, `proposal_only` 요청은 사용자가 명시적으로 파일 작성을 요구하지 않는 한 파일을 생성하거나 수정하지 않는다.
+60. 회차 outline, draft, final, batch, final 수정, canon 변경은 `approval_state.json`을 단일 승인 기준으로 확인한 뒤에만 진행한다. `approval_state`가 없거나 오래되었거나 사용자 요청과 충돌하면 작업을 중단하고 확인 필요 사항으로 보고한다.
+61. 사용자가 3화를 초과하는 회차 생성을 요청해도 실제 생성 범위는 기본 3화까지만 수행한다. 초과분의 줄거리, 장면, 대사, 설정 초안은 작성하지 않고 다음 가능한 작업 후보로만 보고한다.
+62. final 관련 작업 전에는 `final_registry.json`, 해당 `episode_XXX_status.md`, 기존 final 파일 목록을 대조한다. 불일치가 있으면 final 저장 또는 수정을 중단하고 `recovery_plan`을 작성한다.
+63. 기존 final 파일은 항상 읽기 전용 기준본이다. 문장 1개만 고쳐도 기존 final을 직접 수정하지 않고 새 버전 파일과 `revision_note`를 만든다.
+64. `story_bible.json`, `character_bible.json`, `ability_rules.json`, `power_progression.json`의 핵심 규칙을 바꾸려면 먼저 `canon_change_request`를 작성한다. 사용자 승인 전에는 Bible 계열 파일과 canon 확정 로그를 수정하지 않는다.
+65. 능력이 등장하는 outline, draft, review, final 작업은 모두 `ability_usage_log.json`에 예정 사용, 실제 사용, 검수 결과를 단계별로 기록한다. 기록이 불가능하면 final 저장을 중단한다.
+66. 사용자 피드백은 `feedback_application_plan`의 영향도 매트릭스로 분류한다. 말투/문체 피드백은 기본적으로 `TEXT_ONLY`, `STYLE_ADJUSTMENT`, `CHARACTER_VOICE` 범위를 넘지 않는다.
+67. 새 복선, 열린 질문, 회수 지연, 회수 완료는 `foreshadowing_ledger.json`과 `payoff_schedule.json` 양쪽에 동기화한다. critical overdue thread가 있으면 새 장기 복선을 추가하지 않는다.
+68. 모든 prompt 실행 전 `HARNESS_ROUTER.md`와 `REQUIRED_OUTPUTS_MATRIX.md` 또는 해당 역할 문서를 확인해 입력 파일, 출력 파일, 업데이트 파일, 금지 행동을 확정한다.

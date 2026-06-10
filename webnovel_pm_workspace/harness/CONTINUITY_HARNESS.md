@@ -120,3 +120,11 @@
 - `voice_samples.md`: 주요 인물 말투와 내면 독백이 drift되지 않았는지 확인
 
 위 파일과 기존 기억 파일이 충돌하면 final 저장을 중단하고 review 또는 recovery_plan에 기록합니다.
+
+## Bible 보호와 ability usage 연결
+
+- `story_bible.json`, `character_bible.json`, `ability_rules.json`, `power_progression.json`의 핵심 규칙은 사용자 승인 없는 직접 수정 대상이 아니다.
+- 핵심 규칙 변경이 필요하면 `canon_change_request`만 작성하고 승인 전에는 Bible 계열 파일을 수정하지 않는다.
+- 능력이 등장하는 outline은 `ability_usage_log.json`에 예정 사용을 기록한다.
+- draft/final 검수는 `ability_usage_log.json`의 실제 사용과 `ability_rules.json`/`power_progression.json`의 허용 범위를 대조한다.
+- 위반 또는 기록 누락이 있으면 final 저장을 중단한다.

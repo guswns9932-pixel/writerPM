@@ -69,3 +69,15 @@
 - reader_reward_ledger.json:
 - voice_samples.md:
 - user_feedback_log.json:
+
+## 영향도 판정 기준
+
+| 분류 | 적용 가능 예 | 확대 금지선 | 필요한 후속 파일 |
+|---|---|---|---|
+| TEXT_ONLY | 오탈자, 문장 압축 | 사건 결과 변경 | revision_note |
+| STYLE_ADJUSTMENT | 건조한 문체, 문단 호흡 | 성격/욕망 변경 | style_check, revision_note |
+| CHARACTER_VOICE | 대사/내면 독백 조정 | character_bible 변경 | voice_samples, revision_note |
+| SCENE_REWRITE | 특정 장면 재작성 | 회차 목표 변경 | review, status |
+| CONTINUITY_REPAIR | 시간선/설정 보정 | 새 canon 확정 | recovery_plan 또는 canon_change_request |
+| BIBLE_CHANGE_REQUIRED | 능력 규칙/세계 규칙 변경 | 승인 전 반영 | canon_change_request |
+| SCOPE_EXPANSION_RISK | 다음 회차/배치로 확장 | 사용자 승인 없는 진행 | 사용자 확인 필요 |

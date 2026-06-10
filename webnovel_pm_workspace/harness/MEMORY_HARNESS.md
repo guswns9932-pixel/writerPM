@@ -150,3 +150,16 @@ High 심각도/High 발생 가능성 위험을 줄이기 위해 원고 작성, �
 - [ ] `run_reports/run_report_index.json`
 
 누락 시 final 저장 전 누락 사실을 보고하고, 해당 파일 생성 또는 보강을 사용자 확인 필요 사항으로 정리합니다.
+
+## Approval and registry source of truth
+
+원고, outline, draft, final, 수정, canon 변경 전 다음 source of truth를 확인합니다.
+
+- `approval_state.json`: 승인된 회차와 batch 범위
+- `final_registry.json`: final 후보/승인본/버전 보호
+- `episode_XXX_status.md`: 회차별 current final과 검수 상태
+- `ability_usage_log.json`: 능력 사용 예정/실제/검수 기록
+- `payoff_schedule.json`: 복선 회수 일정과 overdue 상태
+- `run_reports/run_report_index.json`: 최신 작업 보고 색인
+
+위 파일이 없거나 서로 충돌하면 final 저장, 다음 배치, canon 변경을 중단합니다.

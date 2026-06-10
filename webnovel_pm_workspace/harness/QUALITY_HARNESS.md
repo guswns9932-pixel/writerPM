@@ -85,3 +85,10 @@
 - 회차별 독자 보상 유형은 `reader_reward_ledger.json` 또는 해당 역할 문서에 기록합니다.
 - 같은 독자 보상 유형이 3회 이상 반복되면 다음 회차 변주 계획을 작성합니다.
 - 총점 75점 미만 또는 독자 보상 누락은 revision_note 없이 final 저장할 수 없습니다.
+
+## Reader reward trend gate
+
+- 각 회차의 독자 보상 유형을 `reader_reward_ledger.json`에 기록한다.
+- 최근 3화의 보상 유형이 반복되면 다음 회차 outline에서 다른 보상 유형을 우선 검토한다.
+- 클리프행어 유형이 반복되면 `episode_pattern_log.json` 또는 해당 역할 문서에 반복 위험을 기록한다.
+- quality score가 통과라도 독자 보상 또는 클리프행어가 약하면 final 저장 전 revision_note를 작성한다.

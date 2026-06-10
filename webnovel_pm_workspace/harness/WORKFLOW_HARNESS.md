@@ -66,3 +66,11 @@ Codex가 작업 시작 전후로 작업 범위와 승인 상태를 점검하기 
 - 요청 범위 초과 작업 위험
 - 다음 배치 자동 진행 위험
 - 기존 final 파일 덮어쓰기 위험
+
+## High/High workflow gate
+
+- “검토만/제안만/아직 수정하지 말고” 요청은 파일 변경 없이 응답한다.
+- 회차 생성 전 `approval_state.json`의 허용 범위를 확인한다.
+- 3화 초과 요청은 기본 3화까지만 수행하고 초과분은 다음 가능한 작업으로만 보고한다.
+- batch 완료 후 `current_stage`는 `awaiting_user_review`로 정리한다.
+- `HARNESS_ROUTER.md`와 `REQUIRED_OUTPUTS_MATRIX.md`를 확인하지 못하면 원고 작업을 시작하지 않는다.

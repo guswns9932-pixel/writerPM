@@ -106,3 +106,15 @@
 - 회차별 독자 보상과 품질 추세는 `reader_reward_ledger.json`, `quality_trend_log.json` 또는 해당 역할 문서에 누적합니다.
 - 주요 인물 말투 변경은 `voice_samples.md` 또는 해당 역할 문서를 기준으로 검수합니다.
 - run report가 생성되면 `run_report_index.json` 또는 해당 역할 문서에 기록합니다.
+
+## High/High 우선 운영 제한
+
+- `audit_only`, `review_only`, `proposal_only`, `plan_only` 요청에서는 사용자가 파일 생성을 명시하지 않는 한 파일을 만들거나 수정하지 않는다.
+- 회차 생성 가능 여부는 대화 기억보다 `approval_state.json`을 우선한다. 승인 상태가 모호하면 작업하지 않는다.
+- 3화 초과 생성 요청은 기본 3화까지만 수행한다. 초과 회차의 줄거리, 대사, 장면, 설정 초안은 작성하지 않는다.
+- final 관련 작업은 `final_registry.json`과 `episode_XXX_status.md`가 일치할 때만 진행한다.
+- Bible 계열 핵심 설정 변경은 `canon_change_request` 승인 전까지 금지한다.
+- 능력 사용이 있는 작업은 outline 단계부터 `ability_usage_log.json` 갱신 계획을 포함한다.
+- 피드백은 영향도 매트릭스로 분류하고, 말투/문체 피드백을 인물 성격·욕망·canon 변경으로 확대하지 않는다.
+- 복선과 payoff는 `foreshadowing_ledger.json`과 `payoff_schedule.json` 양쪽 기준으로 관리한다.
+- 모든 prompt 작업은 `HARNESS_ROUTER.md`와 `REQUIRED_OUTPUTS_MATRIX.md` 기준으로 입력/출력/업데이트/금지 행동을 먼저 확인한다.
