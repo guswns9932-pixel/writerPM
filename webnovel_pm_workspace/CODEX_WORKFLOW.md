@@ -215,3 +215,14 @@ critical issue 예시는 다음과 같습니다.
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## 14. High-risk 상태 파일 우선 확인 절차
+
+- 작업 시작 전 `HARNESS_ROUTER.md`를 확인해 요청 유형을 분류합니다.
+- 회차 outline, draft, revision, batch 작업 전 `approval_state.json`에서 허용된 회차와 배치 범위를 확인합니다.
+- final 후보 또는 승인본을 생성/갱신하는 작업 전후에는 `final_registry.json`과 `episode_XXX_status.md`의 일치 여부를 확인합니다.
+- 능력 사용이 포함되면 `ability_usage_log.json`에 실제 사용 장면, 허용 단계, 대가/한계, 위반 여부를 기록합니다.
+- 새 복선, 회수, 회수 지연은 `foreshadowing_ledger.json`과 `payoff_schedule.json`에 함께 기록합니다.
+- 회차별 독자 보상과 품질 점수는 `reader_reward_ledger.json`과 `quality_trend_log.json`에 누적합니다.
+- 주요 인물의 대사나 내면 독백을 작성/수정할 때는 `voice_samples.md`를 확인합니다.
+- run report를 작성한 뒤 `run_report_index.json` 또는 해당 역할 문서가 있으면 색인을 갱신합니다.

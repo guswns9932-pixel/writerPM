@@ -1,0 +1,23 @@
+{
+  "project_id": "example_project",
+  "purpose": "복선, 열린 질문, 독자 보상 회수 일정을 관리해 장편 진행 중 복선 망각을 방지한다",
+  "open_threads": [
+    {
+      "thread_id": "thread_001",
+      "source_foreshadowing_id": "F001",
+      "first_appearance_episode": 1,
+      "description": "복선 또는 열린 질문 설명",
+      "planned_payoff_episode_or_arc": "episode_010 / arc_01",
+      "payoff_type": "information / emotional / victory / reversal / growth",
+      "status": "open / partially_paid / paid / delayed / dropped_with_reason",
+      "risk_if_delayed": "독자 보상 약화 또는 설정 혼선",
+      "next_required_action": "다음 점검 또는 회수 계획"
+    }
+  ],
+  "payoff_rules": {
+    "audit_every_10_episodes": true,
+    "must_report_overdue_threads": true,
+    "no_new_major_threads_in_final_arc_without_approval": true,
+    "delayed_thread_requires_reason": true
+  }
+}

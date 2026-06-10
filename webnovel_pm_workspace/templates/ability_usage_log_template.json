@@ -1,0 +1,31 @@
+{
+  "project_id": "example_project",
+  "purpose": "회차별 실제 능력 사용을 기록해 능력 규칙 위반과 갑작스러운 파워업을 방지한다",
+  "tracked_system": "main ability / system / power rules",
+  "current_allowed_stage": "stage_01",
+  "episode_usage": [
+    {
+      "episode": 1,
+      "source_final": "episodes/episode_001_final_v1.md",
+      "ability_instances": [
+        {
+          "scene": "장면명",
+          "used_ability": "사용한 능력",
+          "allowed_by_rule": true,
+          "rule_reference": "ability_rules.json#rule_id 또는 power_progression.json#stage_id",
+          "cost_or_limit_shown": "대가/한계/오판 가능성",
+          "power_progression_change": "none / proposed / approved",
+          "violation": false,
+          "note": "검수 메모"
+        }
+      ],
+      "episode_verdict": "pass / fail / needs_review"
+    }
+  ],
+  "blocked_usages": [
+    "mind_reading_without_rule",
+    "perfect_future_prediction_without_rule",
+    "unearned_power_up",
+    "rule_change_without_canon_change_request"
+  ]
+}

@@ -44,3 +44,23 @@
 ## 다음 가능한 작업
 
 -
+
+## High-risk 상태 참조
+
+- approval_state_ref: `approval_state.json`
+- final_registry_ref: `final_registry.json`
+- ability_usage_log_ref: `ability_usage_log.json`
+- payoff_schedule_ref: `payoff_schedule.json`
+- quality_trend_log_ref: `quality_trend_log.json`
+- reader_reward_ledger_ref: `reader_reward_ledger.json`
+- voice_samples_ref: `voice_samples.md`
+
+## High-risk 체크
+
+- 승인된 작업 범위 안에서 작성됨: pending / pass / fail
+- final_registry와 current_final 일치: pending / pass / fail
+- 능력 사용 기록 완료: pending / pass / fail / not_applicable
+- 복선 회수 일정 갱신: pending / pass / fail / not_applicable
+- 독자 보상 ledger 갱신: pending / pass / fail
+- 품질 추세 갱신: pending / pass / fail
+- 주인공/주요 인물 말투 안정성: pending / pass / fail

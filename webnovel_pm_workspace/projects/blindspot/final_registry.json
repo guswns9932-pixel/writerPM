@@ -1,0 +1,82 @@
+{
+  "project_id": "blindspot",
+  "title": "사각지대",
+  "last_updated": "2026-06-10",
+  "versioning_rule": "Never overwrite existing final files. Save revised finals as a new version.",
+  "episodes": [
+    {
+      "episode": 1,
+      "status": "candidate_accepted_for_continuation_pending_formal_review",
+      "current_final_candidate": "episodes/episode_001_final_v2.md",
+      "approved_final": null,
+      "final_versions": [
+        {
+          "version": "v2",
+          "path": "episodes/episode_001_final_v2.md",
+          "status": "candidate_used_as_basis_for_episodes_002_004",
+          "created_from": "episodes/episode_001_revision_note_v2.md",
+          "created_at": "2026-06-09",
+          "do_not_overwrite": true,
+          "notes": "사용자가 1화를 마음에 든다고 평가했으나 final 파일은 보존한다."
+        }
+      ]
+    },
+    {
+      "episode": 2,
+      "status": "pending_user_review",
+      "current_final_candidate": "episodes/episode_002_final_v2.md",
+      "approved_final": null,
+      "final_versions": [
+        {
+          "version": "v2",
+          "path": "episodes/episode_002_final_v2.md",
+          "status": "pending_user_review",
+          "created_from": "episodes/episode_002_revision_note_v2.md",
+          "created_at": "2026-06-09",
+          "do_not_overwrite": true,
+          "notes": "2~4화 배치 final 후보"
+        }
+      ]
+    },
+    {
+      "episode": 3,
+      "status": "pending_user_review",
+      "current_final_candidate": "episodes/episode_003_final_v2.md",
+      "approved_final": null,
+      "final_versions": [
+        {
+          "version": "v2",
+          "path": "episodes/episode_003_final_v2.md",
+          "status": "pending_user_review",
+          "created_from": "episodes/episode_003_revision_note_v2.md",
+          "created_at": "2026-06-09",
+          "do_not_overwrite": true,
+          "notes": "2~4화 배치 final 후보"
+        }
+      ]
+    },
+    {
+      "episode": 4,
+      "status": "pending_user_review",
+      "current_final_candidate": "episodes/episode_004_final_v2.md",
+      "approved_final": null,
+      "final_versions": [
+        {
+          "version": "v2",
+          "path": "episodes/episode_004_final_v2.md",
+          "status": "pending_user_review",
+          "created_from": "episodes/episode_004_revision_note_v2.md",
+          "created_at": "2026-06-09",
+          "do_not_overwrite": true,
+          "notes": "2~4화 배치 final 후보"
+        }
+      ]
+    }
+  ],
+  "integrity_rules": {
+    "episode_status_must_match_registry": true,
+    "approved_final_is_read_only": true,
+    "new_revision_requires_new_version": true,
+    "mismatch_requires_recovery_plan": true
+  }
+}

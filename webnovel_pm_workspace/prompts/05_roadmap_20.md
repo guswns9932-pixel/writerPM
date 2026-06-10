@@ -68,3 +68,10 @@
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## High-risk 보완 규칙
+
+- `approval_state.json`에서 이번 작업이 roadmap 작성 범위인지 확인한다.
+- 2화 이후는 본문, 장면 대사, final처럼 작성하지 않고 구조/보상/복선 회수 계획으로만 기록한다.
+- 입력 파일에 `arc_state.json`, `power_progression.json`, `cast_registry.json`, `opposition_ladder.json`, `episode_pattern_log.json`, `payoff_schedule.json`, `quality_trend_log.json`, `reader_reward_ledger.json`을 포함한다.
+- 작업 후 `payoff_schedule.json`, `reader_reward_ledger.json`, `quality_trend_log.json` 갱신 필요 여부를 보고한다.

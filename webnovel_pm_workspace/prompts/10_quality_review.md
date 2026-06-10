@@ -66,3 +66,10 @@
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## High-risk 보완 규칙
+
+- 입력 파일에 `episode_pattern_log.json`, `quality_trend_log.json`, `reader_reward_ledger.json`, `payoff_schedule.json`을 포함한다.
+- 각 항목은 10점 척도로 평가하고, 7점 미만 항목은 revision_note를 요구한다.
+- 총점 75점 미만, 독자 보상 누락, 같은 보상 유형 3회 반복, 같은 cliffhanger 유형 2회 반복은 품질 이슈로 기록한다.
+- 작업 후 `quality_trend_log.json`과 `reader_reward_ledger.json` 갱신 여부를 보고한다.

@@ -71,3 +71,11 @@
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## High-risk 보완 규칙
+
+- 작성 전 `approval_state.json`에서 해당 회차가 허용 범위인지 확인한다.
+- 입력 파일에 `arc_state.json`, `cast_registry.json`, `location_registry.json`, `episode_pattern_log.json`, `opposition_ladder.json`, `payoff_schedule.json`, `reader_reward_ledger.json`, `voice_samples.md`를 포함한다.
+- 승인되지 않은 회차 outline은 작성하지 않는다.
+- 새 복선, 능력 사용, 독자 보상, 클리프행어 유형을 outline 단계에서 표시한다.
+- 작업 후 `episode_pattern_log.json`, `payoff_schedule.json`, `reader_reward_ledger.json` 갱신 필요 여부를 보고한다.

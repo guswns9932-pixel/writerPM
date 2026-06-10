@@ -44,3 +44,23 @@
 ## 사용자 결정 필요
 
 - approve / reject / revise_request
+
+## High-risk State Impact
+
+- approval_state 영향:
+- final_registry 영향:
+- ability_usage_log 영향:
+- payoff_schedule 영향:
+- quality_trend_log 영향:
+- reader_reward_ledger 영향:
+- voice_samples 영향:
+
+## 승인 전 직접 수정 금지 파일
+
+- `story_bible.json`
+- `character_bible.json`
+- `ability_rules.json`
+- `power_progression.json`
+- `canon_log.json`
+- 기존 final 파일
+- `final_registry.json`의 승인 상태

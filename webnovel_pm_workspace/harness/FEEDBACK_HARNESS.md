@@ -92,3 +92,10 @@
 - 기존 final 파일 덮어쓰기 위험이 있다.
 - 피드백 해석이 불명확하다.
 - 요청 범위가 다음 회차나 다음 배치로 확장된다.
+
+## High-risk 피드백 영향도 제한
+
+- 피드백은 `TEXT_ONLY`, `STYLE_ADJUSTMENT`, `CHARACTER_VOICE`, `SCENE_REWRITE`, `CONTINUITY_REPAIR`, `BIBLE_CHANGE_REQUIRED`, `SCOPE_EXPANSION_RISK`로 분류합니다.
+- 말투/문체 피드백은 기본적으로 대사와 문장 수정으로 제한하고, 인물 성격·욕망·결핍·canon 변경으로 확대하지 않습니다.
+- 말투 피드백은 `voice_samples.md` 또는 해당 역할 문서에 반영할지 먼저 판단합니다.
+- final 수정이 필요하면 기존 final을 직접 편집하지 않고 `final_registry.json` 기준 새 버전을 제안합니다.

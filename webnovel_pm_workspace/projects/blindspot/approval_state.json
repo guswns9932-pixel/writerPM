@@ -1,0 +1,39 @@
+{
+  "project_id": "blindspot",
+  "title": "사각지대",
+  "current_stage": "awaiting_user_review",
+  "last_updated": "2026-06-10",
+  "scope_policy": {
+    "first_work_limit": "concept_to_episode_001_final_only",
+    "post_episode_001_batch_size": 3,
+    "next_batch_requires_explicit_user_instruction": true,
+    "do_not_write_unapproved_episodes": true
+  },
+  "episode_approval": {
+    "approved_through_episode": 1,
+    "episode_001_approved_for_continuation": true,
+    "current_review_range": [2, 3, 4],
+    "next_allowed_batch": null,
+    "blocked_episodes": [5, 6, 7]
+  },
+  "approval_records": [
+    {
+      "approval_id": "approval_20260609_001",
+      "date": "2026-06-09",
+      "user_statement_summary": "사용자가 1화가 마음에 든다고 말하고 2화부터 4화까지 3화 배치 작성을 요청했다.",
+      "approved_scope": "episodes_002_004_generation",
+      "excluded_scope": "episode_005_and_later",
+      "affected_files": [
+        "episodes/episode_002_*",
+        "episodes/episode_003_*",
+        "episodes/episode_004_*"
+      ],
+      "recorded_by": "Codex"
+    }
+  ],
+  "hard_blocks": [
+    "5화 이후 본문, outline, draft, final은 사용자 지시 전 작성하지 않는다.",
+    "2~4화 배치는 awaiting_user_review 상태이며 다음 배치로 자동 진행하지 않는다.",
+    "승인 상태가 불명확하면 원고를 작성하지 않고 보고한다."
+  ]
+}

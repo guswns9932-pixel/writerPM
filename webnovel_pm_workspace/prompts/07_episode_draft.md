@@ -81,3 +81,11 @@
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## High-risk 보완 규칙
+
+- 작성 전 `approval_state.json`에서 해당 회차 draft가 허용되었는지 확인한다.
+- 입력 파일에 `final_registry.json`, `ability_usage_log.json`, `payoff_schedule.json`, `quality_trend_log.json`, `reader_reward_ledger.json`, `voice_samples.md`, `episode_pattern_log.json`, `opposition_ladder.json`, `content_risk_check.md`를 포함한다.
+- 능력 사용 장면은 draft 후 `ability_usage_log.json`에 기록한다.
+- 독자 보상과 클리프행어 유형은 `reader_reward_ledger.json`과 `quality_trend_log.json` 갱신 대상으로 표시한다.
+- 기존 final 파일은 읽기 전용이며 draft 작성 과정에서 수정하지 않는다.

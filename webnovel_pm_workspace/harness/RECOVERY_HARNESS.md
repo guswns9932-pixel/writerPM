@@ -92,3 +92,15 @@ Bible 또는 canon 변경이 필요한 경우입니다.
 - 제안 복구 절차
 - 사용자 승인 필요 여부
 - 재개 가능한 최소 작업 단위
+
+## High-risk 상태 복구 범위
+
+다음 상태 파일 불일치는 recovery_plan 대상으로 처리합니다.
+
+- `approval_state.json` 승인 범위와 실제 생성 파일 불일치
+- `final_registry.json`과 `episode_XXX_status.md` 불일치
+- `ability_usage_log.json` 누락 또는 능력 규칙 위반 기록 누락
+- `payoff_schedule.json` 누락 또는 overdue thread 미보고
+- `quality_trend_log.json` / `reader_reward_ledger.json` 누락으로 품질 추세 확인 불가
+- `voice_samples.md` 기준 말투 drift 발생
+- `run_report_index.json` 누락 또는 최신 run_report 불일치

@@ -108,3 +108,15 @@
 3. `halt_reason_code`를 작성한다.
 4. `recovery_plan` 또는 `canon_change_request`를 작성한다.
 5. 사용자 지시 전에는 확정 반영하지 않는다.
+
+## High-risk 상태 파일 기준 검수
+
+연속성 검수 시 다음 파일을 추가 기준으로 확인합니다.
+
+- `approval_state.json`: 해당 회차/배치가 승인 범위인지 확인
+- `final_registry.json`: 검수 대상 final 후보 또는 승인본이 기준본과 일치하는지 확인
+- `ability_usage_log.json`: 실제 능력 사용이 `ability_rules.json`과 `power_progression.json`을 위반하지 않는지 확인
+- `payoff_schedule.json`: 새 복선, 회수, 회수 지연이 장기 보상 계획과 충돌하지 않는지 확인
+- `voice_samples.md`: 주요 인물 말투와 내면 독백이 drift되지 않았는지 확인
+
+위 파일과 기존 기억 파일이 충돌하면 final 저장을 중단하고 review 또는 recovery_plan에 기록합니다.

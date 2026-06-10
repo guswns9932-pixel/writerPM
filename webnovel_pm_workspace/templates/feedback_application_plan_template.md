@@ -48,3 +48,24 @@
 ## 사용자 승인 필요 사항
 
 -
+
+## Feedback Impact Matrix
+
+- TEXT_ONLY:
+- STYLE_ADJUSTMENT:
+- CHARACTER_VOICE:
+- SCENE_REWRITE:
+- CONTINUITY_REPAIR:
+- BIBLE_CHANGE_REQUIRED:
+- SCOPE_EXPANSION_RISK:
+
+## High-risk State Updates If Approved
+
+- approval_state.json:
+- final_registry.json:
+- ability_usage_log.json:
+- payoff_schedule.json:
+- quality_trend_log.json:
+- reader_reward_ledger.json:
+- voice_samples.md:
+- user_feedback_log.json:

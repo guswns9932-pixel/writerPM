@@ -69,3 +69,9 @@
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## High-risk 보완 규칙
+
+- 입력 파일에 `foreshadowing_ledger.json`, `arc_state.json`, `cast_registry.json`, `location_registry.json`, `final_registry.json`, `approval_state.json`, `ability_usage_log.json`, `payoff_schedule.json`, `voice_samples.md`를 포함한다.
+- 검수 항목에 승인 범위, final registry 일치, 능력 사용 로그, 복선 회수 일정, 말투 drift를 포함한다.
+- 위 항목 중 하나라도 fail이면 final 저장 가능 여부를 `no`로 표시하고 recovery_plan 필요 여부를 판단한다.

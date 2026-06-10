@@ -75,3 +75,10 @@
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## High-risk 보완 규칙
+
+- 입력 파일에 `character_bible.json`, `style_guide.json`, `canon_log.json`, `voice_samples.md`, `final_registry.json`, `approval_state.json`을 포함한다.
+- 피드백을 `TEXT_ONLY`, `STYLE_ADJUSTMENT`, `CHARACTER_VOICE`, `SCENE_REWRITE`, `CONTINUITY_REPAIR`, `BIBLE_CHANGE_REQUIRED`, `SCOPE_EXPANSION_RISK`로 분류한다.
+- 말투/문체 피드백은 기본적으로 대사/문장 수정으로 제한하고 성격/canon 변경으로 확대하지 않는다.
+- final 수정이 필요하면 기존 final을 직접 수정하지 않고 새 버전 생성 계획만 작성한다.

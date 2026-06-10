@@ -75,3 +75,18 @@
 - current_stage: awaiting_user_review
 - 5화는 작성하지 않음.
 - 다음 작업은 사용자 검토와 승인 이후에만 진행 가능.
+
+## 2026-06-10 High-risk 운영 보강
+
+- 현재 단계: `awaiting_user_review`
+- 5화 이후는 사용자 승인/지시 전 작성하지 않는다.
+- 다음 회차 또는 배치 작업 전 반드시 확인할 추가 상태 파일:
+  - `approval_state.json`
+  - `final_registry.json`
+  - `ability_usage_log.json`
+  - `payoff_schedule.json`
+  - `quality_trend_log.json`
+  - `reader_reward_ledger.json`
+  - `voice_samples.md`
+  - `run_reports/run_report_index.json`
+- 이번 보강은 원고 본문, 기존 final, canon 내용을 수정하지 않았다.

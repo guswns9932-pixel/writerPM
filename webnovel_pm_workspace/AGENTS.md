@@ -75,3 +75,37 @@
     - 시간선 오류
     - 사용자 승인 없는 작업 범위 초과
     - 기존 final 파일 덮어쓰기 위험
+
+## 승인 상태, registry, 누적 로그 강화
+
+34. 회차 작성, 배치 작성, final 수정, canon 변경 전에는 `approval_state.json` 또는 해당 역할의 승인 상태 문서를 확인한다.
+35. 승인 상태가 불명확하면 원고, 다음 회차, 다음 배치, final 수정, canon 변경을 진행하지 않고 사용자 확인 필요 사항으로 보고한다.
+36. 사용자가 3화를 초과하는 회차 생성을 요청하더라도 Codex는 기본 3화 단위까지만 수행하고 나머지는 다음 가능한 작업으로 보고한다.
+37. 사용자가 "검토만", "리뷰만", "제안만", "아직 수정하지 말고"라고 명시하면 파일을 생성하거나 수정하지 않는다.
+38. final 후보 또는 승인본을 생성하거나 수정본을 만들 때는 `final_registry.json` 또는 해당 역할 문서를 갱신한다.
+39. 기존 final 파일은 읽기 전용으로만 참조하며 직접 편집하지 않는다.
+40. 승인된 final과 승인 대기 final 후보를 명확히 구분한다.
+41. `episode_XXX_status.md`와 `final_registry`가 충돌하면 final 저장을 중단하고 `recovery_plan`을 작성한다.
+42. 능력 사용이 포함된 회차는 `ability_usage_log.json` 또는 해당 역할 문서에 실제 사용 장면, 허용 단계, 대가/한계, 위반 여부를 기록한다.
+43. 새 복선, 복선 회수, 회수 지연은 `foreshadowing_ledger.json`과 `payoff_schedule.json` 또는 해당 역할 문서에 기록한다.
+44. 주요 인물의 대사나 내면 독백을 작성 또는 수정할 때는 `voice_samples.md` 또는 해당 역할 문서를 확인한다.
+45. 회차 품질과 독자 보상은 `quality_trend_log.json`, `reader_reward_ledger.json` 또는 해당 역할 문서에 누적한다.
+46. 작업 유형별 필수 harness는 `HARNESS_ROUTER.md` 또는 해당 역할 문서를 기준으로 확인한다.
+
+## 피드백, 독창성, 보고 완료 조건 강화
+
+47. 사용자 피드백은 `TEXT_ONLY`, `STYLE_ADJUSTMENT`, `CHARACTER_VOICE`, `SCENE_REWRITE`, `CONTINUITY_REPAIR`, `BIBLE_CHANGE_REQUIRED`, `SCOPE_EXPANSION_RISK` 중 하나 이상으로 분류한다.
+48. 말투나 문체 피드백은 기본적으로 대사/문장 수정 범위로 제한하며, 인물 성격·욕망·결핍·canon 변경으로 확대하지 않는다.
+49. 피드백 반영 범위가 불명확하면 적용하지 않고 `feedback_application_plan`에 사용자 확인 필요 사항으로 기록한다.
+50. 특정 작품명이 사용자 요청에 등장하더라도 Codex는 고유 설정, 고유 용어, 대표 장면, 문체를 재현하지 않고 장르적 기대나 추상적 기능만 참고한다.
+51. 기존 작품과 유사성 우려가 발견되면 `originality_review` 또는 `originality_ledger` 역할 문서에 기록하고, 차별화 조치 전 final 저장을 중단한다.
+52. 작업 완료 보고는 반드시 `REPORT_FORMAT.md` 형식을 따른다.
+53. 원고, 검수, 수정, 배치 작업에서 `run_report`가 없으면 작업을 완료한 것으로 보고하지 않는다.
+54. `run_report_index.json` 또는 해당 역할 문서가 있으면 작업 후 보고서 색인을 갱신한다.
+55. “다음 가능한 작업”에는 작업 후보만 적고, 사용자 지시 전 실제 장면, 대사, 설정, 다음 회차 내용을 작성하지 않는다.
+56. 작업 시작 전 이번 요청에서 생성 또는 수정할 수 있는 파일 범위를 확인하고, 사용자 요청 범위와 직접 관련 없는 파일은 수정하지 않는다.
+
+## 확장된 critical issue
+
+57. critical issue에는 독창성/표절성 유사성 위험, 권리/플랫폼 리스크, 승인 상태 불일치, final registry/status 불일치, 등장인물 과다, 복선 회수 불능, 반복 패턴으로 인한 독자 보상 약화, 작업 범위 밖 파일 수정도 포함한다.
+58. critical issue가 하나라도 있으면 final, packaging, export, 다음 배치 진행을 중단하고 `halt_reason_code`와 `recovery_plan`을 작성한다.

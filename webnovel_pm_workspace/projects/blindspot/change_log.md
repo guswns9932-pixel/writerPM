@@ -15,3 +15,21 @@
 |---|---|---|---|---|---|---|---|
 | 2026-06-09 | CHG-001 | project_setup | `projects/blindspot/*` | 사각지대 프로젝트 기본 기억 파일 및 1~4화 예시 산출물 구성 | workspace 샘플 프로젝트 운영 | recorded | initial workspace setup |
 | 2026-06-09 | CHG-002 | canon_request | `canon_change_requests/canon_change_request_20260609_001.md` | 시선 감지 핵심 판정 기준 명문화 요청 | 능력 만능화/오해 방지 | pending_user_approval | canon change request |
+
+## 2026-06-10 - High-risk workspace safety reinforcement
+
+- change_type: workspace_safety_state_files
+- reason: High 심각도/High 발생 가능성 위험인 승인 없는 회차 작성, final 버전 혼선, 능력 규칙 drift, 복선 망각, 독자 보상 누락, 말투 drift, 보고 누락을 우선 차단하기 위함.
+- created_files:
+  - `approval_state.json`
+  - `final_registry.json`
+  - `ability_usage_log.json`
+  - `payoff_schedule.json`
+  - `quality_trend_log.json`
+  - `reader_reward_ledger.json`
+  - `voice_samples.md`
+  - `run_reports/run_report_index.json`
+- manuscript_change: none
+- final_files_modified: none
+- canon_change: none
+- current_stage: awaiting_user_review

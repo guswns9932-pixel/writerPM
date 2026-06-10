@@ -77,3 +77,10 @@
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## High-risk 보완 규칙
+
+- 출력 파일은 `canon_change_requests/canon_change_request_YYYYMMDD_NNN.md` 형식을 사용한다.
+- 승인 전 `story_bible.json`, `character_bible.json`, `ability_rules.json`, `power_progression.json`, `canon_log.json`, 기존 final 파일을 직접 수정하지 않는다.
+- `approval_state.json`, `final_registry.json`, `ability_usage_log.json`, `payoff_schedule.json`, `voice_samples.md`에 미치는 영향을 별도 항목으로 기록한다.
+- 변경 등급을 `metadata_only`, `minor_continuity`, `major_canon`, `BIBLE_CHANGE_REQUIRED` 중 하나로 분류한다.

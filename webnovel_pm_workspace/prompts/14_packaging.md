@@ -77,3 +77,10 @@
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## High-risk 보완 규칙
+
+- 입력 파일에 `final_registry.json`, `approval_state.json`, `rights_log.md`, `platform_policy_check.md`, `ai_usage_disclosure_note.md`, `content_risk_check.md`, `real_entity_risk_check.md`, `sensitivity_check.md`를 포함한다.
+- `10_exports/{project_id}/...` 같은 legacy 경로를 기본 출력으로 사용하지 않고, 프로젝트별 packaging 파일에 정리한다.
+- 승인되지 않은 final 후보를 공개/투고용 승인본처럼 표시하지 않는다.
+- 권리, 플랫폼, AI 고지, content risk가 불명확하면 공개용 packaging을 확정하지 않는다.

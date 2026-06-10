@@ -96,3 +96,13 @@
 - 최근 회차의 전개 패턴은 `episode_pattern_log.json`에 기록하고 같은 opening, 보상, cliffhanger가 반복되면 변주 계획을 작성합니다.
 - 적대 세력 확장은 `opposition_ladder.json`의 단계에 맞춰 진행하며, 회차 편의를 위해 적대 세력을 갑자기 전능하게 만들지 않습니다.
 - 미해결 content/platform/rights risk가 있으면 final 또는 공개용 packaging 전 review/recovery_plan에 기록합니다.
+
+## 14. High-risk 상태 파일 정책
+
+- `approval_state.json`이 허용하지 않은 회차, 배치, final 수정, canon 변경은 수행하지 않습니다.
+- `final_registry.json`에 등록되지 않은 final 후보 또는 승인본은 기준본으로 취급하지 않습니다.
+- 능력 사용이 포함된 회차에서 `ability_usage_log.json` 갱신이 누락되면 능력 규칙 검수가 미완료된 것으로 간주합니다.
+- 새 복선 또는 회수 지연이 있는데 `payoff_schedule.json` 갱신이 누락되면 장기 연재 검수가 미완료된 것으로 간주합니다.
+- 회차별 독자 보상과 품질 추세는 `reader_reward_ledger.json`, `quality_trend_log.json` 또는 해당 역할 문서에 누적합니다.
+- 주요 인물 말투 변경은 `voice_samples.md` 또는 해당 역할 문서를 기준으로 검수합니다.
+- run report가 생성되면 `run_report_index.json` 또는 해당 역할 문서에 기록합니다.

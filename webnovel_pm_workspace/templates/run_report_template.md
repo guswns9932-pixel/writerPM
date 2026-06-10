@@ -48,3 +48,17 @@
 ## 다음 가능한 작업
 
 -
+
+## High-risk 상태 보고
+
+- request_type:
+- approval_state 확인 여부:
+- final_registry 갱신 여부:
+- ability_usage_log 갱신 여부:
+- payoff_schedule 갱신 여부:
+- quality_trend_log 갱신 여부:
+- reader_reward_ledger 갱신 여부:
+- voice_samples 확인 여부:
+- run_report_index 갱신 여부:
+- 기존 final 덮어쓰기 여부: 없음 / 있음
+- 다음 회차 또는 다음 배치 자동 진행 여부: 없음 / 있음

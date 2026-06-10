@@ -45,3 +45,26 @@
 ## 재개 가능한 최소 작업 단위
 
 -
+
+## High-risk Registry / State Repair
+
+- approval_state repair:
+- final_registry repair:
+- ability_usage_log repair:
+- payoff_schedule repair:
+- quality_trend_log repair:
+- reader_reward_ledger repair:
+- voice_samples repair:
+- run_report_index repair:
+
+## High-risk Halt Code Candidates
+
+- SCOPE_OVERREACH_UNAPPROVED_EPISODE
+- FINAL_REGISTRY_MISMATCH
+- FINAL_OVERWRITE_RISK
+- ABILITY_USAGE_UNLOGGED
+- PAYOFF_OVERDUE_CRITICAL
+- READER_REWARD_MISSING
+- QUALITY_TREND_DECLINE
+- VOICE_DRIFT_CRITICAL
+- RUN_REPORT_MISSING

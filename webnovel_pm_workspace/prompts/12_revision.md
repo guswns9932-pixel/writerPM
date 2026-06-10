@@ -76,3 +76,11 @@
 - 품질 이슈 여부
 - 사용자 확인 필요 사항
 - 다음 가능한 작업
+
+## High-risk 보완 규칙
+
+- 기존 final 파일은 읽기 전용으로만 사용하고 직접 수정하지 않는다.
+- final 후보 수정은 반드시 새 `episode_XXX_final_vN.md` 또는 사용자 요청 범위에 맞는 새 버전 파일로 저장한다.
+- 수정 전 `approval_state.json`, `final_registry.json`, `episode_XXX_status.md`, `feedback_application_plan`을 확인한다.
+- 말투 수정은 `voice_samples.md` 기준으로 제한하고, 성격/canon 변경으로 확대하지 않는다.
+- 수정 후 `final_registry.json`, `episode_XXX_status.md`, `run_report_index.json` 갱신 여부를 보고한다.

@@ -67,3 +67,11 @@
 - [ ] `episode_XXX_status.md`의 `current_final` 또는 승인 대기 상태가 갱신되었다.
 - [ ] 이전 버전이 보존되었다.
 - [ ] 변경 파일 목록을 보고했다.
+
+## final_registry 필수 연동
+
+- final 후보 또는 승인본을 생성하면 `final_registry.json` 또는 해당 역할 문서를 갱신합니다.
+- 기존 final 파일은 읽기 전용으로만 참조하고 직접 편집하지 않습니다.
+- `episode_XXX_status.md`의 `current_final`과 `final_registry.json`의 `current_final_candidate`가 다르면 final 저장을 중단합니다.
+- 승인된 final과 승인 대기 final 후보를 구분합니다.
+- registry/status 불일치가 있으면 `halt_reason_code: FINAL_REGISTRY_MISMATCH`를 기록하고 `recovery_plan`을 작성합니다.

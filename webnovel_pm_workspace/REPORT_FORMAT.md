@@ -118,3 +118,84 @@ critical issue가 발생하면 일반 보고와 함께 아래 항목을 추가�
 - recovery_plan:
 - 사용자 결정 필요 사항:
 ```
+
+## High-risk 필수 보고 항목
+
+원고 생성, 회차 검수, 수정, 배치 작업, packaging 작업을 수행한 경우 기본 보고 형식에 더해 아래 항목을 반드시 보고합니다.
+
+```md
+### 9. 요청 유형 및 승인 상태
+
+- request_type:
+- approval_state 확인 여부:
+- 승인된 작업 범위:
+- current_stage:
+- 다음 회차/다음 배치 진행 가능 여부:
+
+### 10. Harness 확인 결과
+
+- 확인한 harness:
+- HARNESS_ROUTER 기준 충족 여부:
+- 누락된 harness 또는 확인 불가 항목:
+
+### 11. Final / Version 보호
+
+- final_registry 갱신 여부:
+- 새 final 파일:
+- 기존 final 덮어쓰기 여부:
+- current_final_candidate:
+- approved_final:
+- episode_status와 registry 일치 여부:
+
+### 12. 능력 / 설정 안정성
+
+- ability_usage_log 갱신 여부:
+- 이번 회차 능력 사용:
+- 능력 규칙 위반 여부:
+- 갑작스러운 파워업 여부:
+- canon_change_request 필요 여부:
+
+### 13. 복선 / 독자 보상 / 장기 회수
+
+- payoff_schedule 갱신 여부:
+- reader_reward_ledger 갱신 여부:
+- quality_trend_log 갱신 여부:
+- 새 복선:
+- 회수된 복선:
+- 지연된 복선:
+- 독자 보상 유형:
+- 클리프행어 반복 위험:
+
+### 14. 캐릭터 음성 / 피드백 안정성
+
+- voice_samples 확인 여부:
+- 주인공 말투 일치 여부:
+- 주요 조연 말투 일치 여부:
+- 피드백 영향 범위:
+- character drift 위험:
+
+### 15. 보고서 색인 및 완료 조건
+
+- run_report 작성 여부:
+- run_report_index 갱신 여부:
+- 필수 산출물 누락 여부:
+- 다음 가능한 작업에 실제 원고/설정 초안 포함 여부: 없음이어야 함
+```
+
+## High-risk critical issue 추가 보고 항목
+
+critical issue가 approval, final registry, ability usage, payoff, voice, report index와 관련되면 아래 항목도 추가합니다.
+
+```md
+### High-risk State Impact
+
+- approval_state 영향:
+- final_registry 영향:
+- ability_usage_log 영향:
+- payoff_schedule 영향:
+- voice_samples 영향:
+- quality_trend_log 영향:
+- reader_reward_ledger 영향:
+- run_report_index 영향:
+- 필요한 state repair:
+```

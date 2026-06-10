@@ -1,0 +1,68 @@
+{
+  "project_id": "blindspot",
+  "title": "사각지대",
+  "last_updated": "2026-06-10",
+  "open_threads": [
+    {
+      "thread_id": "thread_F001",
+      "source_foreshadowing_id": "F001",
+      "first_appearance_episode": 1,
+      "description": "현장에 없는 감시 매체의 시선이 직접 시선과 다른 차가운 압력으로 느껴진다.",
+      "planned_payoff_episode_or_arc": "episode_002 and later surveillance-network arc",
+      "payoff_type": "information",
+      "status": "partially_paid",
+      "risk_if_delayed": "감시 매체 규칙이 불명확해져 능력 만능화로 오해될 수 있음",
+      "next_required_action": "canon_change_request 승인 여부에 따라 시선 감지 판정 기준 정리"
+    },
+    {
+      "thread_id": "thread_F002",
+      "source_foreshadowing_id": "F002",
+      "first_appearance_episode": 1,
+      "description": "사각지대도 소리와 흔적 때문에 완전한 안전지대가 아니라는 암시.",
+      "planned_payoff_episode_or_arc": "episode_004 and stage_01 limitation",
+      "payoff_type": "limitation",
+      "status": "partially_paid",
+      "risk_if_delayed": "사각지대가 무적 공간처럼 보일 위험",
+      "next_required_action": "5화 이후 작성 전 시선 아닌 위험은 감지하지 못한다는 한계 유지"
+    },
+    {
+      "thread_id": "thread_F003",
+      "source_foreshadowing_id": "F003",
+      "first_appearance_episode": 1,
+      "description": "망루가 한서진의 이름을 이미 알고 있다.",
+      "planned_payoff_episode_or_arc": "episode_004 expansion and past arc",
+      "payoff_type": "reversal",
+      "status": "expanded",
+      "risk_if_delayed": "WATCHLIST_HAN_SEOJIN_OLD의 장기 보상 지연",
+      "next_required_action": "과거 아크 전까지 원인 단서를 단계적으로 배치"
+    },
+    {
+      "thread_id": "thread_F004",
+      "source_foreshadowing_id": "F004",
+      "first_appearance_episode": 2,
+      "description": "윤하라가 한서진의 동선을 먼저 알고 있었다.",
+      "planned_payoff_episode_or_arc": "arc_01 midpoint",
+      "payoff_type": "information",
+      "status": "open",
+      "risk_if_delayed": "윤하라가 편의적 조력자로 보일 위험",
+      "next_required_action": "정보 출처와 망루 내부 연결 단서를 5~10화 구간에서 관리"
+    },
+    {
+      "thread_id": "thread_F005",
+      "source_foreshadowing_id": "F005",
+      "first_appearance_episode": 4,
+      "description": "한서진은 어젯밤 발견된 것이 아니라 오래전부터 목록에 있었다.",
+      "planned_payoff_episode_or_arc": "middle past arc",
+      "payoff_type": "major_reversal",
+      "status": "open",
+      "risk_if_delayed": "핵심 미스터리 보상 지연으로 독자 피로 발생",
+      "next_required_action": "10화 단위 audit에서 회수 일정 재검토"
+    }
+  ],
+  "payoff_rules": {
+    "audit_every_10_episodes": true,
+    "must_report_overdue_threads": true,
+    "no_new_major_threads_in_final_arc_without_approval": true,
+    "delayed_thread_requires_reason": true
+  }
+}

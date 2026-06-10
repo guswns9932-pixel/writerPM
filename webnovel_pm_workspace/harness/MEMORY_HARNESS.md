@@ -135,3 +135,18 @@
 20화 이상 장기 연재 프로젝트는 원고 작성 전 `CAST_HARNESS`와 `LONGFORM_HARNESS`도 함께 확인합니다. 특히 새 인물 추가, 10화 단위 audit, arc gate, 복선 회수 계획은 별도 점검 대상입니다.
 
 투고, 공개, packaging, 민감 소재, 실존 유사성, 외부 자료 사용이 포함되면 `RIGHTS_HARNESS`, `PLATFORM_HARNESS`, `CONTENT_RISK_HARNESS`, `HUMAN_CONTRIBUTION_HARNESS`, `PATTERN_REPETITION_HARNESS`도 확인합니다.
+
+## High-risk 추가 필수 기억 파일
+
+High 심각도/High 발생 가능성 위험을 줄이기 위해 원고 작성, 회차 개요, 수정, 배치 작업 전 다음 파일도 확인합니다.
+
+- [ ] `approval_state.json`
+- [ ] `final_registry.json`
+- [ ] `ability_usage_log.json`
+- [ ] `payoff_schedule.json`
+- [ ] `quality_trend_log.json`
+- [ ] `reader_reward_ledger.json`
+- [ ] `voice_samples.md`
+- [ ] `run_reports/run_report_index.json`
+
+누락 시 final 저장 전 누락 사실을 보고하고, 해당 파일 생성 또는 보강을 사용자 확인 필요 사항으로 정리합니다.

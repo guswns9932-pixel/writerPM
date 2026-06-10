@@ -114,3 +114,15 @@
 - 회수된 복선 수
 - 독자 보상 유형
 - 다음 audit 예정 시점
+
+## High-risk 장기 누적 로그
+
+20화 이상 장기 연재에서는 다음 파일 또는 해당 역할 문서를 유지합니다.
+
+- `payoff_schedule.json`
+- `quality_trend_log.json`
+- `reader_reward_ledger.json`
+- `ability_usage_log.json`
+- `voice_samples.md`
+
+10화 단위 audit 시 위 파일을 확인하고, 복선 회수 지연/독자 보상 반복/능력 성장 drift/말투 drift가 있으면 다음 배치 작성 전 review 또는 recovery_plan을 작성합니다.
