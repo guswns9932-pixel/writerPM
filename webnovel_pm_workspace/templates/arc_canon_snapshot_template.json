@@ -1,0 +1,194 @@
+{
+  "template_name": "arc_canon_snapshot_template",
+  "version": "1.0",
+  "_description": "arc 종료 시점의 clean-state 스냅샷. 이 파일 이후 회차의 설정 일관성 검증 기준점. arc_XXX_canon_snapshot.json으로 저장.",
+
+  "snapshot_id": "snap_{{arc_id}}_ep{{snapshot_episode}}",
+  "arc_id": "{{arc_id}}",
+  "arc_name": "{{arc_name}}",
+  "snapshot_episode": 0,
+  "previous_snapshot_id": "{{이전 arc 스냅샷 ID 또는 null}}",
+  "created_date": "YYYY-MM-DD",
+  "created_by": "AI",
+  "user_confirmed": false,
+  "this_snapshot_is_ground_truth_for_arcs_after": true,
+
+  "world_state": {
+    "summary": "{{이 arc 종료 시점 세계의 상태를 3~5문장으로. 주요 세력 구도, 세계관 변화, 거시적 상황 포함.}}",
+    "active_conflicts": [
+      {
+        "conflict_id": "C001",
+        "description": "{{진행 중인 갈등 요약}}",
+        "parties_involved": ["{{세력/인물 A}}", "{{세력/인물 B}}"],
+        "current_state": "{{갈등 현재 상태}}"
+      }
+    ],
+    "resolved_conflicts": [
+      {
+        "conflict_id": "C000",
+        "description": "{{이번 arc에서 해소된 갈등}}",
+        "resolution": "{{해소 방식}}"
+      }
+    ],
+    "world_changes_this_arc": [
+      "{{이번 arc에서 세계관에 확정된 변화 1}}",
+      "{{이번 arc에서 세계관에 확정된 변화 2}}"
+    ]
+  },
+
+  "protagonist_state": {
+    "character_id": "{{주인공 character_id}}",
+    "character_name": "{{주인공 이름}}",
+    "current_goal": "{{현재 목표}}",
+    "emotional_state": "{{감정/심리 상태 요약}}",
+    "key_relationships": [
+      {
+        "character_id": "{{관계 인물 ID}}",
+        "character_name": "{{이름}}",
+        "relationship_type": "{{동료/적/연인/멘토 등}}",
+        "current_status": "{{관계 현황}}"
+      }
+    ],
+    "ability_current_tier": "{{현재 능력 단계. ability_rules.json 기준}}",
+    "ability_recent_changes": "{{이번 arc에서 변화한 능력 요약}}",
+    "physical_state": "{{부상, 회복, 특이 상태 등}}",
+    "trauma_or_burden": "{{현재 심리적 부담이나 트라우마 요약}}"
+  },
+
+  "active_characters": [
+    {
+      "character_id": "{{character_id}}",
+      "name": "{{이름}}",
+      "status": "active",
+      "current_role": "{{이번 arc에서의 역할}}",
+      "location": "{{현재 위치}}",
+      "notable_change_this_arc": "{{이번 arc에서 이 인물에게 일어난 주요 변화}}"
+    }
+  ],
+
+  "dormant_or_removed_characters": [
+    {
+      "character_id": "{{character_id}}",
+      "name": "{{이름}}",
+      "status": "dormant",
+      "last_seen_episode": 0,
+      "reason": "{{dormant/removed 이유}}"
+    }
+  ],
+
+  "confirmed_canon_summary": [
+    {
+      "canon_id": "canon_{{n}}",
+      "fact": "{{이번 arc에서 확정된 canon 사실}}",
+      "confirmed_episode": 0,
+      "source": "{{확정 근거: 대사/사건/설명 등}}"
+    }
+  ],
+
+  "changed_from_previous_snapshot": {
+    "world_changes": [
+      "{{이전 스냅샷 대비 세계 변화}}"
+    ],
+    "character_changes": [
+      "{{이전 스냅샷 대비 인물 변화}}"
+    ],
+    "canon_additions": [
+      "{{새로 확정된 canon}}"
+    ],
+    "canon_revisions": [
+      {
+        "original": "{{이전 canon}}",
+        "revised": "{{수정된 canon}}",
+        "reason": "{{수정 이유}}",
+        "canon_change_request_id": "{{CCR ID}}"
+      }
+    ]
+  },
+
+  "foreshadowing_state": {
+    "open_foreshadowing_count": 0,
+    "critical_open_threads": [
+      {
+        "thread_id": "{{foreshadowing_ledger의 ID}}",
+        "description": "{{미회수 복선 요약}}",
+        "planted_episode": 0,
+        "expected_payoff_window": "{{예상 회수 구간}}",
+        "urgency": "critical"
+      }
+    ],
+    "delivered_this_arc": [
+      {
+        "thread_id": "{{회수된 복선 ID}}",
+        "description": "{{복선 내용}}",
+        "payoff_episode": 0
+      }
+    ]
+  },
+
+  "ability_state": {
+    "ability_current_tier": "{{주인공 현재 능력 단계}}",
+    "tier_change_this_arc": false,
+    "new_abilities_unlocked": [],
+    "ability_cost_paid": "{{이번 arc에서 능력 사용의 대가로 치른 것}}",
+    "forbidden_abilities_attempted": false,
+    "notes": ""
+  },
+
+  "emotional_promise_state": {
+    "high_investment_promises_status": [
+      {
+        "promise_id": "{{emotional_promise_ledger의 ID}}",
+        "description": "{{약속 요약}}",
+        "current_status": "building",
+        "progress_this_arc": "{{이번 arc에서의 진전}}"
+      }
+    ],
+    "any_promise_at_risk": false,
+    "at_risk_notes": ""
+  },
+
+  "pacing_state": {
+    "arc_average_tension": 0,
+    "arc_peak_tension": 0,
+    "relief_episode_count": 0,
+    "relief_episode_ratio": 0.0,
+    "pacing_rule_violations": [],
+    "pacing_harness_completed": false
+  },
+
+  "thematic_state": {
+    "core_theme_explored": false,
+    "anti_theme_risk": false,
+    "thematic_harness_completed": false,
+    "theme_notes": ""
+  },
+
+  "next_arc_handoff": {
+    "open_questions_for_next_arc": [
+      "{{다음 arc로 넘어가는 열린 질문 1}}",
+      "{{다음 arc로 넘어가는 열린 질문 2}}"
+    ],
+    "protagonist_starting_state_for_next_arc": "{{다음 arc 주인공 시작 상태 요약}}",
+    "immediate_next_conflict": "{{다음 arc가 다룰 즉각적 갈등}}",
+    "reader_expectations_to_honor": [
+      "{{독자가 다음 arc에서 기대하는 것}}"
+    ]
+  },
+
+  "compression_notes": {
+    "rolling_context_compressed": false,
+    "arc_summary_file": "{{arc_XXX_summary.md 경로}}",
+    "compression_log_entry": "{{context_compression_log.md에 기록된 항목 ID}}"
+  },
+
+  "verification_checklist": {
+    "canon_facts_spot_checked": false,
+    "ability_state_consistent_with_ability_rules": false,
+    "foreshadowing_ledger_synced": false,
+    "emotional_promise_ledger_updated": false,
+    "pacing_harness_run": false,
+    "thematic_harness_run": false,
+    "voice_drift_harness_run": false,
+    "user_confirmed": false
+  }
+}

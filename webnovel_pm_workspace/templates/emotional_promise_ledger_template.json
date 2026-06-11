@@ -1,0 +1,167 @@
+{
+  "template_name": "emotional_promise_ledger_template",
+  "project_id": "example_project",
+  "last_updated": "YYYY-MM-DD",
+  "version": "1.0",
+  "_description": "독자와의 암묵적 감정 계약을 추적하는 원장. 플롯 복선(foreshadowing_ledger)과 다름 — 이 파일은 '독자가 이 이야기를 계속 읽는 감정적 이유'를 추적한다.",
+
+  "promise_rules": {
+    "rule_001": "high-investment 약속은 완결 전에 반드시 payoff, transformation, 또는 deliberate_subversion 중 하나로 귀결해야 한다.",
+    "rule_002": "어떤 약속도 조용히 파기(silent_break)될 수 없다. 파기 시 반드시 reason과 reader_impact_note를 기록하고 사용자 승인을 받는다.",
+    "rule_003": "high-investment 약속이 10화 이상 진전 없이 방치되면 next_milestone_plan을 작성한다.",
+    "rule_004": "새 약속을 추가하기 전 기존 approaching_payoff 상태 약속의 처리 계획을 먼저 확인한다.",
+    "rule_005": "deliberate_subversion(의도적 전복)은 독자가 최종적으로 더 깊은 의미를 얻어야 정당화된다. 단순 회피는 허용되지 않는다."
+  },
+
+  "review_trigger": "10화마다 THEMATIC_HARNESS와 함께 이 원장을 검토한다. arc 종료 시 전체 상태 점검 필수.",
+
+  "promises": [
+    {
+      "promise_id": "EP001",
+      "type": "romance",
+      "description": "예시: 주인공과 동반자 사이의 감정선. 독자는 이 관계가 결국 확인될 것이라고 기대하며 읽는다.",
+      "first_planted_episode": 5,
+      "expected_payoff_window": {
+        "start_episode": 400,
+        "end_episode": 900
+      },
+      "current_status": "building",
+      "reader_investment_level": "high",
+      "last_progressed_episode": 0,
+      "next_milestone_plan": "EP050 전후: 첫 감정 충돌. EP150 전후: 관계 위기.",
+      "if_broken_impact": "high-investment 독자 이탈 위험. 이 약속이 파기되면 독자의 연재 지속 동기가 크게 감소한다.",
+      "transformation_allowed": true,
+      "transformation_note": "만약 romance가 실현되지 않는다면 '함께하는 선택 그 자체'가 payoff가 되도록 transformation 가능.",
+      "deliberate_subversion_requires_user_approval": true,
+      "notes": ""
+    },
+    {
+      "promise_id": "EP002",
+      "type": "redemption",
+      "description": "예시: 과거의 실수로 인한 죄책감을 가진 인물이 결국 용서받거나 스스로를 용서하게 될 것이라는 기대.",
+      "first_planted_episode": 3,
+      "expected_payoff_window": {
+        "start_episode": 700,
+        "end_episode": 950
+      },
+      "current_status": "planted",
+      "reader_investment_level": "high",
+      "last_progressed_episode": 3,
+      "next_milestone_plan": "",
+      "if_broken_impact": "캐릭터 여정의 의미 상실. 주인공 서사 붕괴 위험.",
+      "transformation_allowed": false,
+      "transformation_note": "",
+      "deliberate_subversion_requires_user_approval": true,
+      "notes": ""
+    },
+    {
+      "promise_id": "EP003",
+      "type": "revenge",
+      "description": "예시: 주인공이 원수를 반드시 처단할 것이라는 기대. 독자가 이 목표에 강하게 투자.",
+      "first_planted_episode": 1,
+      "expected_payoff_window": {
+        "start_episode": 800,
+        "end_episode": 980
+      },
+      "current_status": "building",
+      "reader_investment_level": "high",
+      "last_progressed_episode": 0,
+      "next_milestone_plan": "",
+      "if_broken_impact": "핵심 독자 동기 파기. 단, 복수가 '승리'가 아닌 '성장'으로 transformation 가능.",
+      "transformation_allowed": true,
+      "transformation_note": "",
+      "deliberate_subversion_requires_user_approval": true,
+      "notes": ""
+    },
+    {
+      "promise_id": "EP004",
+      "type": "found_family",
+      "description": "예시: 고독한 주인공이 진짜 동료와 소속감을 찾게 될 것이라는 기대.",
+      "first_planted_episode": 10,
+      "expected_payoff_window": {
+        "start_episode": 300,
+        "end_episode": 700
+      },
+      "current_status": "planted",
+      "reader_investment_level": "medium",
+      "last_progressed_episode": 10,
+      "next_milestone_plan": "",
+      "if_broken_impact": "중간 수준. 보조 서사이므로 파기 시 독자 실망이 있으나 이탈까지 이어지지 않을 수 있음.",
+      "transformation_allowed": true,
+      "transformation_note": "",
+      "deliberate_subversion_requires_user_approval": false,
+      "notes": ""
+    },
+    {
+      "promise_id": "EP005",
+      "type": "survival",
+      "description": "예시: 독자가 사랑하는 특정 캐릭터의 생존. 이 인물이 죽으면 독자 이탈 위험.",
+      "first_planted_episode": 15,
+      "expected_payoff_window": {
+        "start_episode": 1,
+        "end_episode": 1000
+      },
+      "current_status": "building",
+      "reader_investment_level": "high",
+      "last_progressed_episode": 15,
+      "next_milestone_plan": "",
+      "if_broken_impact": "극히 high. 단, 의미 있는 희생으로 transformation 가능.",
+      "transformation_allowed": true,
+      "transformation_note": "희생이 주제와 연결되고 독자가 납득할 수 있는 방식이어야 함.",
+      "deliberate_subversion_requires_user_approval": true,
+      "notes": ""
+    },
+    {
+      "promise_id": "EP006",
+      "type": "justice",
+      "description": "예시: 부당한 세력이 결국 처단될 것이라는 기대.",
+      "first_planted_episode": 2,
+      "expected_payoff_window": {
+        "start_episode": 900,
+        "end_episode": 1000
+      },
+      "current_status": "planted",
+      "reader_investment_level": "medium",
+      "last_progressed_episode": 2,
+      "next_milestone_plan": "",
+      "if_broken_impact": "장르 약속 위반 느낌. 단, 불완전한 정의도 주제가 될 수 있음.",
+      "transformation_allowed": true,
+      "transformation_note": "",
+      "deliberate_subversion_requires_user_approval": false,
+      "notes": ""
+    },
+    {
+      "promise_id": "EP007",
+      "type": "growth",
+      "description": "예시: 주인공이 결말에서는 1화의 자신보다 진정으로 성장해 있을 것이라는 기대.",
+      "first_planted_episode": 1,
+      "expected_payoff_window": {
+        "start_episode": 900,
+        "end_episode": 1000
+      },
+      "current_status": "building",
+      "reader_investment_level": "high",
+      "last_progressed_episode": 0,
+      "next_milestone_plan": "",
+      "if_broken_impact": "서사 전체 의미 붕괴.",
+      "transformation_allowed": false,
+      "transformation_note": "",
+      "deliberate_subversion_requires_user_approval": true,
+      "notes": ""
+    }
+  ],
+
+  "broken_promises": [],
+
+  "delivered_promises": [],
+
+  "review_history": [
+    {
+      "review_episode": 0,
+      "reviewer": "AI",
+      "summary": "초기 설정 완료",
+      "flags": [],
+      "user_confirmed": false
+    }
+  ]
+}

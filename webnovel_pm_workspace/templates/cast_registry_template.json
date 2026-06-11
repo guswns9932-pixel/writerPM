@@ -1,0 +1,26 @@
+{
+  "template_name": "cast_registry_template",
+  "project_id": "example_project",
+  "cast": [
+    {
+      "character_id": "char_protagonist",
+      "name": "예시 주인공",
+      "first_appearance": "episode_001",
+      "status": "active",
+      "role": "protagonist",
+      "summary": "욕망과 결핍이 뚜렷한 중심 인물",
+      "do_not_break": [
+        "수동적 해결",
+        "근거 없는 성격 변화"
+      ]
+    },
+    {
+      "character_id": "char_rival",
+      "name": "예시 라이벌",
+      "first_appearance": "episode_001",
+      "status": "planned",
+      "role": "rival",
+      "summary": "주인공의 선택을 압박하는 인물"
+    }
+  ]
+}

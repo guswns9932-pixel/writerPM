@@ -1,0 +1,29 @@
+{
+  "template_name": "user_taste_profile_template",
+  "project_id": "example_project",
+  "preferred_genres": [
+    "현대판타지",
+    "성장물"
+  ],
+  "preferred_hooks": [
+    "초반 위기",
+    "비밀 공개 직전",
+    "불리한 선택"
+  ],
+  "preferred_protagonist_traits": [
+    "능동적",
+    "집요함",
+    "결정적 순간의 선택"
+  ],
+  "dislikes": [
+    "설정 설명으로 시작",
+    "수동적 주인공",
+    "대가 없는 파워업"
+  ],
+  "style_preferences": {
+    "pacing": "빠른 전개",
+    "description": "장면 중심",
+    "dialogue": "기능적이고 짧게"
+  },
+  "last_updated": "YYYY-MM-DD"
+}

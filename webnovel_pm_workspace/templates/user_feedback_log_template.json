@@ -1,0 +1,18 @@
+{
+  "template_name": "user_feedback_log_template",
+  "project_id": "example_project",
+  "feedback": [
+    {
+      "feedback_id": "feedback_YYYYMMDD_001",
+      "date": "YYYY-MM-DD",
+      "target_file": "episode_001_draft_v1.md",
+      "target_episode": "episode_001",
+      "user_original": "예시: 주인공 선택이 더 강했으면 좋겠다",
+      "interpretation": "주인공의 능동성을 강화해야 함",
+      "apply_immediately": false,
+      "requires_feedback_application_plan": true,
+      "canon_change_possible": false,
+      "status": "logged"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+# FEEDBACK_HARNESS
+
+사용자 피드백을 기록, 해석, 분류, 계획, 추적하기 위한 문서형 harness입니다.
+
+## 목적
+
+- 사용자 피드백 기록
+- 피드백 해석
+- 반영 대상 분류
+- `feedback_application_plan` 작성 기준 제공
+- 미반영 피드백 추적
+
+## 사용자 피드백 기록
+
+피드백을 받으면 먼저 `user_feedback_log`에 기록합니다.
+
+기록 항목:
+
+- 날짜
+- 대상 파일
+- 대상 회차
+- 사용자 원문
+- 긴급도
+- 즉시 반영 여부
+- canon 변경 가능성
+
+## 피드백 해석
+
+피드백은 원문을 보존한 뒤 별도로 해석합니다.
+
+- 사용자가 원하는 감정 변화
+- 줄거리 변경 요구 여부
+- 인물 변경 요구 여부
+- 문체 변경 요구 여부
+- canon 변경 요구 여부
+- 단순 취향 메모인지 필수 수정인지 구분
+
+## 반영 대상 분류
+
+피드백을 다음 중 하나 이상으로 분류합니다.
+
+- `TEXT_ONLY`: 문장, 문단, 대사, 표현 수정
+- `SCENE_REWRITE`: 특정 장면 재작성
+- `EPISODE_OUTLINE_REWRITE`: 회차 구조 변경
+- `CONTINUITY_REPAIR`: 설정, 시간선, 인물 연속성 보정
+- `BIBLE_CHANGE_REQUIRED`: Bible 또는 canon 변경 필요
+- `STYLE_ADJUSTMENT`: 문체, 톤, 가독성 조정
+- `PENDING_CLARIFICATION`: 사용자 확인 필요
+
+## `feedback_application_plan` 작성 기준
+
+사용자가 "바로 반영"이라고 명시하지 않은 피드백은 먼저 `feedback_application_plan`을 작성합니다.
+
+계획에 포함할 항목:
+
+1. 피드백 원문 요약
+2. 해석
+3. 반영 대상 분류
+4. 변경 예정 파일
+5. 예상 변경 범위
+6. canon 변경 필요 여부
+7. 위험 요소
+8. 사용자 승인 필요 여부
+
+## 바로 반영 가능 조건
+
+다음 조건을 모두 만족할 때만 바로 반영할 수 있습니다.
+
+- 사용자가 "바로 반영"이라고 명시했다.
+- canon 변경이 필요하지 않다.
+- 기존 final 파일을 덮어쓰지 않는다.
+- 작업 범위가 명확하다.
+- 한 회차 자동 수정 1회 제한을 초과하지 않는다.
+
+## 미반영 피드백 추적
+
+미반영 피드백은 별도로 추적합니다.
+
+추적 항목:
+
+- 피드백 ID
+- 미반영 사유
+- 필요한 사용자 결정
+- 관련 파일
+- 재검토 예정 시점
+
+## 중단 조건
+
+다음 경우 반영을 중단합니다.
+
+- canon 변경이 필요한데 사용자 승인이 없다.
+- 기존 final 파일 덮어쓰기 위험이 있다.
+- 피드백 해석이 불명확하다.
+- 요청 범위가 다음 회차나 다음 배치로 확장된다.
+
+## High-risk 피드백 영향도 제한
+
+- 피드백은 `TEXT_ONLY`, `STYLE_ADJUSTMENT`, `CHARACTER_VOICE`, `SCENE_REWRITE`, `CONTINUITY_REPAIR`, `BIBLE_CHANGE_REQUIRED`, `SCOPE_EXPANSION_RISK`로 분류합니다.
+- 말투/문체 피드백은 기본적으로 대사와 문장 수정으로 제한하고, 인물 성격·욕망·결핍·canon 변경으로 확대하지 않습니다.
+- 말투 피드백은 `voice_samples.md` 또는 해당 역할 문서에 반영할지 먼저 판단합니다.
+- final 수정이 필요하면 기존 final을 직접 편집하지 않고 `final_registry.json` 기준 새 버전을 제안합니다.
+
+## Feedback Impact Matrix gate
+
+피드백 반영 전 다음 매트릭스를 작성하거나 확인합니다.
+
+| 영향 분류 | 기본 허용 범위 | 사용자 재승인 필요 조건 |
+|---|---|---|
+| `TEXT_ONLY` | 문장, 표현, 오탈자 | final 새 버전 필요 시 |
+| `STYLE_ADJUSTMENT` | 문체, 호흡, 문단 길이 | 회차 톤 전체 변경 시 |
+| `CHARACTER_VOICE` | 대사/내면 독백 말투 | 성격·욕망·결핍 변경으로 확대될 때 |
+| `SCENE_REWRITE` | 특정 장면 재작성 | 사건 결과가 바뀔 때 |
+| `CONTINUITY_REPAIR` | 설정 충돌 보정 | canon 변경이 필요할 때 |
+| `BIBLE_CHANGE_REQUIRED` | Bible 변경 요청 | 항상 canon_change_request 필요 |
+| `SCOPE_EXPANSION_RISK` | 다음 회차/배치로 확장 위험 | 항상 사용자 확인 필요 |
+
+말투/문체 피드백은 기본적으로 `TEXT_ONLY`, `STYLE_ADJUSTMENT`, `CHARACTER_VOICE`에 머물러야 하며, canon 변경으로 확대하지 않습니다.

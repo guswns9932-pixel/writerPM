@@ -1,0 +1,115 @@
+{
+  "project_id": "blindspot",
+  "title": "사각지대",
+  "last_updated": "2026-06-10",
+  "versioning_rule": "Never overwrite existing final files. Save revised finals as a new version.",
+  "episodes": [
+    {
+      "episode": 1,
+      "status": "candidate_accepted_for_continuation_pending_formal_review",
+      "current_final_candidate": "episodes/episode_001_final_v2.md",
+      "approved_final": null,
+      "final_versions": [
+        {
+          "version": "v2",
+          "path": "episodes/episode_001_final_v2.md",
+          "status": "candidate_used_as_basis_for_episodes_002_004",
+          "created_from": "episodes/episode_001_revision_note_v2.md",
+          "created_at": "2026-06-09",
+          "do_not_overwrite": true,
+          "notes": "사용자가 1화를 마음에 든다고 평가했으나 final 파일은 보존한다."
+        }
+      ],
+      "registry_status_sync": {
+        "episode_status_path": "episodes/episode_001_status.md",
+        "status_current_final_should_equal": "episodes/episode_001_final_v2.md",
+        "last_sync": "2026-06-10",
+        "sync_status": "synced"
+      }
+    },
+    {
+      "episode": 2,
+      "status": "pending_user_review",
+      "current_final_candidate": "episodes/episode_002_final_v2.md",
+      "approved_final": null,
+      "final_versions": [
+        {
+          "version": "v2",
+          "path": "episodes/episode_002_final_v2.md",
+          "status": "pending_user_review",
+          "created_from": "episodes/episode_002_revision_note_v2.md",
+          "created_at": "2026-06-09",
+          "do_not_overwrite": true,
+          "notes": "2~4화 배치 final 후보"
+        }
+      ],
+      "registry_status_sync": {
+        "episode_status_path": "episodes/episode_002_status.md",
+        "status_current_final_should_equal": "episodes/episode_002_final_v2.md",
+        "last_sync": "2026-06-10",
+        "sync_status": "synced"
+      }
+    },
+    {
+      "episode": 3,
+      "status": "pending_user_review",
+      "current_final_candidate": "episodes/episode_003_final_v2.md",
+      "approved_final": null,
+      "final_versions": [
+        {
+          "version": "v2",
+          "path": "episodes/episode_003_final_v2.md",
+          "status": "pending_user_review",
+          "created_from": "episodes/episode_003_revision_note_v2.md",
+          "created_at": "2026-06-09",
+          "do_not_overwrite": true,
+          "notes": "2~4화 배치 final 후보"
+        }
+      ],
+      "registry_status_sync": {
+        "episode_status_path": "episodes/episode_003_status.md",
+        "status_current_final_should_equal": "episodes/episode_003_final_v2.md",
+        "last_sync": "2026-06-10",
+        "sync_status": "synced"
+      }
+    },
+    {
+      "episode": 4,
+      "status": "pending_user_review",
+      "current_final_candidate": "episodes/episode_004_final_v2.md",
+      "approved_final": null,
+      "final_versions": [
+        {
+          "version": "v2",
+          "path": "episodes/episode_004_final_v2.md",
+          "status": "pending_user_review",
+          "created_from": "episodes/episode_004_revision_note_v2.md",
+          "created_at": "2026-06-09",
+          "do_not_overwrite": true,
+          "notes": "2~4화 배치 final 후보"
+        }
+      ],
+      "registry_status_sync": {
+        "episode_status_path": "episodes/episode_004_status.md",
+        "status_current_final_should_equal": "episodes/episode_004_final_v2.md",
+        "last_sync": "2026-06-10",
+        "sync_status": "synced"
+      }
+    }
+  ],
+  "integrity_rules": {
+    "episode_status_must_match_registry": true,
+    "approved_final_is_read_only": true,
+    "new_revision_requires_new_version": true,
+    "mismatch_requires_recovery_plan": true,
+    "status_registry_sync_required_before_completion": true,
+    "new_version_requires_revision_note": true
+  },
+  "preflight_check": {
+    "must_compare_episode_status_before_final_work": true,
+    "must_list_existing_final_files_before_new_version": true,
+    "existing_final_files_are_read_only": true,
+    "mismatch_halt_reason_code": "FINAL_REGISTRY_STATUS_MISMATCH",
+    "last_checked_run_report": "run_reports/run_report_20260610_metadata_sync.md"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "project_id": "blindspot",
+  "foreshadowing": [
+    {
+      "foreshadowing_id": "F001",
+      "setup_episode": "episode_001",
+      "setup_scene": "첫 시선 감지 장면",
+      "content": "현장에 없는 감시 매체의 시선이 직접 시선과 다른 차가운 압력으로 느껴진다",
+      "payoff_plan": "episode_002에서 죽은 렌즈와 삭제된 영상으로 감시망 실체 일부 공개",
+      "status": "partially_paid",
+      "visibility": "reader_noticeable_but_not_explained"
+    },
+    {
+      "foreshadowing_id": "F002",
+      "setup_episode": "episode_001",
+      "setup_scene": "비상계단 아래 사각지대",
+      "content": "감지되지 않는 공간도 소리와 흔적 때문에 완전한 안전지대가 아니라는 암시",
+      "payoff_plan": "episode_004에서 압력판 함정으로 일부 회수",
+      "status": "partially_paid",
+      "visibility": "subtle"
+    },
+    {
+      "foreshadowing_id": "F003",
+      "setup_episode": "episode_001",
+      "setup_scene": "망루 관측자의 마지막 대사",
+      "content": "망루가 한서진의 이름을 이미 알고 있다",
+      "payoff_plan": "episode_004의 WATCHLIST_HAN_SEOJIN_OLD로 확장",
+      "status": "expanded",
+      "visibility": "clear"
+    },
+    {
+      "foreshadowing_id": "F004",
+      "setup_episode": "episode_002",
+      "setup_scene": "공중전화 경고",
+      "content": "윤하라가 한서진의 동선을 먼저 알고 있었다",
+      "payoff_plan": "윤하라의 정보 출처와 망루 내부 연결 공개",
+      "status": "active",
+      "visibility": "clear"
+    },
+    {
+      "foreshadowing_id": "F005",
+      "setup_episode": "episode_004",
+      "setup_scene": "WATCHLIST_HAN_SEOJIN_OLD",
+      "content": "한서진은 어젯밤 발견된 것이 아니라 오래전부터 목록에 있었다",
+      "payoff_plan": "중반부 과거 아크에서 회수",
+      "status": "active",
+      "visibility": "clear"
+    }
+  ],
+  "rules": [
+    "새 복선은 반드시 기록",
+    "회수 전까지 모순 금지",
+    "회수 시 독자 보상 명시",
+    "사용자 승인 없는 중대 canon 변경 금지"
+  ]
+}
