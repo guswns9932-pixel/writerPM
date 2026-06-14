@@ -1,0 +1,31 @@
+{
+  "project_id": "blindspot",
+  "narrative_style": "한국 현대 판타지 남성향 모바일 연재체. 긴장감 있는 짧은 문장, 생존 판단, 잠입 액션, 정보전 중심.",
+  "sentence_policy": {
+    "default": "짧고 선명한 문장 중심",
+    "avoid": "능력 원리 장황 설명",
+    "mobile_readability": "문단을 짧게 나누고 장면 전환을 명확히 한다",
+    "sensory_focus": "시선, 빛, 그림자, 렌즈, 숨소리 같은 감각어를 반복 모티프로 사용"
+  },
+  "dialogue_policy": {
+    "han_seojin": "말수는 적지만 선택 순간에는 단호하다",
+    "yoon_hara": "정보를 주되 속내를 감춘다",
+    "ma_gyeongtae": "거칠고 짧게 압박한다",
+    "watchtower": "차갑고 절차적인 관측 언어를 사용한다"
+  },
+  "opening_policy": "설정 설명이 아니라 시선 감지로 인한 즉각적 위험, 욕망, 비밀로 시작한다.",
+  "ending_policy": "회차마다 생존 보상 직후 더 큰 감시나 조직의 손길을 암시한다.",
+  "tone_keywords": [
+    "긴장감",
+    "생존",
+    "성장",
+    "잠입",
+    "조직전",
+    "정보전"
+  ],
+  "banned_style_requests": [
+    "특정 작가 문체 모방",
+    "기존 작품 대표 문장 리듬 모방",
+    "설정집처럼 시작하는 서술"
+  ]
+}

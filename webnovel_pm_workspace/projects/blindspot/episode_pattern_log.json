@@ -1,0 +1,49 @@
+{
+  "project_id": "blindspot",
+  "purpose": "최근 회차의 전개 패턴을 기록하고 반복을 방지한다.",
+  "pattern_rules": {
+    "max_same_opening_pattern_in_a_row": 2,
+    "max_same_cliffhanger_type_in_a_row": 2,
+    "requires_variation_plan_when_repeated": true
+  },
+  "recent_episode_patterns": [
+    {
+      "episode": "001",
+      "opening_pattern": "immediate_pursuit_and_gaze_detection",
+      "main_conflict_pattern": "survival_escape",
+      "reward_type": "ability_rule_reveal_and_first_survival_win",
+      "cliffhanger_type": "antagonist_identifies_protagonist",
+      "variation_note": "시선 감지의 기본 규칙과 망루의 존재를 동시에 후킹"
+    },
+    {
+      "episode": "002",
+      "opening_pattern": "aftermath_and_evidence_recovery",
+      "main_conflict_pattern": "evidence_vs_surveillance",
+      "reward_type": "dead_lens_storage_and_yoon_hara_warning",
+      "cliffhanger_type": "direct_warning_under_surveillance",
+      "variation_note": "도주보다 증거 확보를 전면화"
+    },
+    {
+      "episode": "003",
+      "opening_pattern": "controlled_contact_with_broker",
+      "main_conflict_pattern": "conditional_deal_and_re_pursuit",
+      "reward_type": "watchtower_name_and_observation_candidate_clue",
+      "cliffhanger_type": "old_candidate_record",
+      "variation_note": "윤하라와의 대면으로 정보전 확장"
+    },
+    {
+      "episode": "004",
+      "opening_pattern": "first_infiltration",
+      "main_conflict_pattern": "blindspot_vs_non_gaze_trap",
+      "reward_type": "WATCHLIST_HAN_SEOJIN_OLD",
+      "cliffhanger_type": "long_term_target_reveal",
+      "variation_note": "시선 없는 함정으로 능력 한계 강조"
+    }
+  ],
+  "repetition_warnings": [],
+  "next_variation_targets": [
+    "추격/도주 시작 패턴 반복을 피한다",
+    "파일명 공개형 클리프행어 반복을 피한다",
+    "주인공이 먼저 조건을 걸거나 함정을 설계하는 회차를 늘린다"
+  ]
+}

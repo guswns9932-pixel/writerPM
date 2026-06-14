@@ -1,0 +1,22 @@
+{
+  "project_id": "example_project",
+  "purpose": "run_report와 audit 보고서 목록을 추적해 보고 누락과 최신 상태 혼선을 방지한다",
+  "reports": [
+    {
+      "report_id": "run_report_YYYYMMDD_001",
+      "path": "run_reports/run_report_YYYYMMDD_001.md",
+      "date": "YYYY-MM-DD",
+      "covered_scope": "예: episode_001 final package",
+      "created_files": [],
+      "modified_files": [],
+      "checks_performed": [],
+      "current_stage_after_work": "awaiting_user_review",
+      "follow_up_required": false
+    }
+  ],
+  "rules": {
+    "every_generation_or_revision_requires_run_report": true,
+    "missing_report_requires_recovery_plan": true,
+    "latest_report_must_match_rolling_context": true
+  }
+}

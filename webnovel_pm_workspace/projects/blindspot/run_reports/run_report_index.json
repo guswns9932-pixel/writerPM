@@ -1,0 +1,96 @@
+{
+  "project_id": "blindspot",
+  "title": "사각지대",
+  "last_updated": "2026-06-10",
+  "reports": [
+    {
+      "report_id": "run_report_20260609_001",
+      "path": "run_reports/run_report_20260609_001.md",
+      "date": "2026-06-09",
+      "covered_scope": "concept_to_episode_001_final_v2_package",
+      "created_files_summary": "concept candidates, roadmap_20, episode_001 outline/draft/reviews/final/status/packaging",
+      "modified_files_summary": "story, character, ability, power, arc, cast, location, foreshadowing, style, canon, timeline, rolling_context",
+      "checks_performed": [
+        "continuity",
+        "originality",
+        "style",
+        "scene",
+        "quality",
+        "reader_simulation"
+      ],
+      "current_stage_after_work": "awaiting_user_review",
+      "follow_up_required": true
+    },
+    {
+      "report_id": "run_report_20260609_002_004",
+      "path": "run_reports/run_report_20260609_002_004.md",
+      "date": "2026-06-09",
+      "covered_scope": "episodes_002_004_batch",
+      "created_files_summary": "episode_002-004 outline/draft/review/revision_note/final/status",
+      "modified_files_summary": "canon_log, timeline, foreshadowing_ledger, rolling_context, arc_state, cast_registry, location_registry",
+      "checks_performed": [
+        "continuity",
+        "quality",
+        "ability_rules",
+        "originality",
+        "critical_issue"
+      ],
+      "current_stage_after_work": "awaiting_user_review",
+      "follow_up_required": true
+    },
+    {
+      "report_id": "continuity_audit_001",
+      "path": "run_reports/continuity_audit_001.md",
+      "date": "2026-06-09",
+      "covered_scope": "episodes_001_004_final_continuity_audit",
+      "created_files_summary": "continuity audit report",
+      "modified_files_summary": "none",
+      "checks_performed": [
+        "continuity_audit"
+      ],
+      "current_stage_after_work": "awaiting_user_review",
+      "follow_up_required": false
+    },
+    {
+      "report_id": "run_report_20260610_metadata_sync",
+      "path": "run_reports/run_report_20260610_metadata_sync.md",
+      "date": "2026-06-10",
+      "covered_scope": "high_high_metadata_state_sync_after_audit_approval",
+      "created_files_summary": "metadata sync run report",
+      "modified_files_summary": "approval_state, final_registry, ability_usage_log, payoff_schedule, episode_001-004_status",
+      "checks_performed": [
+        "approval_state",
+        "final_registry",
+        "episode_status",
+        "ability_usage_log",
+        "payoff_schedule",
+        "run_report_index"
+      ],
+      "high_risk_files_checked": [
+        "approval_state.json",
+        "final_registry.json",
+        "ability_usage_log.json",
+        "payoff_schedule.json",
+        "episodes/episode_001_status.md",
+        "episodes/episode_002_status.md",
+        "episodes/episode_003_status.md",
+        "episodes/episode_004_status.md"
+      ],
+      "approval_state_checked": true,
+      "final_registry_checked": true,
+      "ability_usage_log_checked": true,
+      "payoff_schedule_checked": true,
+      "status_registry_sync_checked": true,
+      "next_batch_block_confirmed": true,
+      "current_stage_after_work": "awaiting_user_review",
+      "follow_up_required": true
+    }
+  ],
+  "rules": {
+    "every_generation_or_revision_requires_run_report": true,
+    "missing_report_requires_recovery_plan": true,
+    "latest_report_must_match_rolling_context": true,
+    "high_risk_files_must_be_indexed_after_metadata_sync": true,
+    "status_registry_sync_report_required": true
+  }
+}

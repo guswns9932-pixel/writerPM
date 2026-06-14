@@ -1,0 +1,28 @@
+{
+  "project_id": "example_project",
+  "purpose": "적대 세력의 단계적 확장을 관리한다.",
+  "current_opposition_level": "level_01_initial_pressure",
+  "rules": [
+    "적대 세력은 회차 편의를 위해 갑자기 전능해지지 않는다.",
+    "상위 적대자는 하위 압박의 결과와 단서를 통해 단계적으로 등장한다.",
+    "새 적대 세력 추가 전 기존 세력으로 대체 가능한지 확인한다."
+  ],
+  "ladder": [
+    {
+      "level_id": "level_01_initial_pressure",
+      "episode_range": "001-010",
+      "opposition_form": "초기 추적자 또는 지역 압박",
+      "representatives": [],
+      "allowed_pressure": [],
+      "locked_pressure": []
+    },
+    {
+      "level_id": "level_02_expanded_network",
+      "episode_range": "011-030",
+      "opposition_form": "확장된 조직 또는 시스템 압박",
+      "representatives": [],
+      "allowed_pressure": [],
+      "unlock_condition": "주인공이 초기 생존 단계를 넘어선다"
+    }
+  ]
+}

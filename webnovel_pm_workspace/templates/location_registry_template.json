@@ -1,0 +1,22 @@
+{
+  "template_name": "location_registry_template",
+  "project_id": "example_project",
+  "locations": [
+    {
+      "location_id": "loc_start",
+      "name": "예시 시작 장소",
+      "type": "urban / academy / dungeon / palace",
+      "rules": [
+        "외부 통신 제한",
+        "감시 사각지대 존재"
+      ],
+      "spatial_notes": "입구, 중심부, 탈출로를 구분",
+      "first_appearance": "episode_001",
+      "canon_status": "planned"
+    }
+  ],
+  "space_conflict_checks": [
+    "동일 시간대 이동 가능한 거리인가?",
+    "폐쇄 구역 규칙을 무시하지 않았는가?"
+  ]
+}

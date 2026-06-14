@@ -1,0 +1,120 @@
+# PROJECT_POLICY.md
+
+이 문서는 `writerPM` repository에서 웹소설 제작 작업을 수행할 때 적용되는 프로젝트 운영 정책입니다.
+
+## 1. 작업 범위 제한
+
+- Codex는 사용자의 한 번의 요청에서 명시된 작업 범위만 수행합니다.
+- 사용자가 요청하지 않은 다음 회차, 다음 배치, 추가 수정, 설정 변경을 임의로 진행하지 않습니다.
+- 작업 범위가 불명확하면 안전한 최소 범위만 수행하고 사용자 확인 필요 사항으로 보고합니다.
+
+## 2. 컨셉 후보 기본 개수
+
+- 컨셉 후보는 기본 3개만 생성합니다.
+- 사용자가 명시적으로 더 많거나 적은 개수를 요청한 경우에만 해당 개수를 따릅니다.
+- 컨셉 후보 생성 후에는 사용자의 선택 또는 추가 지시를 기다립니다.
+
+## 3. 최초 작업 범위
+
+- 최초 작업은 컨셉부터 1화 final까지만 수행합니다.
+- Codex는 사용자의 명시적 승인 없이 2화 이후 본문을 작성하지 않습니다.
+- 1화 final은 검수와 revision_note를 거친 뒤에만 저장할 수 있습니다.
+
+## 4. 추가 작성 단위
+
+- 1화 final 승인 후 추가 작성은 기본 3화 단위로만 진행합니다.
+- 예시:
+  - 2~4화
+  - 5~7화
+  - 8~10화
+- 사용자가 명시적으로 다른 범위를 요청하더라도, Codex는 작업 범위와 승인 상태를 먼저 확인하고 보고합니다.
+- 배치 생성 후에는 반드시 사용자 검토 대기 상태로 정리합니다.
+
+## 5. 한 회차 자동 수정 제한
+
+- 한 회차 자동 수정은 기본 1회만 수행합니다.
+- 추가 수정이 필요하면 `revision_note`를 남기고 사용자 지시를 기다립니다.
+- 사용자가 추가 수정을 명시하면 그 요청 범위 안에서만 수정합니다.
+
+## 6. 피드백 반영 정책
+
+- 사용자 피드백은 `user_feedback_log`에 기록합니다.
+- 사용자가 "바로 반영"이라고 명시하지 않은 피드백은 `feedback_application_plan`을 먼저 작성합니다.
+- canon 변경이 필요한 피드백은 `canon_change_request`를 작성하고 사용자 승인 전에는 반영하지 않습니다.
+
+## 7. 다음 작업 묶음 진행 금지
+
+- Codex는 명시적 승인 없이 다음 작업 묶음으로 넘어가지 않습니다.
+- 1화 final 승인 전에는 2화 이후를 작성하지 않습니다.
+- 3화 단위 배치 완료 후에는 다음 배치를 작성하지 않습니다.
+- 추가 작업 후보는 보고할 수 있지만, 실행은 사용자 지시 후에만 가능합니다.
+
+## 8. final 파일 보호
+
+- 기존 final 파일은 덮어쓰지 않습니다.
+- final 수정본은 `v3`, `v4`처럼 새 버전으로 저장합니다.
+- 덮어쓰기 위험이 있으면 작업을 중단하고 `halt_reason_code`와 `recovery_plan`을 작성합니다.
+
+## 9. 품질 및 중단 기준
+
+다음 문제가 있으면 final로 저장하지 않습니다.
+
+- 설정 충돌
+- 능력 규칙 위반
+- 인물 붕괴
+- 시간선 오류
+- 특정 기존 작품의 고유 설정, 고유 용어, 대표 장면, 특정 작가 문체 모방 위험
+- 사용자 승인 없는 범위 초과
+
+문제가 발견되면 review, revision_note, run_report에 기록하고 필요한 경우 recovery plan을 작성합니다.
+
+## 10. 등장인물 과다 방지
+
+- 한 arc의 active 핵심 인물은 주인공 포함 5~7명을 기본 상한으로 둡니다.
+- 3화 배치당 신규 named character는 기본 0~2명으로 제한합니다.
+- 새 인물을 만들기 전 기존 인물, 조직명, 직책, 단역으로 대체 가능한지 확인합니다.
+- 새 named character가 등장하면 `cast_registry.json`에 첫 등장, 역할, 상태, 재등장 목적을 기록합니다.
+- 역할 중복, 목적 흔들림, active cast 과다로 회차 초점이 흐려지면 final 저장 전 review 또는 recovery_plan을 작성합니다.
+
+## 11. 장기 연재 audit 규칙
+
+- 20화 이상 장기 연재 프로젝트는 `arc_state.json`, `foreshadowing_ledger.json`, `canon_log.json`, `rolling_context.md`를 기준으로 장기 진행 상태를 관리합니다.
+- 매 10화 완료 또는 arc 종료 시 `continuity_audit`, `cast_audit`, `foreshadowing_audit`, `quality_trend_audit` 중 필요한 audit을 작성합니다.
+- 마지막 20~25% 구간에서는 신규 핵심 인물, 신규 핵심 능력, 신규 장기 복선을 추가하지 않고 기존 복선 회수와 결말 정리를 우선합니다.
+- 장기 구조 변경이나 핵심 설정 변경이 필요하면 `canon_change_request`를 작성하고 사용자 승인 전에는 반영하지 않습니다.
+
+## 12. 권리 및 플랫폼 리스크 관리
+
+- 외부 자료, 표지, 외주, 공동작업, 자료 출처는 `rights_log.md`에 기록합니다.
+- 사용자의 창작적 선택, 수정, 승인은 `human_contribution_log.md`에 기록합니다.
+- 투고 전에는 `platform_policy_check.md`와 `ai_usage_disclosure_note.md`를 확인합니다.
+- 권리 또는 플랫폼 정책이 불명확하면 공개용 packaging을 확정하지 않고 사용자 확인 필요 사항으로 보고합니다.
+
+## 13. 콘텐츠 리스크 및 반복 패턴 관리
+
+- 과도한 폭력성, 선정성, 혐오 표현, 실제 인물/기관 유사성, 민감한 묘사는 각각 risk check 파일에 기록합니다.
+- 최근 회차의 전개 패턴은 `episode_pattern_log.json`에 기록하고 같은 opening, 보상, cliffhanger가 반복되면 변주 계획을 작성합니다.
+- 적대 세력 확장은 `opposition_ladder.json`의 단계에 맞춰 진행하며, 회차 편의를 위해 적대 세력을 갑자기 전능하게 만들지 않습니다.
+- 미해결 content/platform/rights risk가 있으면 final 또는 공개용 packaging 전 review/recovery_plan에 기록합니다.
+
+## 14. High-risk 상태 파일 정책
+
+- `approval_state.json`이 허용하지 않은 회차, 배치, final 수정, canon 변경은 수행하지 않습니다.
+- `final_registry.json`에 등록되지 않은 final 후보 또는 승인본은 기준본으로 취급하지 않습니다.
+- 능력 사용이 포함된 회차에서 `ability_usage_log.json` 갱신이 누락되면 능력 규칙 검수가 미완료된 것으로 간주합니다.
+- 새 복선 또는 회수 지연이 있는데 `payoff_schedule.json` 갱신이 누락되면 장기 연재 검수가 미완료된 것으로 간주합니다.
+- 회차별 독자 보상과 품질 추세는 `reader_reward_ledger.json`, `quality_trend_log.json` 또는 해당 역할 문서에 누적합니다.
+- 주요 인물 말투 변경은 `voice_samples.md` 또는 해당 역할 문서를 기준으로 검수합니다.
+- run report가 생성되면 `run_report_index.json` 또는 해당 역할 문서에 기록합니다.
+
+## High/High 우선 운영 제한
+
+- `audit_only`, `review_only`, `proposal_only`, `plan_only` 요청에서는 사용자가 파일 생성을 명시하지 않는 한 파일을 만들거나 수정하지 않는다.
+- 회차 생성 가능 여부는 대화 기억보다 `approval_state.json`을 우선한다. 승인 상태가 모호하면 작업하지 않는다.
+- 3화 초과 생성 요청은 기본 3화까지만 수행한다. 초과 회차의 줄거리, 대사, 장면, 설정 초안은 작성하지 않는다.
+- final 관련 작업은 `final_registry.json`과 `episode_XXX_status.md`가 일치할 때만 진행한다.
+- Bible 계열 핵심 설정 변경은 `canon_change_request` 승인 전까지 금지한다.
+- 능력 사용이 있는 작업은 outline 단계부터 `ability_usage_log.json` 갱신 계획을 포함한다.
+- 피드백은 영향도 매트릭스로 분류하고, 말투/문체 피드백을 인물 성격·욕망·canon 변경으로 확대하지 않는다.
+- 복선과 payoff는 `foreshadowing_ledger.json`과 `payoff_schedule.json` 양쪽 기준으로 관리한다.
+- 모든 prompt 작업은 `HARNESS_ROUTER.md`와 `REQUIRED_OUTPUTS_MATRIX.md` 기준으로 입력/출력/업데이트/금지 행동을 먼저 확인한다.

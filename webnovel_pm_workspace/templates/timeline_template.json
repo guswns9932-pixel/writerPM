@@ -1,0 +1,31 @@
+{
+  "template_name": "timeline_template",
+  "project_id": "example_project",
+  "pre_story_events": [
+    {
+      "event_id": "pre_001",
+      "order": 1,
+      "summary": "주인공의 실패를 만든 과거 사건",
+      "characters": [
+        "char_protagonist"
+      ],
+      "canon_status": "planned"
+    }
+  ],
+  "episode_events": [
+    {
+      "episode_id": "episode_001",
+      "sequence": 1,
+      "time_marker": "Day 1 morning",
+      "location_id": "loc_start",
+      "summary": "첫 후킹 사건",
+      "characters": [
+        "char_protagonist"
+      ],
+      "continuity_notes": "이동 시간과 정보 전달 시간을 기록"
+    }
+  ],
+  "open_time_questions": [
+    "사건 A와 B 사이 이동 시간이 충분한가?"
+  ]
+}
