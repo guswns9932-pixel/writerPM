@@ -1,0 +1,23 @@
+{
+  "template_name": "arc_state_template",
+  "project_id": "example_project",
+  "current_arc": "arc_01",
+  "arcs": [
+    {
+      "arc_id": "arc_01",
+      "title": "첫 번째 선택",
+      "episodes": "001-004",
+      "arc_goal": "주인공이 세계의 규칙을 처음 이해한다",
+      "protagonist_state_start": "회피",
+      "protagonist_state_end": "능동적 선택",
+      "reader_rewards": [
+        "규칙 발견",
+        "작은 승리",
+        "큰 위협 공개"
+      ],
+      "open_threads": [
+        "적대자의 정체"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "project_id": "blindspot",
+  "title": "사각지대",
+  "last_updated": "2026-06-10",
+  "reward_entries": [
+    {
+      "episode": 1,
+      "reward_type": "ability_rule_understanding",
+      "reward_description": "시선 감지의 방향, 대가, 사각지대 활용을 장면으로 이해한다.",
+      "reader_question_answered": "주인공이 무엇을 감지하고 어떻게 살아남는가",
+      "new_reader_question": "망루는 왜 한서진의 이름을 아는가",
+      "repetition_risk": "low",
+      "variation_needed_next": false
+    },
+    {
+      "episode": 2,
+      "reward_type": "surveillance_information",
+      "reward_description": "죽은 렌즈와 삭제된 영상을 통해 감시망의 일부 실체를 본다.",
+      "reader_question_answered": "감시가 단순 추격이 아니라 기록/삭제와 연결되어 있음",
+      "new_reader_question": "윤하라는 어떻게 먼저 알고 전화했는가",
+      "repetition_risk": "low",
+      "variation_needed_next": false
+    },
+    {
+      "episode": 3,
+      "reward_type": "alliance_and_condition",
+      "reward_description": "윤하라와의 조건부 거래로 조직전 진입 구조가 열린다.",
+      "reader_question_answered": "조력자가 어떤 조건으로 주인공과 엮이는가",
+      "new_reader_question": "망루가 한서진을 과거부터 분류한 이유는 무엇인가",
+      "repetition_risk": "medium",
+      "variation_needed_next": false
+    },
+    {
+      "episode": 4,
+      "reward_type": "successful_infiltration_and_major_clue",
+      "reward_description": "폐보안실 잠입 성공과 WATCHLIST_HAN_SEOJIN_OLD 단서 확보.",
+      "reader_question_answered": "한서진이 수동적 도주자가 아니라 주도권을 잡을 수 있음",
+      "new_reader_question": "OLD 분류는 무엇을 의미하는가",
+      "repetition_risk": "low",
+      "variation_needed_next": false
+    }
+  ],
+  "rules": {
+    "each_episode_requires_reader_reward": true,
+    "same_reward_type_three_times_requires_variation": true,
+    "reward_absent_blocks_final": true
+  }
+}

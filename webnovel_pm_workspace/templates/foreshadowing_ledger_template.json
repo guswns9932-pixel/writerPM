@@ -1,0 +1,20 @@
+{
+  "template_name": "foreshadowing_ledger_template",
+  "project_id": "example_project",
+  "foreshadowing": [
+    {
+      "foreshadowing_id": "F001",
+      "setup_episode": "episode_001",
+      "setup_scene": "첫 후킹 장면",
+      "content": "사소해 보이는 물건이 later reveal의 단서",
+      "payoff_plan": "episode_003 이후",
+      "status": "planned",
+      "visibility": "reader_noticeable_but_not_explained"
+    }
+  ],
+  "rules": [
+    "새 복선은 반드시 기록",
+    "회수 전까지 모순 금지",
+    "회수 시 독자 보상 명시"
+  ]
+}

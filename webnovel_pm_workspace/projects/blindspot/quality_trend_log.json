@@ -1,0 +1,64 @@
+{
+  "project_id": "blindspot",
+  "title": "사각지대",
+  "last_updated": "2026-06-10",
+  "episodes": [
+    {
+      "episode": 1,
+      "source_review": "episodes/episode_001_quality_review.md",
+      "hook_score": 9,
+      "conflict_score": 8,
+      "protagonist_choice_score": 8,
+      "reader_reward_score": 8,
+      "cliffhanger_score": 9,
+      "commerciality_score": 9,
+      "overall_score": 83.75,
+      "trend_note": "시선 감지 규칙과 생존 선택을 후킹으로 제시",
+      "revision_required": false
+    },
+    {
+      "episode": 2,
+      "source_review": "episodes/episode_002_review.md",
+      "hook_score": 8,
+      "conflict_score": 8,
+      "protagonist_choice_score": 8,
+      "reader_reward_score": 8,
+      "cliffhanger_score": 9,
+      "commerciality_score": 9,
+      "overall_score": 84.25,
+      "trend_note": "죽은 렌즈와 삭제 영상으로 감시망 보상 제공",
+      "revision_required": false
+    },
+    {
+      "episode": 3,
+      "source_review": "episodes/episode_003_review.md",
+      "hook_score": 8,
+      "conflict_score": 9,
+      "protagonist_choice_score": 8,
+      "reader_reward_score": 8,
+      "cliffhanger_score": 9,
+      "commerciality_score": 9,
+      "overall_score": 85.0,
+      "trend_note": "윤하라와의 조건부 거래로 조직전 진입 보상 제공",
+      "revision_required": false
+    },
+    {
+      "episode": 4,
+      "source_review": "episodes/episode_004_review.md",
+      "hook_score": 9,
+      "conflict_score": 9,
+      "protagonist_choice_score": 9,
+      "reader_reward_score": 8,
+      "cliffhanger_score": 9,
+      "commerciality_score": 9,
+      "overall_score": 86.25,
+      "trend_note": "폐보안실 잠입과 WATCHLIST 자료 확보로 상승 추세",
+      "revision_required": false
+    }
+  ],
+  "warning_rules": {
+    "overall_below_75_requires_revision_note": true,
+    "three_episode_decline_requires_quality_audit": true,
+    "repeated_reward_type_requires_variation_plan": true
+  }
+}

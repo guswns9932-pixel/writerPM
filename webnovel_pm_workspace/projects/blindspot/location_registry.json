@@ -1,0 +1,86 @@
+{
+  "project_id": "blindspot",
+  "locations": [
+    {
+      "location_id": "loc_yeongdo_alley",
+      "name": "영도시장 뒤 폐골목",
+      "type": "urban_back_alley",
+      "rules": [
+        "낡은 CCTV 세 대 중 한 대는 작동하지 않는다",
+        "시장 간판 불빛 때문에 그림자가 끊긴다",
+        "비상계단 아래 4초짜리 사각지대가 있다",
+        "죽은 렌즈 안에 로컬 저장장치가 남아 있었다"
+      ],
+      "spatial_notes": "편의점, 폐식당, 비상계단, 고장난 CCTV, 빗물 배수로가 연결된다",
+      "first_appearance": "episode_001",
+      "canon_status": "active"
+    },
+    {
+      "location_id": "loc_watchtower_room",
+      "name": "망루 관측실 A",
+      "type": "surveillance_room",
+      "rules": [
+        "도시 CCTV 일부와 사설 렌즈 피드를 모은다",
+        "대상 이름과 동선을 태그한다"
+      ],
+      "spatial_notes": "1화에서는 목소리와 모니터 묘사만 등장",
+      "first_appearance": "episode_001_cliffhanger",
+      "canon_status": "active_limited"
+    },
+    {
+      "location_id": "loc_closed_security_office",
+      "name": "폐업한 보안업체 사무실",
+      "type": "closed_office",
+      "rules": [
+        "한서진이 과거 쓰던 장비와 접속 지식이 남아 있다",
+        "외부 감시가 약하지만 완전한 안전지대는 아니다"
+      ],
+      "spatial_notes": "2화에서 CCTV 백업 확인 시도",
+      "first_appearance": "episode_002",
+      "canon_status": "active"
+    },
+    {
+      "location_id": "loc_underground_arcade",
+      "name": "지하상가와 폐극장 입구",
+      "type": "underground_commercial_area",
+      "rules": [
+        "반사면과 죽은 카메라가 섞여 시선 감지가 복잡하다",
+        "폐극장 셔터 아래 반쪽짜리 사각이 있다"
+      ],
+      "spatial_notes": "3화 윤하라 직접 접촉과 마경태 추적 장면",
+      "first_appearance": "episode_003",
+      "canon_status": "active"
+    },
+    {
+      "location_id": "loc_abandoned_security_room",
+      "name": "폐보안실",
+      "type": "abandoned_security_room",
+      "rules": [
+        "죽은 척 켜진 렌즈가 있다",
+        "감지되지 않는 압력판 함정이 있다",
+        "WATCHLIST 자료가 보관되어 있었다"
+      ],
+      "spatial_notes": "4화 첫 잠입 장소",
+      "first_appearance": "episode_004",
+      "canon_status": "active"
+    },
+    {
+      "location_id": "loc_city",
+      "name": "미정 도시",
+      "type": "modern_city",
+      "rules": [
+        "CCTV와 사설 감시망이 촘촘하다",
+        "사각지대는 드물지만 존재한다",
+        "밤에는 조직의 비공식 감시가 늘어난다"
+      ],
+      "spatial_notes": "상업지구, 낡은 골목, 지하 통로, 고층 감시 지점을 구분 예정",
+      "first_appearance": "episode_001",
+      "canon_status": "initial"
+    }
+  ],
+  "space_conflict_checks": [
+    "동일 시간대 이동 가능한 거리인가?",
+    "감시망 밀도와 사각지대 존재가 모순되지 않는가?",
+    "폐쇄 구역 규칙을 무시하지 않았는가?"
+  ]
+}

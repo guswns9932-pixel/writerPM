@@ -1,0 +1,21 @@
+{
+  "project_id": "example_project",
+  "purpose": "최근 회차의 전개 패턴을 기록하고 반복을 방지한다.",
+  "pattern_rules": {
+    "max_same_opening_pattern_in_a_row": 2,
+    "max_same_cliffhanger_type_in_a_row": 2,
+    "requires_variation_plan_when_repeated": true
+  },
+  "recent_episode_patterns": [
+    {
+      "episode": "001",
+      "opening_pattern": "example_immediate_hook",
+      "main_conflict_pattern": "example_conflict",
+      "reward_type": "example_reward",
+      "cliffhanger_type": "example_cliffhanger",
+      "variation_note": "다음 회차에서 반복을 피할 변주 메모"
+    }
+  ],
+  "repetition_warnings": [],
+  "next_variation_targets": []
+}
