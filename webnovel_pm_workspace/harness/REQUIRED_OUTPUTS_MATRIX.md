@@ -26,6 +26,7 @@
 | `revision` | feedback_plan, final_registry, status, target final | 새 version 파일, revision_note | final_registry, status, run_report | 기존 final 직접 편집 |
 | `canon_change_request` | issue, Bible files, canon_log | canon_change_request | user_feedback_log 또는 run_report 필요 시 | 승인 전 Bible 수정 |
 | `recovery_plan` | halt issue, status, registry, logs | recovery_plan | run_report 또는 index 필요 시 | 복구 전 final 저장 |
+| `project_discontinuation` | approval_state, final_registry, quality_trend_log | project_discontinuation_report | 반영 대상 harness/prompt (salvaged_learnings가 있는 경우) | 보고서 없는 프로젝트 폴더 삭제/정리 |
 | `packaging` | final_registry, status, rights/platform/content checks | packaging report | run_report, policy check files | 권리/플랫폼 미확인 공개용 확정 |
 
 ## 완료 조건

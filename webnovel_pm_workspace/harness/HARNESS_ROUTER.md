@@ -39,10 +39,11 @@
 | `concept_generation` | “컨셉 후보 생성” | WORKFLOW, ORIGINALITY, HUMAN_CONTRIBUTION | brief, user_taste_profile | 선택 전 Bible 확정 |
 | `bible_generation` | “Bible 생성/보강” | MEMORY, CONTINUITY, ORIGINALITY, THEMATIC, CONTEXT_COMPRESSION | approval_state, canon_log, approved canon 역할 문서, thematic_compass, arc_canon_snapshot | 승인 없는 핵심 canon 확정 |
 | `episode_outline` | “N화 outline 작성” | WORKFLOW, MEMORY, CONTINUITY, QUALITY, CAST, PATTERN_REPETITION, LONGFORM, THEMATIC, PACING, VOICE_DRIFT, CONTEXT_COMPRESSION | approval_state, arc_state, payoff_schedule, episode_pattern_log, opposition_ladder, voice_samples, thematic_compass, pacing_curve, emotional_promise_ledger, world_expansion_policy | 승인되지 않은 회차 outline 작성 |
-| `episode_draft` | “N화 draft 작성” | WORKFLOW, MEMORY, CONTINUITY, QUALITY, CAST, PATTERN_REPETITION, CONTENT_RISK | approval_state, ability_usage_log, payoff_schedule, voice_samples, final_registry | 승인되지 않은 회차 본문 작성 |
-| `revision` | “수정해줘” | FEEDBACK, VERSIONING, CONTINUITY, QUALITY, CHARACTER/VOICE 역할 문서 | feedback_application_plan, final_registry, voice_samples, approval_state | 기존 final 직접 편집 |
+| `episode_draft` | “N화 draft 작성” | WORKFLOW, MEMORY, CONTINUITY, QUALITY, CAST, PATTERN_REPETITION, CONTENT_RISK, STYLE, READABILITY, KOREAN_GRAMMAR | approval_state, ability_usage_log, payoff_schedule, voice_samples, final_registry | 승인되지 않은 회차 본문 작성 |
+| `revision` | “수정해줘” | FEEDBACK, VERSIONING, CONTINUITY, QUALITY, STYLE, READABILITY, KOREAN_GRAMMAR, CHARACTER/VOICE 역할 문서 | feedback_application_plan, final_registry, voice_samples, approval_state | 기존 final 직접 편집 |
 | `canon_change_request` | “설정 변경 요청서 작성” | CONTINUITY, RECOVERY, ORIGINALITY | canon_log, story_bible, ability_rules, approval_state | 사용자 승인 전 Bible 직접 수정 |
 | `recovery_plan` | “복구 계획 작성” | RECOVERY, VERSIONING, CONTINUITY | final_registry, episode_status, run_report_index | 복구 계획 없이 final 저장 |
+| `project_discontinuation` | “이 프로젝트 그만할래”, “중단해줘” | RECOVERY, WORKFLOW, VERSIONING | approval_state, final_registry, quality_trend_log | discontinuation_report 없이 프로젝트 폴더 삭제/정리 |
 | `packaging` | “패키징/투고 준비” | VERSIONING, RIGHTS, PLATFORM, CONTENT_RISK, ORIGINALITY | final_registry, rights_log, platform_policy_check, ai_usage_disclosure_note | 권리/플랫폼 미확인 공개용 확정 |
 
 ## High-risk state files
@@ -74,6 +75,7 @@
 - 능력 사용이 ability_rules/power_progression/ability_usage_log 기준과 충돌하는 경우
 - payoff_schedule상 overdue thread가 critical인데 새 복선을 추가하려는 경우
 - voice_samples와 충돌하는 말투 drift가 발생했는데 revision_note 없이 final 저장하려는 경우
+- STYLE_HARNESS/READABILITY_HARNESS/KOREAN_GRAMMAR_HARNESS 기준 위반(AI식 문장, 가독성 미달, 문법 오류)이 반복되는데 revision_note 없이 final 저장하려는 경우
 - run_report 없이 작업을 완료하려는 경우
 
 ## Request Type 선판정 규칙
