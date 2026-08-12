@@ -1,0 +1,20 @@
+{
+  "project_id": "example_project",
+  "purpose": "회차별 독자 보상 유형과 반복 여부를 기록한다",
+  "reward_entries": [
+    {
+      "episode": 1,
+      "reward_type": "information / emotional / victory / reversal / growth",
+      "reward_description": "이번 회차에서 독자가 받은 보상",
+      "reader_question_answered": "일부 해소된 질문",
+      "new_reader_question": "다음 화 클릭을 유도하는 질문",
+      "repetition_risk": "low / medium / high",
+      "variation_needed_next": false
+    }
+  ],
+  "rules": {
+    "each_episode_requires_reader_reward": true,
+    "same_reward_type_three_times_requires_variation": true,
+    "reward_absent_blocks_final": true
+  }
+}

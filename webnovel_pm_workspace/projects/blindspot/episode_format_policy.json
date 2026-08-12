@@ -1,0 +1,35 @@
+{
+  "project_id": "blindspot",
+  "episode_length_policy": {
+    "target_chars": "추후 사용자 지정",
+    "opening_hook_chars": "첫 500자",
+    "paragraph_style": "모바일 가독성 우선"
+  },
+  "required_components": [
+    "첫 500자 후킹",
+    "주인공 욕망",
+    "주인공 선택",
+    "장면별 갈등",
+    "독자 보상",
+    "클리프행어"
+  ],
+  "blindspot_specific_requirements": [
+    "시선 감지 능력은 장면 속 위험으로 보여준다",
+    "감지의 한계와 대가를 유지한다",
+    "감시/잠입/생존 판단 중 하나를 회차 핵심 재미로 둔다"
+  ],
+  "forbidden_components": [
+    "설정 설명 시작",
+    "수동적 해결",
+    "대가 없는 만능 감지",
+    "기존 final 덮어쓰기",
+    "특정 기존 작품 또는 작가 문체 모방"
+  ],
+  "file_naming_examples": [
+    "episode_001_outline.md",
+    "episode_001_draft_v1.md",
+    "episode_001_review_v1.md",
+    "episode_001_final_v1.md",
+    "episode_001_status.md"
+  ]
+}

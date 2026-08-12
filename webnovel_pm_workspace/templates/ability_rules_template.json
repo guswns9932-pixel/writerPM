@@ -1,0 +1,27 @@
+{
+  "template_name": "ability_rules_template",
+  "project_id": "example_project",
+  "system_name": "예시 능력 체계",
+  "core_rule": "능력은 명확한 조건과 대가를 요구한다",
+  "activation_conditions": [
+    "조건 A 충족",
+    "상황 B에서만 사용"
+  ],
+  "limits": [
+    "하루 사용 횟수 제한",
+    "사용 후 피로 누적"
+  ],
+  "costs": [
+    "체력 소모",
+    "기억 단서 일부 손실"
+  ],
+  "forbidden_shortcuts": [
+    "위기 해결을 위한 갑작스러운 신규 능력",
+    "대가 없는 연속 사용"
+  ],
+  "review_questions": [
+    "능력 사용 조건이 지켜졌는가?",
+    "대가가 장면에 반영되었는가?",
+    "canon 변경이 필요한가?"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "template_name": "canon_log_template",
+  "project_id": "example_project",
+  "canon_entries": [
+    {
+      "canon_id": "CANON001",
+      "category": "world_rule",
+      "summary": "능력 사용에는 조건과 대가가 필요하다",
+      "source_file": "ability_rules.json",
+      "source_episode": "episode_000",
+      "status": "approved",
+      "approved_by": "user_or_initial_setup",
+      "last_updated": "YYYY-MM-DD"
+    }
+  ],
+  "change_requests": [
+    {
+      "request_id": "canon_change_YYYYMMDD_001",
+      "status": "pending_user_approval",
+      "summary": "예시 변경 요청",
+      "do_not_apply_before_approval": true
+    }
+  ]
+}

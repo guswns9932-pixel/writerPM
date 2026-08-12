@@ -1,0 +1,64 @@
+{
+  "project_id": "blindspot",
+  "current_arc": "arc_01_survive_the_gaze",
+  "current_stage": "awaiting_user_review",
+  "arcs": [
+    {
+      "arc_id": "arc_01_survive_the_gaze",
+      "title": "시선에서 살아남기",
+      "episodes": "001-010",
+      "arc_goal": "한서진이 시선 감지 능력의 기본 규칙과 대가를 이해하고 망루의 존재를 알게 된다",
+      "protagonist_state_start": "숨는 사람",
+      "protagonist_state_end": "사각지대를 선택하는 사람",
+      "reader_rewards": [
+        "능력 규칙 발견",
+        "첫 생존 승리",
+        "감시 조직의 존재 암시",
+        "잠입/도주 루트의 쾌감"
+      ],
+      "open_threads": [
+        "망루는 왜 한서진을 오래전부터 분류했는가",
+        "윤하라의 진짜 목적은 무엇인가",
+        "WATCHLIST 원본에는 무엇이 들어 있는가",
+        "마경태의 상급자는 누구인가"
+      ],
+      "episode_001_result": "주인공이 추적자를 따돌렸지만 망루가 그의 이름을 확인했다",
+      "episode_002_004_result": "한서진은 죽은 렌즈의 저장장치, 윤하라와의 거래, 폐보안실 첫 잠입을 거치며 망루가 오래전부터 자신을 분류했다는 단서를 확보했다."
+    },
+    {
+      "arc_id": "arc_02_into_the_blindspot",
+      "title": "사각지대로 들어가기",
+      "episodes": "011-030",
+      "arc_goal": "한서진이 감시망의 빈틈을 이용해 첫 잠입 임무에 들어간다",
+      "protagonist_state_start": "도망자",
+      "protagonist_state_end": "조건부 침투자",
+      "reader_rewards": [
+        "잠입전",
+        "정보전",
+        "능력 성장"
+      ]
+    },
+    {
+      "arc_id": "arc_03_watchtower_war",
+      "title": "망루와의 조직전",
+      "episodes": "031-060",
+      "arc_goal": "한서진이 개인 생존을 넘어 팀과 조직전을 치른다",
+      "reader_rewards": [
+        "감시망 역이용",
+        "동료 조합",
+        "조직전 카타르시스"
+      ]
+    },
+    {
+      "arc_id": "arc_04_design_the_blindspot",
+      "title": "사각지대를 설계하는 자",
+      "episodes": "061-080",
+      "arc_goal": "한서진이 더 이상 사각지대를 찾는 사람이 아니라 만드는 사람이 된다",
+      "reader_rewards": [
+        "최종 감시망 교란",
+        "능력 완성 보상",
+        "주체적 선택의 결말"
+      ]
+    }
+  ]
+}

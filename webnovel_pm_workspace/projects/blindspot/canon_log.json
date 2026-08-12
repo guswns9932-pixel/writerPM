@@ -1,0 +1,97 @@
+{
+  "project_id": "blindspot",
+  "canon_entries": [
+    {
+      "canon_id": "CANON001",
+      "category": "core_ability",
+      "summary": "한서진은 자신을 볼 가능성이 있는 모든 시선을 방향, 거리감, 위험도로 감지한다.",
+      "source_file": "ability_rules.json",
+      "source_episode": "episode_000",
+      "status": "approved_initial_input",
+      "approved_by": "user",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON002",
+      "category": "genre_tone",
+      "summary": "작품은 현대 판타지이며 긴장감, 생존, 성장, 잠입, 조직전을 핵심 톤으로 한다.",
+      "source_file": "brief.md",
+      "source_episode": "episode_000",
+      "status": "approved_initial_input",
+      "approved_by": "user",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON003",
+      "category": "scope",
+      "summary": "이번 작업 범위는 컨셉부터 1화 final까지이며, 2화 이후 본문은 작성하지 않는다.",
+      "source_file": "user_request",
+      "source_episode": "episode_000",
+      "status": "approved_initial_input",
+      "approved_by": "user",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON004",
+      "category": "character",
+      "summary": "주인공 이름은 한서진이며 전직 보안 장비 현장 기사다.",
+      "source_file": "character_bible.json",
+      "source_episode": "episode_001",
+      "status": "active",
+      "approved_by": "codex_draft_pending_user_review",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON005",
+      "category": "antagonist_force",
+      "summary": "망루는 도시 감시망과 정보 브로커를 이용해 특이 능력자를 추적하는 비공식 조직이다.",
+      "source_file": "story_bible.json",
+      "source_episode": "episode_001",
+      "status": "active",
+      "approved_by": "codex_draft_pending_user_review",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON006",
+      "category": "episode_001_event",
+      "summary": "한서진은 영도시장 뒤 폐골목에서 마경태의 추적을 사각지대와 피 묻은 장갑 미끼로 따돌렸다.",
+      "source_file": "episode_001_final_v2.md",
+      "source_episode": "episode_001",
+      "status": "final_candidate_pending_user_review",
+      "approved_by": "pending_user_review",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON007",
+      "category": "episode_002_event",
+      "summary": "한서진은 삭제된 영상 대신 죽은 렌즈의 로컬 저장장치를 회수했고, 공중전화로 윤하라의 경고를 받았다.",
+      "source_file": "episode_002_final_v2.md",
+      "source_episode": "episode_002",
+      "status": "final_candidate_pending_user_review",
+      "approved_by": "pending_user_review",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON008",
+      "category": "character",
+      "summary": "윤하라는 망루 정보를 가진 정보 브로커이며 한서진에게 조건부 거래를 제안했다.",
+      "source_file": "episode_003_final_v2.md",
+      "source_episode": "episode_003",
+      "status": "final_candidate_pending_user_review",
+      "approved_by": "pending_user_review",
+      "last_updated": "2026-06-09"
+    },
+    {
+      "canon_id": "CANON009",
+      "category": "episode_004_event",
+      "summary": "한서진은 폐보안실 첫 잠입에서 WATCHLIST 자료 일부를 확보했고 원본을 숨겨 협상 주도권을 잡았다.",
+      "source_file": "episode_004_final_v2.md",
+      "source_episode": "episode_004",
+      "status": "final_candidate_pending_user_review",
+      "approved_by": "pending_user_review",
+      "last_updated": "2026-06-09"
+    }
+  ],
+  "change_requests": [],
+  "current_stage": "awaiting_user_review"
+}

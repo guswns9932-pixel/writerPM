@@ -1,0 +1,35 @@
+{
+  "project_id": "blindspot",
+  "target_reader": "문피아/카카오페이지 남성향 독자",
+  "preferred_genres": [
+    "현대 판타지",
+    "생존물",
+    "성장물",
+    "잠입/조직전"
+  ],
+  "preferred_hooks": [
+    "초반 위기",
+    "감시당하는 긴장감",
+    "능력의 규칙 발견",
+    "불리한 선택"
+  ],
+  "preferred_protagonist_traits": [
+    "능동적",
+    "집요함",
+    "위험을 계산함",
+    "성장함"
+  ],
+  "dislikes": [
+    "설정 설명으로 시작",
+    "수동적 주인공",
+    "대가 없는 파워업",
+    "특정 작품 모방"
+  ],
+  "style_preferences": {
+    "pacing": "빠른 전개",
+    "description": "장면 중심",
+    "dialogue": "짧고 기능적으로",
+    "tone": "긴장감과 생존 판단 중심"
+  },
+  "last_updated": "2026-06-08"
+}
