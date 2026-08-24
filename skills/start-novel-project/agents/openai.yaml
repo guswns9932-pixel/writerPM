@@ -1,0 +1,4 @@
+interface:
+  display_name: "새 소설 프로젝트 시작"
+  short_description: "승인·설정·회차 안전 게이트로 새 소설을 시작합니다"
+  default_prompt: "Use $start-novel-project to start a new novel project from my premise and stop at the appropriate approval gate."
